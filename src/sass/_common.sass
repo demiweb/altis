@@ -3,13 +3,13 @@ html
   line-height: 1.4
   color: $c-text
   +reg
-  +sm
-    font-size: $fz-sm-px
+  // +sm
+  //   font-size: $fz-sm-px
 
 body
-  background-color: $white  
+  background-color: $light  
   min-width: 320px  
-  +no-scroll  
+  +no-scroll
 
 .icon
   display: inline-block
@@ -20,4 +20,31 @@ body
   $this: &
   &--loaded:not(#{$this}--no-fade-in)
     animation: fadeIn 1s
+
+.logo
+  display: inline-block
+  font-size: 0
+
+.search
+  +flex()
+  border-radius:  $radius-sm
+  overflow: hidden
+  &__input, &__btn
+    height: rem(35)
+  &__input
+    background-color: $light
+    font-size: em(9.24)
+    font-weight: 300
+    padding: 0.1em 1em
+  &__btn
+    +flex(center, center)
+    color: $white
+    background-color: $accent
+    
+    width: rem(35)
+    height: rem(35)
+    flex: 0 0 rem(40)
+    .icon
+      font-size: rem(22)
+
     

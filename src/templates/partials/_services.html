@@ -1,0 +1,17 @@
+<!-- begin services -->
+<div class="services{% if services.mod %} {{ services.mod }}{% endif %}">
+  <h2 class="section__title title title--h2">Группы товаров и услуг</h2>
+
+  <div class="grid">
+    {% for i in services.items %}
+    <div class="col col--4">
+      <a href="#" class="services-card">
+        <span class="services-card__img js-lazy" data-background-image="./img/services/{{ loop.index }}.jpg"></span>
+
+        <span class="services-card__title">{{ i.title | safe }}</span>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- end services -->

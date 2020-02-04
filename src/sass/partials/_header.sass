@@ -1,0 +1,23 @@
+.header
+  $this: &
+  &__top
+    border-bottom: 1px solid #e6e6e6
+  &__inner
+    +flex(flex-start, center)
+    padding-top: rem(10)
+    padding-bottom: rem(10)
+    #{$this}__top &
+      height: $header-top-height
+    #{$this}__bottom &
+      height: $header-bottom-height
+  &__bottom
+    background-color: $white
+    border-bottom: 1px solid #e6e6e6
+  &__logo
+    margin-right: rem(70)
+  &__search
+    margin-right: rem(20)
+  &__contacts
+    flex-grow: 1
+  &__cart
+    margin-left: rem(40)

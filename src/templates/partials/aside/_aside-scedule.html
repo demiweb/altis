@@ -1,0 +1,22 @@
+<!-- begin aside-block -->
+<div class="aside__block aside-block">
+  <div class="aside-block__top">График работы </div>
+
+  <div class="aside-block__content">
+    {{ mixins.list(
+      name = 'scedule',
+      descr = true,
+      modifications = { wrap: '', item: '', link: '' },
+      list = [
+        { dt: 'Пн. ', dd: '9:00-17:00' },
+        { dt: 'Вт.', dd: '9:00-17:00' },
+        { dt: 'Ср.', dd: '9:00-17:00' },
+        { dt: 'Чт.', dd: '9:00-17:00' },
+        { dt: 'Пт.', dd: '9:00-17:00' },
+        { dt: 'Сб.', dd: '9:00-14:00' },
+        { dt: 'Нд.', dd: 'выходной' }
+      ]
+    ) }}
+  </div>
+</div>
+<!-- end aside-block -->

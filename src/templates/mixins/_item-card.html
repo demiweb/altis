@@ -1,0 +1,26 @@
+{% from 'mixins/_icon.html' import icon %}
+{% set icon = icon %}
+
+{% macro itemCard(mod) %}
+<a href="#" class="item-card">
+  <span class="item-card__img js-lazy" data-background-image="./img/item.pn"></span>
+
+  <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+
+  <span class="item-card__label card-label">Скидка 10%</span>
+
+  <span class="item-card__text">Производитель Jrone</span>
+
+  <span class="item-card__status status">
+    <span class="status__icon">
+      {{ icon('checkmark') }}
+    </span>
+    Есть в наличии
+  </span>
+
+  <span class="item-card__price-labels">
+    <span class="item-card__price-label price-label">2000 <small>грн</small></span>
+    <span class="item-card__price-label price-label price-label--old">3000 грн</span>
+  </span>
+</a>
+{% endmacro %}

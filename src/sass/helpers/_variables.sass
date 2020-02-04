@@ -1,16 +1,32 @@
-$fz:       16px
-$fz-sm-px: 14px
-$fz-xs-px: 12px
-$fz-sm:    em(14)
-$fz-xs:    em(12)
+$fz:       14px
+// $fz-sm-px: 14px
+// $fz-xs-px: 12px
+// $fz-sm:    em(14)
+// $fz-xs:    em(12)
 
 $text-inputs: "[type='color']", "[type='date']", "[type='datetime']", "[type='datetime-local']", "[type='email']", "[type='month']", "[type='number']", "[type='password']", "[type='search']", "[type='tel']", "[type='text']", "[type='time']", "[type='url']", "[type='week']", "input:not([type])", "textarea"
 $check-inputs: "[type='checkbox']", "[type='radio']"
 
-$c-text: #000
+// colors
+$c-text:     #000
 
-$black: #000
-$white: #fff
+$black:      #000
+$white:      #fff
+$light:      #f8f8f8
+
+$accent:     #3fb4ff
+$accent-aux: #d9234a
+
+// header heights
+$header-top-height:    rem(38)
+$header-bottom-height: rem(99)
+
+$header-height:        $header-bottom-height + $header-top-height
+
+// border-radiuses
+$radius:    5px
+$radius-sm: 3px
+
 
 =windowHeight($offset: 0px)
   height: calc(100vh - #{$offset})

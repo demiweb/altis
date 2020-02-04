@@ -1,0 +1,32 @@
+---
+title: home
+page: home
+services: {
+  mod: 'section__block',
+  items: [
+    { title: 'Запчасти DAF' },
+    { title: 'Запчасти MAN' },
+    { title: 'Запчасти грузовики Renault ' },
+    { title: 'Запчасти грузовики  Iveco ' },
+    { title: 'Запчасти Scania' },
+    { title: 'Запчасти грузовики Mercedes' },
+    { title: 'Запчасти для грузовиков (универсальные)' },
+    { title: 'Запчасти на полуприцепы' },
+    { title: 'Запчасти грузовики Volvo ' }
+  ]
+}
+---
+{% extends "layouts/_has-aside.html" %}
+
+{% block content %}
+  <!-- begin section -->
+  <section class="">
+    {% include "partials/sliders/_banner.html" %}
+  </section>
+  <!-- end section -->  
+{% endblock %}
+
+{% block bottom %}
+  {% include "partials/sections/_s-tabs-slider.html" %}
+  {% include "partials/sections/_s-text.html" %}
+{% endblock %}

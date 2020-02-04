@@ -1,0 +1,36 @@
+{%set
+tabs = [
+  {
+    tabTitle: 'Cкидки',
+    active: true
+  },
+  {
+    tabTitle: 'Новые поступления'
+  },
+  {
+    tabTitle: 'Популярные'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--bg js-lazy" data-background-image="./img/7a1e0dac-ed61-42e1-a206-9ce908cf095e.jpg">
+  <!-- begin items-tabs -->
+  <div class="items-tabs">
+    <div class="items-tabs__tabs">
+      {% for i in tabs %}
+      <button class="item-tabs__tab js-tab{% if i.active %} item-tabs__tab--active{% endif %}">{{ i.tabTitle | safe }}</button>
+      {% endfor %}
+    </div>
+
+    <div class="items-tabs__content">
+      {% for i in tabs %}
+      <div class="item-tabs__item js-tabs-content{% if i.active %} item-tabs__item--active{% endif %}">
+        {% include "partials/sliders/_items.html" %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- end items-tabs -->
+</section>
+<!-- end section -->

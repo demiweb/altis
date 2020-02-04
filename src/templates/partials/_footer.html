@@ -1,5 +1,103 @@
 <!-- begin footer -->
 <footer class="footer">
-  hello from footer
+  <div class="footer__top js-lazy" data-background-image="./img/1440x400-banner-iveco-new-S-way.jpg">
+    <div class="container">
+      <div class="grid">
+        <div class="col col--3">
+          <div class="footer__block">
+            <h3 class="title title--h3">ИНФОРМАЦИЯ</h3>
+
+            {{ mixins.list(
+              name = 'nav',
+              modifications = { wrap: 'nav--footer', item: '', link: '' },
+              list = [
+                { link: 'О нас' },
+                { link: 'Доставка' },
+                { link: 'Оплата' },
+                { link: 'Условия сотрудничества' },
+                { link: 'Региональные представители' }
+              ]
+            ) }}
+          </div>
+        </div>
+
+        <div class="col col--3">
+          <div class="footer__block">
+            <h3 class="title title--h3">Каталог</h3>
+
+            {{ mixins.list(
+              name = 'nav',
+              modifications = { wrap: 'nav--footer', item: '', link: '' },
+              list = [
+                { link: 'Возврат и обмен товара' },
+                { link: 'Бренды' },
+                { link: 'Интересное' },
+                { link: 'Реферальная программа' },
+                { link: 'Товары со скидкой' },
+                { link: 'Карта сайта' }
+              ]
+            ) }}
+          </div>
+        </div>
+
+        <div class="col col--3">
+          <div class="footer__block">
+            <h3 class="title title--h3">Соц сети</h3>
+
+            {{ mixins.list(
+              name = '',
+              hasWrap = true,
+              modifications = { wrap: 'nav nav--footer', item: '', link: '' },
+              list = [
+                { link: mixins.icon('facebook') + 'Facebook' },
+                { link: mixins.icon('youtube') + 'Youtube' },
+                { link: mixins.icon('instagram') + 'Instagram' }
+              ]
+            ) }}
+          </div>
+        </div>
+
+        <div class="col col--3">
+          <div class="footer__block">
+            <h3 class="title title--h3">НАШИ КОНТАКТЫ</h3>
+
+            {{ mixins.list(
+              name = '',
+              hasWrap = true,
+              modifications = { wrap: 'nav nav--footer', item: '', link: '' },
+              list = [
+                { link: mixins.icon('phone-call') + '050-140-07-42', href: 'tel:0501400742' },
+                { link: mixins.icon('phone-call') + '093-675-31-34', href: 'tel:0936753134' },
+                { link: mixins.icon('phone-call') + '098-897-75-07', href: 'tel:0988977507' },
+                { link: mixins.icon('envelope') + '6753134@gmail.com', href: 'mailto:6753134@gmail.com' },
+                { item: mixins.icon('clock') + 'пн-пт 9.00 - 18.00 сб 9.00 - 16.00' }
+              ]
+            ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__middle">
+    <div class="container">
+      <div class="grid">
+        <div class="col col--8 col--offset-2">
+          <div class="footer__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</div>
+        </div>
+
+        <div class="col col--2">
+          <img class="js-lazy" alt="" width="60" src="about:blank" data-src="./img/mastercard.svg"/>
+          <img class="js-lazy" alt="" width="60" src="about:blank" data-src="./img/Former_Visa_(company)_logo.svg"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      Altis Avto (c) 2019
+    </div>
+  </div>
 </footer>
 <!-- end footer -->

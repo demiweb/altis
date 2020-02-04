@@ -1,0 +1,24 @@
+<!-- begin slider -->
+<div class="section__block slider__wrap slider--banner__wrap">
+  <div class="swiper-container js-slider" data-slider="banner">
+    <div class="swiper-wrapper slider">
+      {% for i in range(0, 3) %}
+      <div class="swiper-slide banner-slide js-lazy" data-background-image="./img/bg-banner-01-image copy.png"> 
+        <h2 class="banner-slide__title title title--h1">Хороший <br>товар</h2>
+        
+
+        <div class="banner-slide__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</div>
+
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <div class="slider__pagination"></div>
+  
+  <div class="slider__controls">
+    <button class="slider__prev prev js-slider-prev"></button>
+    <button class="slider__next next js-slider-next"></button>
+  </div>
+</div>
+<!-- end slider -->

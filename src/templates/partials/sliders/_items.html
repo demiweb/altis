@@ -1,0 +1,26 @@
+<!-- begin slider -->
+<div class="slider__wrap slider--items__wrap">
+  <div class="swiper-container js-slider" data-slider="items">
+    <div class="swiper-wrapper slider">
+      {% for i in range(0, 10) %}
+      {{ mixins.itemCard(
+        mod = 'swiper-slide'
+      ) }}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="slider__controls">
+    <button class="slider__prev prev js-slider-prev"></button>
+    <button class="slider__next next js-slider-next"></button>
+  </div>
+
+  <div class="slider__btn">
+    {{ mixins.btn(
+      title = 'Показать еще 20',
+      mod = 'btn--transp-blue',
+      href = false
+    ) }}
+  </div>
+</div>
+<!-- end slider -->
