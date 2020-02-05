@@ -1,5 +1,5 @@
 .btn
-  display: inline-block
+  +inline-flex(center, center)
   background-color: $accent-aux
   border: 1px solid  $accent-aux
   border-radius: $radius
@@ -17,3 +17,9 @@
     min-width: 215px
     border-color: $accent
     padding: .5em 1em
+  &--lg
+    font-size: em(17)
+    height: rem(43)
+  &--full
+    min-width: 0
+    width: 100%

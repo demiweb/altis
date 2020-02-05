@@ -28,6 +28,8 @@ body
 .main
   padding-top: rem(10)
   // padding-bottom: rem(10)
+  &__breadcrumbs
+    margin-bottom: rem(10)
 
 .search
   +flex()
@@ -87,4 +89,55 @@ body
   +shadow
   border-radius: $radius
   padding: rem(8)
+  &--lg
+    padding: rem(20) rem(20) rem(8)
+
+.meta-block
+  +shadow
+  border-radius: $radius
+  overflow: hidden
+  background-color: $accent
+  &__top
+    // background-color: $accent
+    color: $white
+    font-size: em(16)
+    padding: .5rem 1rem
+    &--has-icon
+      +flex(flex-start, center)
+  &__top-icon
+    @extend .burger
+  &__title
+    text-align: center
+    flex-grow: 1
+  &__content
+    background-color: $white
+    border-radius: $radius
+    padding: rem(8) rem(15)
+  &__input
+    margin-bottom: rem(10)
+
+
+.rating
+  color: #f5b800
+  +flex(flex-start, center)
+  .icon
+    font-size: em(17)
+    +notlast
+      margin-right: .3em
+
+.list
+  font-size: em(12)
+  li
+    +list-bullet
+    position: relative
+    padding-left: em(15)
+    +notlast
+      margin-bottom: rem(10)
+    &::before      
+      position: absolute
+      top: 0
+      left: 0
+      color: $accent
+      font-size: 1.5em
+      line-height: .9
     

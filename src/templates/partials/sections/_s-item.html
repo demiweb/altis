@@ -1,0 +1,83 @@
+{%set
+tabs = [
+  {
+    tabTitle: 'Описание',
+    active: true
+  },
+  {
+    tabTitle: 'Характеристики'
+  },
+  {
+    tabTitle: 'Аналоги'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="">
+  <!-- begin block -->
+  <div class="block block--lg">
+    {% include "partials/_item-full.html" %}
+
+    <!-- begin items-tabs -->
+    <div class="section__block-sm items-tabs">
+      <div class="items-tabs__tabs">
+        {% for i in tabs %}
+        <button class="items-tabs__tab js-tab{% if i.active %} items-tabs__tab--active{% endif %}">{{ i.tabTitle | safe }}</button>
+        {% endfor %}
+      </div>
+
+      <div class="items-tabs__content items-tabs__content--no-shadow">
+        {% for i in tabs %}
+        <div class="items-tabs__item js-tabs-content{% if i.active %} items-tabs__item--active{% endif %}">
+
+          {{ mixins.list(
+            name = 'item-descr',
+            modifications = { wrap: '', item: 'item-descr__item', link: '' },
+            list = [
+              { item: 'Передний амортизатор для грузовика  Daf 105 производства - Сакс' },
+              { item: 'Тип амортизатора: масляный, верхние и нижнее гашения вибрации' },
+              { item: 'Длина в сжатом виде: 402 мм' },
+              { item: 'Длина в разжатом  виде: 694 мм' },
+              { item: 'Наружная резьба: M16 x 1,5,  длина резьбы : 34 мм' }
+            ]
+          ) }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end items-tabs -->
+
+    <!-- begin items-tabs -->
+    <div class="section__block-sm items-tabs">
+      <div class="items-tabs__tabs">
+        <button class="items-tabs__tab items-tabs__tab--active">Аналоги</button>
+      </div>
+
+      <div class="items-tabs__content items-tabs__content--no-shadow">
+        <div class="items-tabs__item items-tabs__item--active">
+          <!-- begin items -->
+          <div class="items">
+            {% for i in range(0, 4) %}
+            {{ mixins.itemCard(
+              mod = 'items__item'
+            ) }}
+            {% endfor %}
+          </div>
+          <!-- end items -->
+        </div>
+      </div>
+
+      <div class="items-tabs__btn">
+        {{ mixins.btn(
+          title = 'Показать еще 20',
+          mod = 'btn--transp-blue',
+          href = false
+        ) }}
+      </div>
+    </div>
+    <!-- end items-tabs -->
+  </div>
+  <!-- end block -->
+</section>
+<!-- end section -->

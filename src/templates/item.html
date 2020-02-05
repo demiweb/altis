@@ -1,28 +1,24 @@
 ---
-title: catalog
-page: catalog
+title: item
+page: item
 breadcrumbs: {
   list: [
     { link: 'Магазин автозапчастей' },
     { item: '>' },
     { link: 'Грузовые авто' },
     { item: '>' },
-    { link: 'DAF XF' },
-    { item: '>' },
-    { item: ' Амортизатор', modItem: 'breadcrumbs__item-current' }
+    { item: ' Передний амортизатор Daf 105', modItem: 'breadcrumbs__item-current' }
   ]
 }
 aside: {
-  sliders: true,
   filters: true,
-  scedule: true,
   contacts: true
 }
 ---
 {% extends "layouts/_has-aside.html" %}
 
 {% block content %}
-  {% include "partials/sections/_s-catalog.html" %}
+  {% include "partials/sections/_s-item.html" %}
 {% endblock %}
 
 {% block bottom %}

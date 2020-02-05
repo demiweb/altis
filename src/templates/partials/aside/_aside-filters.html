@@ -666,17 +666,17 @@ filters = [
 ]
 %}
 
-<div class="aside__block aside-block">
-  <div class="aside-block__top aside-block__top--has-icon">
-    <div class="aside-block__top-icon"><span></span></div>
+<div class="aside__block meta-block">
+  <div class="meta-block__top meta-block__top--has-icon">
+    <div class="meta-block__top-icon"><span></span></div>
 
-    <div class="aside-block__title">Подбор по каталогу</div>
+    <div class="meta-block__title">Подбор по каталогу</div>
   </div>
 
-  <div class="aside-block__content">
+  <div class="meta-block__content">
     {{ mixins.input(
       name = 'select',
-      mod = 'aside-block__input',
+      mod = 'meta-block__input',
       type = '',
       placeholder = '',
       value = '',
@@ -692,7 +692,7 @@ filters = [
 
     {{ mixins.input(
       name = 'select',
-      mod = 'aside-block__input',
+      mod = 'meta-block__input',
       type = '',
       placeholder = '',
       value = '',
@@ -707,7 +707,7 @@ filters = [
     ) }}
 
     <!-- begin aside-filters -->
-    <ul class="aside-block__filters aside-filters js-accordion">
+    <ul class="meta-block__filters aside-filters js-accordion">
       {% for i in filters %}
       <li class="aside-filters__item">
         <button class="aside-filters__btn">

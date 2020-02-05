@@ -9,3 +9,49 @@
     margin-left: $grid-gap / 2
     margin-right: $grid-gap / 2
     margin-bottom: $grid-gap
+
+.item-full
+  &__top
+    +flex(space-between)
+    margin-bottom: rem(5)
+  &__subttl
+    font-size: em(12)
+    margin-bottom: rem(15)
+  &__body
+    +flex(flex-start, normal, row, wrap)
+  &__gallery
+    width: percentage(300/ 805)
+  &__content
+    padding-left: rem(20)
+    width: percentage((805 - 300) / 805)
+  &__price-block
+    +flex(flex-start, center)
+    // margin-right: rem(-10)
+    margin-bottom: rem(20)
+  &__price-labels
+    +flex(space-between, center)
+    margin-right: rem(10)
+    width: 65%
+  &__descr-title
+    font-size: em(18)
+    font-weight: 500
+    margin-bottom: rem(15)
+    &--mb-0
+      margin-bottom: 0
+  &__btn
+    width: 35%
+  &__descr
+    +flex(flex-start, normal, row, wrap)
+  &__descr-block
+    width: 50%
+    padding-right: rem(30)
+    margin-bottom: rem(30)
+    &--full
+      width: 100%
+
+.item-descr
+  &__item
+    padding: rem(8) rem(10)
+    &:nth-child(even)
+      background-color: $light
+

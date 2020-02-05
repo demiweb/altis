@@ -1,0 +1,35 @@
+<!-- begin gallery -->
+<div class="gallery js-gallery">
+  <div class="gallery__slider">
+    <!-- begin slider -->
+    <div class="slider__wrap slider--gallery__wrap">
+      <div class="swiper-container js-slider" data-slider="gallery">
+        <div class="swiper-wrapper slider slider--gallery js-lightgallery">
+          {% for i in range(0, 5) %}
+          <a
+            href="./img/gallery/dffe93df49c69b3b32e1f98b14e4.jpg"
+            class="swiper-slide gallery__img js-lazy"
+            data-background-image="./img/gallery/dffe93df49c69b3b32e1f98b14e4.jpg"
+            ></a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- end slider -->
+  </div>
+
+  <div class="gasllery__thumbs">
+    <!-- begin slider -->
+    <div class="slider__wrap slider--thmbs__wrap">
+      <div class="swiper-container js-slider" data-slider="thumbs">
+        <div class="swiper-wrapper">
+          {% for i in range(0, 5) %}
+          <button class="swiper-slide gallery__thumb js-lazy" data-background-image="./img/gallery/thumb.jpg"></button>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- end slider -->
+  </div>
+</div>
+<!-- end gallery -->

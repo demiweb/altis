@@ -27,7 +27,7 @@
               {% if breadcrumbs %}
               {{ mixins.list(
                 name = 'breadcrumbs',
-                modifications = { wrap: 'main__breadcrumbs', item: '', link: '' },
+                modifications = { list: 'main__breadcrumbs breadcrumbs', item: '', link: '' },
                 list = breadcrumbs.list
               ) }}
               {% endif %}

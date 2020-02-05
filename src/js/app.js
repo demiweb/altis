@@ -11,6 +11,7 @@ import classNames from './classNames'
 import sayHello from './lib/sayHello'
 import setHTMLClassNames from './components/setHTMLClassNames'
 import setLazy from './components/setLazy'
+import setGallery from './components/setGallery'
 
 import setSelects from './components/Select/Select'
 import Slider from './components/Slider/Slider'
@@ -50,6 +51,7 @@ class App {
       setHTMLClassNames,
       setLazy,
       setSelects,
+      setGallery,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))

@@ -60,6 +60,7 @@
       font-size: rem(20)
 
 .price-label
+  $this: &
   +inline-flex(center, center)
   // display: inline-block
   // text-align: center
@@ -78,3 +79,14 @@
     font-weight: 400
     font-size: 1em
     text-decoration: line-through
+    &#{$this}--lg
+      font-size: em(24)
+      color: #868686
+  &--lg
+    font-size: em(36)
+    font-weight: 500
+    height: rem(43)
+    min-width: 115px
+    padding: 0
+  &--text
+    color: inherit

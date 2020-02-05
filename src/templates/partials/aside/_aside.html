@@ -1,13 +1,19 @@
 <!-- begin aside -->
 <aside class="aside">
-  {% include "partials/aside/_aside-filters.html" %}
+  {% if aside.filters %}
+    {% include "partials/aside/_aside-filters.html" %}
+  {% endif %}
 
   {% if aside.sliders %}
     {% include "partials/aside/_aside-sliders.html" %}
   {% endif %}
   
-  {% include "partials/aside/_aside-contacts.html" %}
-
-  {% include "partials/aside/_aside-scedule.html" %}
+  {% if aside.contacts %}
+    {% include "partials/aside/_aside-contacts.html" %}
+  {% endif %}
+  
+  {% if aside.scedule %}
+    {% include "partials/aside/_aside-scedule.html" %}
+  {% endif %}
 </aside>
 <!-- end aside -->

@@ -1,5 +1,6 @@
 export default {
   lazy: 'js-lazy',
+  lightgallery: 'js-lightgallery',
   menu: {
     burger: 'js-burger',
     menu: 'js-menu',
@@ -19,5 +20,6 @@ export default {
       initialized: 'swiper-container-initialized',
       activeSlide: 'swiper-slide-active',
     },
+    gallery: 'js-gallery',
   },
 }

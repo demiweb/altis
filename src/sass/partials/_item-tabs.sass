@@ -23,6 +23,12 @@
     padding: rem(15)
     position: relative
     z-index: 2
+    +notlast
+      margin-bottom: rem(15)
+    &--no-shadow
+      box-shadow: none
+      border: 1px solid  $c-border
+
   &__item
     +hidden
     overflow: hidden
@@ -30,5 +36,7 @@
     &--active
       +visible
       max-height: none
+  &__btn
+    text-align: center
 
   

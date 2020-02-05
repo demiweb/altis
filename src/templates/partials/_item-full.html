@@ -1,0 +1,89 @@
+{%set
+descr = [
+  {
+    title: 'Доставка:',
+    list: [
+      { item: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' },
+      { item: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' },
+      { item: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' }
+    ]
+  },
+  {
+    title: 'Оплата:',
+    list: [
+      { item: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' },
+      { item: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' },
+      { item: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' }
+    ]
+  },
+  {
+    mod: 'item-full__descr-block--full',
+    title: 'Гарантия:',
+    list: [
+      { item: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' },
+      { item: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' },
+      { item: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' }
+    ]
+  }
+]
+%}
+
+<!-- begin item-full -->
+<div class="section__block item-full">
+  <div class="item-full__top">
+    <h2 class="item-full__title title title--h2">Передний амортизатор Daf 105 (290 980 Sachs)</h2>
+
+    {% include "partials/_rating.html" %}
+  </div>
+
+  <div class="item-full__subttl">Код товара: 423790</div>
+
+  <div class="item-full__body">
+    <div class="item-full__gallery">
+      {% include "partials/_gallery.html" %}
+    </div>
+
+    <div class="item-full__content">
+      <div class="item-full__status status">
+        <div class="status__icon">
+          {{ mixins.icon('checkmark') }}
+        </div>
+        Есть в наличии
+      </div>
+
+      <div class="item-full__price-block">
+        <div class="item-full__price-labels">
+          <div class="item-full__descr-title item-full__descr-title--mb-0">Цена:</div>
+          <div class="item-full__price-label price-label price-label--lg price-label--text">
+            68 <small>грн</small>
+          </div>
+
+          <div class="item-full__price-label price-label price-label--lg price-label--old">
+            68 грн
+          </div>
+        </div>
+
+        {{ mixins.btn(
+          title = 'Купить',
+          mod = 'item-full__btn btn--lg btn--full'
+        ) }}
+      </div>
+
+      <div class="item-full__descr">
+        {% for i in descr %}
+        <div class="item-full__descr-block{% if i.mod %} {{ i.mod }}{% endif %}">
+          <div class="item-full__descr-title">{{ i.title | safe }}</div>
+
+          {{ mixins.list(
+            name = 'list',
+            modifications = { wrap: 'item-full__descr-list', item: '', link: '' },
+            list = i.list
+          ) }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+</div>
+<!-- end item-full -->
