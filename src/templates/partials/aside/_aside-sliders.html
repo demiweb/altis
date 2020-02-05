@@ -1,0 +1,36 @@
+<div class="aside__block aside-block">
+  <div class="aside-block__top">Фильтры</div>
+  <div class="aside-block__content">
+    {{ mixins.input(
+      name = 'checkbox',
+      mod = 'aside-block__input',
+      type = 'checkbox',
+      placeholder = '',
+      value = '',
+      fieldClass = '',
+      label = { last: '<span>передние</span>' }
+    ) }}
+
+    {{ mixins.input(
+      name = 'checkbox',
+      mod = 'aside-block__input',
+      type = 'checkbox',
+      placeholder = '',
+      value = '',
+      fieldClass = '',
+      label = { last: '<span>задние</span>' }
+    ) }}
+
+    <div class="aside-block__input input input--range">
+      <label class="input__label">Длина</label>
+
+      <div class="input__input"></div>
+    </div>
+
+    <div class="aside-block__input input input--range">
+      <label class="input__label">Цена</label>
+
+      <div class="input__input"></div>
+    </div>
+  </div>
+</div>

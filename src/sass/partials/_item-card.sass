@@ -1,0 +1,80 @@
+.item-card
+  +flex(flex-start, normal, column)
+  border: 1px solid $c-border
+  border-radius: $radius
+  padding: em(8)
+  height: auto
+  &__img
+    display: block
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: contain
+    margin-bottom: em(10)
+    padding-top: 70%
+  &__title
+    text-align: center
+    margin-bottom: rem(15)
+  &__label
+    display: block
+    margin-bottom: em(10)
+    margin-left: em(-8)
+  &__text
+    font-size: em(15.64)
+    margin-bottom: em(5)
+  &__content
+    display: block
+    flex-grow: 1
+    padding-bottom: em(5)
+    border-bottom: 1px solid $c-border
+  &__price-labels
+    +flex
+    margin-left: em(-8)
+    margin-right: em(-8)
+    padding-top: em(14)
+  &__price-label
+    width: calc(50% - #{em(16)})
+    margin-left: em(8)
+    margin-right: em(8)
+
+
+.card-label
+  display: inline-block
+  color: $white
+  text-transform: uppercase
+  font-size: em(12.38)
+  font-weight: 300
+  background-color: $accent-aux
+  border-radius: $radius-sm
+  padding: .5em 1em
+  text-align: center
+
+.status
+  font-size: em(17.3)
+  font-weight: 500
+  +inline-flex(flex-start, center)
+  &__icon
+    color: $accent
+    font-size: 0
+    margin-right: .5rem
+    .icon
+      font-size: rem(20)
+
+.price-label
+  +inline-flex(center, center)
+  // display: inline-block
+  // text-align: center
+  background-color: #f3f3f3
+  border-radius: $radius
+  font-weight: 600
+  font-size: em(21)
+  color: $accent
+  padding: .5em
+  height: rem(35)
+  position: relative
+  small
+    font-size: em(16.91, 21)
+  &--old
+    color: inherit
+    font-weight: 400
+    font-size: 1em
+    text-decoration: line-through

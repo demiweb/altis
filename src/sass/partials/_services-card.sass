@@ -1,0 +1,22 @@
+.services-card
+  $this: &
+  +shadow
+  display: block
+  overflow: hidden
+  border-radius: $radius
+  background-color: $white
+  +tr(background-color .3s, color .3s)
+  +hover
+    background-color: $accent
+    color: $white
+  &__img
+    display: block
+    +cover
+    background-color: $c-border
+    padding-top: percentage(240 / 260)
+  &__title
+    padding: .5em 1em
+    +flex(center, center)
+    text-align: center
+    height: rem(50)
+    overflow: hidden

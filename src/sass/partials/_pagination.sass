@@ -1,0 +1,31 @@
+.pagination
+  font-size: em(16)
+  font-weight: 500
+  +flex(flex-end, center)
+  li
+    display: inline-block
+    +notfirst
+      margin-left: rem(4)
+  a
+    +flex(center, center)
+    background-color: #f4f4f4
+    height: rem(50)
+    min-width: rem(50)
+    border-radius: $radius-lg
+    +tr(background-color .3s, opacity .3s, color .3s)
+    +hover
+      background-color: $accent
+      color: $white
+  .next, .prev
+    background-color: $accent
+    color: $white
+    +hover
+      opacity: .7
+    +before
+      +icon-arrow(1.1, 1.1, .1, currentColor, 45, em)
+      display: block
+      margin-left: .4em
+  .next
+    transform: scaleX(-1)
+
+

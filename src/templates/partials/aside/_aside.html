@@ -2,6 +2,10 @@
 <aside class="aside">
   {% include "partials/aside/_aside-filters.html" %}
 
+  {% if aside.sliders %}
+    {% include "partials/aside/_aside-sliders.html" %}
+  {% endif %}
+  
   {% include "partials/aside/_aside-contacts.html" %}
 
   {% include "partials/aside/_aside-scedule.html" %}

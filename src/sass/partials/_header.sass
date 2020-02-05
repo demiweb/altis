@@ -21,3 +21,60 @@
     flex-grow: 1
   &__cart
     margin-left: rem(40)
+  &__contacts
+    padding-left: rem(35)
+
+
+
+.header-cart
+  position: relative
+  color: #9e9e9e
+  padding-top: 1em
+  padding-right: 1em
+  .icon
+    font-size: em(33)
+  &__sup
+    +flex(center, center)
+    position: absolute
+    z-index: 1
+    top: rem(-11)
+    right: rem(-11)
+    background-color: $accent-aux
+    color: $white
+    border-radius: 50%
+    height: rem(22)
+    min-width: rem(22)
+
+.burger 
+  display: flex
+  align-items: center
+  justify-content: center
+  width: rem(23)
+  height: rem(19)
+  position: relative
+  span
+    display: block
+    &, &::after, &::before
+      width: 100%
+      height: rem(2)
+      background-color: currentColor
+      backface-visibility: hidden
+      +tr(transform .3s)
+    &::after, &::before
+      content: ""
+      position: absolute
+      left: 0
+      // top: 0
+    &::after
+      top: 0
+      // top: 50%
+      // margin-top: rem(-1)
+    &::before
+      bottom: 0
+  // &--active 
+  //   span
+  //     background-color: transparent
+  //     &::before
+  //       transform: rotate(45deg) translate(-7px,-5px)
+  //     &::after
+  //       transform: rotate(-45deg) translate(-6px,4px)

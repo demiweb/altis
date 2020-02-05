@@ -1,6 +1,19 @@
 .nav
-  font-size: em(10)
+  font-size: em(10.78)
   li
-    display: inline-block
+    &:not(.footer-contact)
+      display: inline-block
     +notlast
       margin-right: rem(25)
+  a
+    +tr(color .3s)
+    +hover
+      color: $accent
+
+  &--footer
+    li
+      &:not(.footer-contact)
+        display: block
+      +notlast
+        margin-right: 0
+        margin-bottom: .5em 

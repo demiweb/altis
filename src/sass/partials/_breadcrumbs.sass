@@ -1,0 +1,14 @@
+.breadcrumbs
+  font-size: em(12)
+  border: 1px solid  $c-border
+  background-color: #efefef
+  border-radius: $radius
+  padding: rem(8) rem(15)
+  li
+    display: inline-block
+  a
+    +tr(color .3s)
+    +hover
+      color: $accent
+  &__item-current
+    color: $accent

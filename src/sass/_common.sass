@@ -25,26 +25,66 @@ body
   display: inline-block
   font-size: 0
 
+.main
+  padding-top: rem(10)
+  // padding-bottom: rem(10)
+
 .search
   +flex()
   border-radius:  $radius-sm
   overflow: hidden
   &__input, &__btn
-    height: rem(35)
+    height: rem(36)
   &__input
     background-color: $light
     font-size: em(9.24)
     font-weight: 300
     padding: 0.1em 1em
+    width: 185px
   &__btn
     +flex(center, center)
     color: $white
     background-color: $accent
     
-    width: rem(35)
-    height: rem(35)
+    width: rem(36)
+    height: rem(36)
     flex: 0 0 rem(40)
     .icon
       font-size: rem(22)
 
+
+.scedule
+  +clr
+  &__title, &__text
+    margin-bottom: .7rem
+  &__title
+    float: left
+    color: $accent
+    margin-right: .5em
+
+.scroll-top
+  position: fixed
+  z-index: 10
+  bottom: rem(30)
+  right: rem(30)
+  +flex(center, center)
+  font-size: rem(45)
+  height: 1em
+  width: 1em
+  border-radius: 50%
+  background-color: $accent
+  color: $white
+  +tr(opacity .3s)
+  +before
+    +icon-arrow(.4, .4, .04, currentColor, 135, em)
+    display: block
+    margin-top: .15em
+  +hover
+    opacity: .7
+
+.block
+  background-color: $white
+  +shadow
+  border-radius: $radius
+  padding: rem(8)
     

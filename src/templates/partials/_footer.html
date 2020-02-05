@@ -5,10 +5,11 @@
       <div class="grid">
         <div class="col col--3">
           <div class="footer__block">
-            <h3 class="title title--h3">ИНФОРМАЦИЯ</h3>
+            <h3 class="footer__title title title--h3">ИНФОРМАЦИЯ</h3>
 
             {{ mixins.list(
               name = 'nav',
+              hasWrap = true,
               modifications = { wrap: 'nav--footer', item: '', link: '' },
               list = [
                 { link: 'О нас' },
@@ -23,10 +24,11 @@
 
         <div class="col col--3">
           <div class="footer__block">
-            <h3 class="title title--h3">Каталог</h3>
+            <h3 class="footer__title title title--h3">Каталог</h3>
 
             {{ mixins.list(
               name = 'nav',
+              hasWrap = true,
               modifications = { wrap: 'nav--footer', item: '', link: '' },
               list = [
                 { link: 'Возврат и обмен товара' },
@@ -42,16 +44,16 @@
 
         <div class="col col--3">
           <div class="footer__block">
-            <h3 class="title title--h3">Соц сети</h3>
+            <h3 class="footer__title title title--h3">Соц сети</h3>
 
             {{ mixins.list(
               name = '',
               hasWrap = true,
-              modifications = { wrap: 'nav nav--footer', item: '', link: '' },
+              modifications = { wrap: 'nav nav--footer', item: 'footer-contact' },
               list = [
-                { link: mixins.icon('facebook') + 'Facebook' },
-                { link: mixins.icon('youtube') + 'Youtube' },
-                { link: mixins.icon('instagram') + 'Instagram' }
+                { item: mixins.icon('facebook') + '<a href="#">Facebook</a>' },
+                { item: mixins.icon('youtube') + '<a href="#">Youtube</a>' },
+                { item: mixins.icon('instagram') + '<a href="#">Instagram</a>' }
               ]
             ) }}
           </div>
@@ -59,17 +61,17 @@
 
         <div class="col col--3">
           <div class="footer__block">
-            <h3 class="title title--h3">НАШИ КОНТАКТЫ</h3>
+            <h3 class="footer__title title title--h3">НАШИ КОНТАКТЫ</h3>
 
             {{ mixins.list(
               name = '',
               hasWrap = true,
-              modifications = { wrap: 'nav nav--footer', item: '', link: '' },
+              modifications = { wrap: 'nav nav--footer', item: 'footer-contact footer-contact--sm' },
               list = [
-                { link: mixins.icon('phone-call') + '050-140-07-42', href: 'tel:0501400742' },
-                { link: mixins.icon('phone-call') + '093-675-31-34', href: 'tel:0936753134' },
-                { link: mixins.icon('phone-call') + '098-897-75-07', href: 'tel:0988977507' },
-                { link: mixins.icon('envelope') + '6753134@gmail.com', href: 'mailto:6753134@gmail.com' },
+                { item: mixins.icon('phone-call') + '<a href="tel:0501400742">050-140-07-42</a>' },
+                { item: mixins.icon('phone-call') + '<a href="tel:0936753134">093-675-31-34</a>' },
+                { item: mixins.icon('phone-call') + '<a href="tel:0988977507">098-897-75-07</a>' },
+                { item: mixins.icon('envelope') + '<a href="mailto:6753134@gmail.com">6753134@gmail.com</a>' },
                 { item: mixins.icon('clock') + 'пн-пт 9.00 - 18.00 сб 9.00 - 16.00' }
               ]
             ) }}
@@ -87,8 +89,10 @@
         </div>
 
         <div class="col col--2">
-          <img class="js-lazy" alt="" width="60" src="about:blank" data-src="./img/mastercard.svg"/>
-          <img class="js-lazy" alt="" width="60" src="about:blank" data-src="./img/Former_Visa_(company)_logo.svg"/>
+          <div class="footer__imgs">
+            <img class="js-lazy" alt="" width="60" src="about:blank" data-src="./img/mastercard.svg"/>
+            <img class="js-lazy" alt="" width="60" src="about:blank" data-src="./img/Former_Visa_(company)_logo.svg"/>
+          </div>
         </div>
       </div>
     </div>

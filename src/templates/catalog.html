@@ -1,0 +1,27 @@
+---
+title: catalog
+page: catalog
+breadcrumbs: {
+  list: [
+    { link: 'Магазин автозапчастей' },
+    { item: '>' },
+    { link: 'Грузовые авто' },
+    { item: '>' },
+    { link: 'DAF XF' },
+    { item: '>' },
+    { item: ' Амортизатор', modItem: 'breadcrumbs__item-current' }
+  ]
+}
+aside: {
+  sliders: true
+}
+---
+{% extends "layouts/_has-aside.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-catalog.html" %}
+{% endblock %}
+
+{% block bottom %}
+  {% include "partials/sections/_s-text.html" %}
+{% endblock %}

@@ -1,0 +1,11 @@
+.items
+  $grid-gap: rem(10)
+  +flex(flex-start, normal, row, wrap)
+  font-size: em(12)
+  margin-left: -$grid-gap / 2
+  margin-right: -$grid-gap / 2
+  &__item
+    width: calc(25% - #{$grid-gap})
+    margin-left: $grid-gap / 2
+    margin-right: $grid-gap / 2
+    margin-bottom: $grid-gap

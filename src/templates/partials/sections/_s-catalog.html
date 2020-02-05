@@ -1,0 +1,17 @@
+<!-- begin section -->
+<section class="section">
+  <h2 class="section__title title title--h2 text-center">Запчасти на DAF</h2>
+
+  <!-- begin block -->
+  <div class="section__block block items">
+      {% for i in range(0, 20) %}
+        {{ mixins.itemCard(
+          mod = 'items__item'
+        ) }}
+      {% endfor %}
+  </div>
+  <!-- end block -->
+
+  {% include "partials/_pagination.html" %}
+</section>
+<!-- end section -->

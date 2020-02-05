@@ -667,71 +667,79 @@ filters = [
 %}
 
 <div class="aside__block aside-block">
-  <div class="aside-block__top">
-    <div class="aside-block__top-icon"></div>
+  <div class="aside-block__top aside-block__top--has-icon">
+    <div class="aside-block__top-icon"><span></span></div>
 
-    Подбор по каталогу
+    <div class="aside-block__title">Подбор по каталогу</div>
   </div>
 
-  {{ mixins.input(
-    name = 'select',
-    mod = 'aside-block__input',
-    type = '',
-    placeholder = '',
-    value = '',
-    fieldClass = 'js-select',
-    options = [
-      { value: '1', option: 'Все' },
-      { value: '2', option: 'Все1' },
-      { value: '3', option: 'Все2' },
-      { value: '4', option: 'Все3' }
-    ],
-    label = { first: '<label>Марка</label>'}
-  ) }}
+  <div class="aside-block__content">
+    {{ mixins.input(
+      name = 'select',
+      mod = 'aside-block__input',
+      type = '',
+      placeholder = '',
+      value = '',
+      fieldClass = 'js-select',
+      options = [
+        { value: '1', option: 'Все' },
+        { value: '2', option: 'Все1' },
+        { value: '3', option: 'Все2' },
+        { value: '4', option: 'Все3' }
+      ],
+      label = { first: '<label class="input__label">Марка</label>'}
+    ) }}
 
-  {{ mixins.input(
-    name = 'select',
-    mod = 'aside-block__input',
-    type = '',
-    placeholder = '',
-    value = '',
-    fieldClass = 'js-select',
-    options = [
-      { value: '1', option: 'Все' },
-      { value: '2', option: 'Все1' },
-      { value: '3', option: 'Все2' },
-      { value: '4', option: 'Все3' }
-    ],
-    label = { first: '<label>Модель</label>'}
-  ) }}
+    {{ mixins.input(
+      name = 'select',
+      mod = 'aside-block__input',
+      type = '',
+      placeholder = '',
+      value = '',
+      fieldClass = 'js-select',
+      options = [
+        { value: '1', option: 'Все' },
+        { value: '2', option: 'Все1' },
+        { value: '3', option: 'Все2' },
+        { value: '4', option: 'Все3' }
+      ],
+      label = { first: '<label class="input__label">Модель</label>'}
+    ) }}
 
-  <!-- begin aside-filters -->
-  <ul class="aside-block__filters aside-filters js-accordion">
-    {% for i in filters %}
-    <li class="aside-filters__item">
-      <div class="aside-filters__icon"></div>
-      {{ i.title | safe }}
-      {% if i.sublist %}
-      <ul class="aside-filters__sublist">
-        {% for j in i.sublist %}
-        <li class="aside-filters__subitem">
-          {% if j.sublist %}
-          <div class="aside-filters__icon"></div>
-          {% endif %}
-          {{ j.title | safe }}
-          {% if j.sublist %}
-          <ul class="aside-filters__sublist aside-filters__sublist--dark">
-            {% for k in j.sublist %}
-            <li class="aside-filters__subitem">{{ k.title | safe }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-  <!-- end aside-filters -->  
+    <!-- begin aside-filters -->
+    <ul class="aside-block__filters aside-filters js-accordion">
+      {% for i in filters %}
+      <li class="aside-filters__item">
+        <button class="aside-filters__btn">
+          <span class="aside-filters__icon"></span>
+          <span class="aside-filters__title">{{ i.title | safe }}</span>
+        </button>
+        {% if i.sublist %}
+        <ul class="aside-filters__sublist">
+          {% for j in i.sublist %}
+          <li class="aside-filters__subitem">
+            {% if j.sublist %}
+            <button class="aside-filters__btn">
+              <span class="aside-filters__icon"></span>            
+              <span class="aside-filters__title">{{ j.title | safe }}</span>
+            </button>
+            {% else %}
+            <span class="aside-filters__title">{{ j.title | safe }}</span>
+            {% endif %}
+            {% if j.sublist %}
+            <ul class="aside-filters__sublist aside-filters__sublist--second">
+              {% for k in j.sublist %}
+              <li class="aside-filters__subitem">{{ k.title | safe }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    <!-- end aside-filters -->
+  </div>
 </div>

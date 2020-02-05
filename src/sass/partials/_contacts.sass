@@ -1,0 +1,46 @@
+.header-contact
+  $this: &
+  +flex(flex-start, center)
+  font-size: rem(15.5)
+  &__icon
+    margin-right: .5rem
+    color: #dbdbdb
+    #{$this}--viber &
+      color: #8529ab
+  &__link
+    +tr(color .3s)
+    +hover
+      color: $accent
+
+.aside-contact
+  +flex(flex-start, center)
+  &__icon
+    color: #a8a8a8
+    font-size: 0
+    margin-right: .5rem
+    .icon
+      font-size: 1.2rem
+  &__link
+    +tr(color .3s)
+    +hover
+      color: $accent
+
+.aside-contacts
+  &__contact
+    +notlast
+      margin-bottom: rem(10)
+  &__block
+    padding-top: rem(8)
+    padding-bottom: rem(8)
+    +notlast
+      border-bottom: 1px solid  $c-border
+
+.footer-contact
+  +flex(flex-start, center)
+  .icon
+    fill: $accent
+    margin-right: .5em
+    font-size: 1.3em
+  &--sm
+    .icon
+      font-size: 1em

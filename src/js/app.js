@@ -12,6 +12,9 @@ import sayHello from './lib/sayHello'
 import setHTMLClassNames from './components/setHTMLClassNames'
 import setLazy from './components/setLazy'
 
+import setSelects from './components/Select/Select'
+import Slider from './components/Slider/Slider'
+
 // import { NO_SCROLL } from './constants'
 
 class App {
@@ -21,6 +24,7 @@ class App {
     this.dom = {
       body: document.body,
     }
+    this.slider = new Slider(`.${classNames.slider.container}`)
     // this.state = {
     //   hasMenuOpen: false,
     // }
@@ -45,6 +49,7 @@ class App {
       sayHello,
       setHTMLClassNames,
       setLazy,
+      setSelects,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))
@@ -52,6 +57,8 @@ class App {
 
   init() {
     this.initMethods()
+
+    this.slider.init()
 
     // this.menu.init()
     // this.menu.onToggle = this.onMenuToggle.bind(this)

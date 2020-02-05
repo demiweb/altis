@@ -1,0 +1,74 @@
+.slider-prev, .slider-prev
+  +flex(center, center)
+  width: 1em
+  height: 1em
+  font-size: em(45)
+  color: #c6c6c6
+  +before
+    +icon-arrow(.7, .7, .06, currentColor, 45, em)
+    display: block
+
+.slider-next
+  transform: scaleX(-1)
+
+.slider
+  &__wrap
+    position: relative
+    *
+      box-sizing: border-box
+  &__controls
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    z-index: 3
+  &__prev, &__next
+    position: absolute
+    z-index: 1
+    top: 50%
+    transform: translate(0, -50%)
+    &.swiper-button-disabled
+      opacity: .5
+  &__prev
+    left: 0
+  &__next
+    right: 0
+    transform: translate(0, -50%) scaleX(-1)
+  &__pagination
+    display: block
+    width: 100%
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+    margin-top: rem(30)
+    .swiper-pagination-bullet
+      display: inline-block
+      border-radius: 50%
+      background-color: $accent
+      width: rem(5)
+      height: rem(5)
+      margin-left: rem(2)
+      margin-right: rem(2)
+      cursor: pointer
+  &__btn
+    margin-top: rem(25)
+    text-align: center
+
+  &--banner
+    &__wrap
+      +shadow
+      background-color: $white
+      border-radius: $radius
+      padding: rem(20) rem(50)
+      .slider
+        &__prev
+          left: rem(20)
+        &__next
+          right: rem(20)
+  &--items
+    &__wrap
+      .slider
+        &__prev
+          left: rem(-60)
+        &__next
+          right: rem(-60)

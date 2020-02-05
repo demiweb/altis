@@ -24,6 +24,13 @@
             </div>
 
             <div class="col col--9">
+              {% if breadcrumbs %}
+              {{ mixins.list(
+                name = 'breadcrumbs',
+                modifications = { wrap: 'main__breadcrumbs', item: '', link: '' },
+                list = breadcrumbs.list
+              ) }}
+              {% endif %}
               {% block content %}{% endblock %}
             </div>
           </div>
