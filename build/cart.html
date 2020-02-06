@@ -17,6 +17,9 @@
         <div class="header__top">
           <div class="container">
             <div class="header__inner">
+              <a href="/" class="header__logo-mob logo">
+                <img class="js-lazy" alt="" src="" data-src="./img/logo-mob.png" />
+              </a>
               <!-- begin nav -->
               <nav class="nav header__nav">
                 <ul>
@@ -35,54 +38,57 @@
         <div class="header__bottom">
           <div class="container">
             <div class="header__inner">
-              <a href="/" class="header__logo logo">
-                <img class="js-lazy" alt="" src="" data-src="./img/logo.png" />
-              </a>
-              <form class="header__search search">
-                <input class="search__input" type="text" placeholder="Поиск по артикулу">
-                <button class="search__btn">
-                  <!-- begin icon-search -->
-                  <svg viewBox="0 0 511.999 511.999" class="icon icon-search" width="1.000em" height="1em">
-                    <path d="M508.874 478.708L360.142 329.976c28.21-34.827 45.191-79.103 45.191-127.309C405.333 90.917 314.416 0 202.666 0S0 90.917 0 202.667s90.917 202.667 202.667 202.667c48.206 0 92.482-16.982 127.309-45.191l148.732 148.732c4.167 4.165 10.919 4.165 15.086 0l15.081-15.082c4.165-4.166 4.165-10.92-.001-15.085zM202.667 362.667c-88.229 0-160-71.771-160-160s71.771-160 160-160 160 71.771 160 160-71.771 160-160 160z" />
+              <div class="header__controls">
+                <a href="/" class="header__logo logo">
+                  <img class="js-lazy" alt="" src="" data-src="./img/logo.png" />
+                </a>
+                <form class="header__search search">
+                  <input class="search__input" type="text" placeholder="Поиск по артикулу">
+                  <button class="search__btn">
+                    <!-- begin icon-search -->
+                    <svg viewBox="0 0 511.999 511.999" class="icon icon-search" width="1.000em" height="1em">
+                      <path d="M508.874 478.708L360.142 329.976c28.21-34.827 45.191-79.103 45.191-127.309C405.333 90.917 314.416 0 202.666 0S0 90.917 0 202.667s90.917 202.667 202.667 202.667c48.206 0 92.482-16.982 127.309-45.191l148.732 148.732c4.167 4.165 10.919 4.165 15.086 0l15.081-15.082c4.165-4.166 4.165-10.92-.001-15.085zM202.667 362.667c-88.229 0-160-71.771-160-160s71.771-160 160-160 160 71.771 160 160-71.771 160-160 160z" />
+                    </svg>
+                    <!-- end icon-search -->
+                  </button>
+                </form>
+                <a href="#" class="btn header__btn">Оставить вопрос</a>
+              </div>
+              <div class="header__contacts-wrap">
+                <button class="header__burger burger burger--lg"><span></span></button>
+                <div class="header__contacts">
+                  <div class="header__contact header-contact header-contact--viber">
+                    <div class="header-contact__icon">
+                      <!-- begin icon-call-1 -->
+                      <svg viewBox="0 0 512.006 512.006" class="icon icon-call-1" width="1.000em" height="1em">
+                        <path d="M502.05 407.127l-56.761-37.844-50.459-33.633c-9.738-6.479-22.825-4.355-30.014 4.873l-31.223 40.139c-6.707 8.71-18.772 11.213-28.39 5.888-21.186-11.785-46.239-22.881-101.517-78.23-55.278-55.349-66.445-80.331-78.23-101.517-5.325-9.618-2.822-21.683 5.888-28.389l40.139-31.223c9.227-7.188 11.352-20.275 4.873-30.014l-32.6-48.905-38.877-58.316C98.262.03 85.016-2.95 74.786 3.185L29.95 30.083A54.779 54.779 0 005.074 62.277C-7.187 106.98-9.659 205.593 148.381 363.633s256.644 155.56 301.347 143.298a54.771 54.771 0 0032.194-24.876l26.898-44.835c6.136-10.231 3.156-23.476-6.77-30.093zM291.309 79.447c82.842.092 149.977 67.226 150.069 150.069a8.828 8.828 0 0017.656 0c-.102-92.589-75.135-167.622-167.724-167.724a8.828 8.828 0 00-8.828 8.828 8.826 8.826 0 008.827 8.827z" />
+                        <path d="M291.309 132.412c53.603.063 97.04 43.501 97.103 97.103a8.828 8.828 0 0017.656 0c-.073-63.349-51.409-114.686-114.759-114.759a8.828 8.828 0 000 17.656z" />
+                        <path d="M291.309 185.378c24.365.029 44.109 19.773 44.138 44.138a8.828 8.828 0 0017.656 0c-.039-34.111-27.682-61.754-61.793-61.793a8.828 8.828 0 00-8.828 8.828 8.826 8.826 0 008.827 8.827z" />
+                      </svg>
+                      <!-- end icon-call-1 -->
+                    </div>
+                    <a href="viber://chat?number=380980164356" class="header-contact__link">+38 098 016 43 56 Viber </a>
+                  </div>
+                  <div class="header__contact header-contact">
+                    <div class="header-contact__icon">
+                      <!-- begin icon-call -->
+                      <svg viewBox="0 0 384 384" class="icon icon-call" width="1.000em" height="1em">
+                        <path d="M353.188 252.052c-23.51 0-46.594-3.677-68.469-10.906-10.719-3.656-23.896-.302-30.438 6.417l-43.177 32.594c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208 11.167-20.198 7.635-31.448-7.26-21.99-10.948-45.063-10.948-68.583C132.146 13.823 118.323 0 101.333 0h-70.52C13.823 0 0 13.823 0 30.813 0 225.563 158.438 384 353.188 384c16.99 0 30.813-13.823 30.813-30.813v-70.323c-.001-16.989-13.824-30.812-30.813-30.812z" />
+                      </svg>
+                      <!-- end icon-call -->
+                    </div>
+                    <a href="tel:+380669240607" class="header-contact__link">+38 066 924 06 07</a>
+                  </div>
+                </div>
+                <button class="header__cart header-cart">
+                  <sup class="header-cart__sup">1</sup>
+                  <!-- begin icon-shopping-cart -->
+                  <svg height="1em" viewBox="0 -31 512 512" width="1.000em" class="icon icon-shopping-cart">
+                    <path d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0014.422-10.879l60-210a15.003 15.003 0 00-2.445-13.152A15.006 15.006 0 00497 60H130.367l-10.722-48.254A15.003 15.003 0 00105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zm0 0M150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0M362 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0" />
                   </svg>
-                  <!-- end icon-search -->
+                  <!-- end icon-shopping-cart -->
                 </button>
-              </form>
-              <div class="header__btn">
-                <a href="#" class="btn">Оставить вопрос</a>
               </div>
-              <div class="header__contacts">
-                <div class="header__contact header-contact header-contact--viber">
-                  <div class="header-contact__icon">
-                    <!-- begin icon-call-1 -->
-                    <svg viewBox="0 0 512.006 512.006" class="icon icon-call-1" width="1.000em" height="1em">
-                      <path d="M502.05 407.127l-56.761-37.844-50.459-33.633c-9.738-6.479-22.825-4.355-30.014 4.873l-31.223 40.139c-6.707 8.71-18.772 11.213-28.39 5.888-21.186-11.785-46.239-22.881-101.517-78.23-55.278-55.349-66.445-80.331-78.23-101.517-5.325-9.618-2.822-21.683 5.888-28.389l40.139-31.223c9.227-7.188 11.352-20.275 4.873-30.014l-32.6-48.905-38.877-58.316C98.262.03 85.016-2.95 74.786 3.185L29.95 30.083A54.779 54.779 0 005.074 62.277C-7.187 106.98-9.659 205.593 148.381 363.633s256.644 155.56 301.347 143.298a54.771 54.771 0 0032.194-24.876l26.898-44.835c6.136-10.231 3.156-23.476-6.77-30.093zM291.309 79.447c82.842.092 149.977 67.226 150.069 150.069a8.828 8.828 0 0017.656 0c-.102-92.589-75.135-167.622-167.724-167.724a8.828 8.828 0 00-8.828 8.828 8.826 8.826 0 008.827 8.827z" />
-                      <path d="M291.309 132.412c53.603.063 97.04 43.501 97.103 97.103a8.828 8.828 0 0017.656 0c-.073-63.349-51.409-114.686-114.759-114.759a8.828 8.828 0 000 17.656z" />
-                      <path d="M291.309 185.378c24.365.029 44.109 19.773 44.138 44.138a8.828 8.828 0 0017.656 0c-.039-34.111-27.682-61.754-61.793-61.793a8.828 8.828 0 00-8.828 8.828 8.826 8.826 0 008.827 8.827z" />
-                    </svg>
-                    <!-- end icon-call-1 -->
-                  </div>
-                  <a href="viber://chat?number=380980164356" class="header-contact__link">+38 098 016 43 56 Viber </a>
-                </div>
-                <div class="header__contact header-contact">
-                  <div class="header-contact__icon">
-                    <!-- begin icon-call -->
-                    <svg viewBox="0 0 384 384" class="icon icon-call" width="1.000em" height="1em">
-                      <path d="M353.188 252.052c-23.51 0-46.594-3.677-68.469-10.906-10.719-3.656-23.896-.302-30.438 6.417l-43.177 32.594c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208 11.167-20.198 7.635-31.448-7.26-21.99-10.948-45.063-10.948-68.583C132.146 13.823 118.323 0 101.333 0h-70.52C13.823 0 0 13.823 0 30.813 0 225.563 158.438 384 353.188 384c16.99 0 30.813-13.823 30.813-30.813v-70.323c-.001-16.989-13.824-30.812-30.813-30.812z" />
-                    </svg>
-                    <!-- end icon-call -->
-                  </div>
-                  <a href="tel:+380669240607" class="header-contact__link">+38 066 924 06 07</a>
-                </div>
-              </div>
-              <button class="header__cart header-cart">
-                <sup class="header-cart__sup">1</sup>
-                <!-- begin icon-shopping-cart -->
-                <svg height="1em" viewBox="0 -31 512 512" width="1.000em" class="icon icon-shopping-cart">
-                  <path d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0014.422-10.879l60-210a15.003 15.003 0 00-2.445-13.152A15.006 15.006 0 00497 60H130.367l-10.722-48.254A15.003 15.003 0 00105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zm0 0M150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0M362 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0" />
-                </svg>
-                <!-- end icon-shopping-cart -->
-              </button>
             </div>
           </div>
         </div>
@@ -134,12 +140,16 @@
                   <div class="cart-item cart__item">
                     <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
                     <div class="cart-item__descr">
-                      <h4 class="cart-item__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
-                      <div class="cart-item__subttl">Артикул 310185</div>
-                      <div class="cart-item__label">
-                        <span class="card-label">Скидка 10%</span>
+                      <h4 class="cart-item__title title title--h4">
+                        <a href="#">Картридж турбины ТКР7С-6 Евро-2,3</a>
+                      </h4>
+                      <div class="cart-item__descr-content">
+                        <div class="cart-item__subttl">Артикул 310185</div>
+                        <div class="cart-item__label">
+                          <span class="card-label">Скидка 10%</span>
+                        </div>
+                        <div class="cart-item__text">Производитель Jrone</div>
                       </div>
-                      <div class="cart-item__text">Производитель Jrone</div>
                     </div>
                     <div class="cart-item__quantity">
                       <!-- begin counter -->
@@ -163,12 +173,16 @@
                   <div class="cart-item cart__item">
                     <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
                     <div class="cart-item__descr">
-                      <h4 class="cart-item__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
-                      <div class="cart-item__subttl">Артикул 310185</div>
-                      <div class="cart-item__label">
-                        <span class="card-label">Скидка 10%</span>
+                      <h4 class="cart-item__title title title--h4">
+                        <a href="#">Картридж турбины ТКР7С-6 Евро-2,3</a>
+                      </h4>
+                      <div class="cart-item__descr-content">
+                        <div class="cart-item__subttl">Артикул 310185</div>
+                        <div class="cart-item__label">
+                          <span class="card-label">Скидка 10%</span>
+                        </div>
+                        <div class="cart-item__text">Производитель Jrone</div>
                       </div>
-                      <div class="cart-item__text">Производитель Jrone</div>
                     </div>
                     <div class="cart-item__quantity">
                       <!-- begin counter -->
@@ -192,12 +206,16 @@
                   <div class="cart-item cart__item">
                     <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
                     <div class="cart-item__descr">
-                      <h4 class="cart-item__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
-                      <div class="cart-item__subttl">Артикул 310185</div>
-                      <div class="cart-item__label">
-                        <span class="card-label">Скидка 10%</span>
+                      <h4 class="cart-item__title title title--h4">
+                        <a href="#">Картридж турбины ТКР7С-6 Евро-2,3</a>
+                      </h4>
+                      <div class="cart-item__descr-content">
+                        <div class="cart-item__subttl">Артикул 310185</div>
+                        <div class="cart-item__label">
+                          <span class="card-label">Скидка 10%</span>
+                        </div>
+                        <div class="cart-item__text">Производитель Jrone</div>
                       </div>
-                      <div class="cart-item__text">Производитель Jrone</div>
                     </div>
                     <div class="cart-item__quantity">
                       <!-- begin counter -->
@@ -221,12 +239,16 @@
                   <div class="cart-item cart__item">
                     <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
                     <div class="cart-item__descr">
-                      <h4 class="cart-item__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
-                      <div class="cart-item__subttl">Артикул 310185</div>
-                      <div class="cart-item__label">
-                        <span class="card-label">Скидка 10%</span>
+                      <h4 class="cart-item__title title title--h4">
+                        <a href="#">Картридж турбины ТКР7С-6 Евро-2,3</a>
+                      </h4>
+                      <div class="cart-item__descr-content">
+                        <div class="cart-item__subttl">Артикул 310185</div>
+                        <div class="cart-item__label">
+                          <span class="card-label">Скидка 10%</span>
+                        </div>
+                        <div class="cart-item__text">Производитель Jrone</div>
                       </div>
-                      <div class="cart-item__text">Производитель Jrone</div>
                     </div>
                     <div class="cart-item__quantity">
                       <!-- begin counter -->

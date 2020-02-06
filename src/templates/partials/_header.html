@@ -3,6 +3,9 @@
   <div class="header__top">
     <div class="container">
       <div class="header__inner">
+        <a href="/" class="header__logo-mob logo">
+          <img class="js-lazy" alt="" src="" data-src="./img/logo-mob.png"/>
+        </a>
         {{ mixins.list(
           name = 'nav',
           hasWrap = true,
@@ -23,44 +26,48 @@
   <div class="header__bottom">
     <div class="container">
       <div class="header__inner">
-        <a href="/" class="header__logo logo">
-          <img class="js-lazy" alt="" src="" data-src="./img/logo.png"/>
-        </a>
+        <div class="header__controls">
+          <a href="/" class="header__logo logo">
+            <img class="js-lazy" alt="" src="" data-src="./img/logo.png"/>
+          </a>
 
-        <form class="header__search search">
-          <input class="search__input" type="text" placeholder="Поиск по артикулу">
-          <button class="search__btn">
-            {{ mixins.icon('search') }}
-          </button>
-        </form>
+          <form class="header__search search">
+            <input class="search__input" type="text" placeholder="Поиск по артикулу">
+            <button class="search__btn">
+              {{ mixins.icon('search') }}
+            </button>
+          </form>
 
-        <div class="header__btn">
           {{ mixins.btn(
             title = 'Оставить вопрос',
-            mod = ''
+            mod = 'header__btn'
           ) }}
         </div>
 
-        <div class="header__contacts">
-          <div class="header__contact header-contact header-contact--viber">
-            <div class="header-contact__icon">
-              {{ mixins.icon('call-1') }}
+        <div class="header__contacts-wrap">
+          <button class="header__burger burger burger--lg"><span></span></button>
+
+          <div class="header__contacts">
+            <div class="header__contact header-contact header-contact--viber">
+              <div class="header-contact__icon">
+                {{ mixins.icon('call-1') }}
+              </div>
+              <a href="viber://chat?number=380980164356" class="header-contact__link">+38 098 016 43 56 Viber </a>
             </div>
-            <a href="viber://chat?number=380980164356" class="header-contact__link">+38 098 016 43 56 Viber </a>
+
+            <div class="header__contact header-contact">
+              <div class="header-contact__icon">
+                {{ mixins.icon('call') }}
+              </div>
+              <a href="tel:+380669240607" class="header-contact__link">+38 066 924 06 07</a>
+            </div>
           </div>
 
-          <div class="header__contact header-contact">
-            <div class="header-contact__icon">
-              {{ mixins.icon('call') }}
-            </div>
-            <a href="tel:+380669240607" class="header-contact__link">+38 066 924 06 07</a>
-          </div>
+          <button class="header__cart header-cart">
+            <sup class="header-cart__sup">1</sup>
+            {{ mixins.icon('shopping-cart') }}
+          </button>
         </div>
-
-        <button class="header__cart header-cart">
-          <sup class="header-cart__sup">1</sup>
-          {{ mixins.icon('shopping-cart') }}
-        </button>
       </div>
     </div>
   </div>

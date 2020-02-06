@@ -37,12 +37,16 @@ body
   overflow: hidden
   &__input, &__btn
     height: rem(36)
+    +lg
+      height: rem(42)
   &__input
     background-color: $light
     font-size: em(9.24)
     font-weight: 300
     padding: 0.1em 1em
     width: 185px
+    +lg
+      width: calc(100% - #{rem(42)})
   &__btn
     +flex(center, center)
     color: $white
@@ -50,7 +54,9 @@ body
     
     width: rem(36)
     height: rem(36)
-    flex: 0 0 rem(40)
+    // flex: 0 0 rem(40)
+    +lg
+      width: rem(42)
     .icon
       font-size: rem(22)
 

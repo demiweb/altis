@@ -14,11 +14,19 @@ h1, h2, h3, h4, h5, h6
     font-size: em(24)
   &--h3
     text-transform: uppercase
-    font-size: em(18.47)
+    font-size: em(18.47)    
   &--h4
     font-size: em(15.64)
     font-weight: 500
+  &--ttn
+    text-transform: none
 
 
 .text
   font-size: em(18)
+  p
+    +notlast
+      margin-bottom: rem(15)
+  a
+    color: $accent-aux
+    text-decoration: underline

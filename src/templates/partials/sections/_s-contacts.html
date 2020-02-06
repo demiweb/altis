@@ -1,0 +1,161 @@
+{%set
+form = {
+  
+  fields: [
+    {
+      wrapMod: '',
+      name: 'input',
+      type: 'text',
+      placeholder: 'Имя',
+      fieldClass: ''
+    },
+    {
+      wrapMod: '',
+      name: 'input',
+      type: 'text',
+      placeholder: 'Фамилия',
+      fieldClass: ''
+    },
+    {
+      wrapMod: '',
+      name: 'input',
+      type: 'tel',
+      placeholder: 'Телефон',
+      fieldClass: ''
+    },
+    {
+      wrapMod: '',
+      name: 'input',
+      type: 'email',
+      placeholder: 'Email',
+      fieldClass: ''
+    },
+    {
+      wrapMod: 'form__col--full',
+      name: 'textarea',
+      type: '',
+      placeholder: 'Комментарий',
+      fieldClass: 'js-textarea'
+    }
+  ]
+}
+%}  
+
+<!-- begin section -->
+<section class="">
+  <div class="container">
+    <!-- begin contacts -->
+    <div class="contacts block">
+      <h2 class="section__title title title--h2">Контакты</h2>
+      
+      <div class="map contacts__map">
+        <iframe class="map__map js-lazy" src="" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2545.77156101468!2d30.45701791589344!3d50.35216600232271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c841e42c336d%3A0x503b624dc64e74e!2z0LLRg9C70LjRhtGPINCS0LDRgdC40LvRjNC60ZbQstGB0YzQutCwLCAyLCDQndC-0LLQvtGB0ZbQu9C60LgsINCa0LjRl9Cy0YHRjNC60LAg0L7QsdC7LiwgMDMwMjc!5e0!3m2!1sru!2sua!4v1580998265659!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+
+      <div class="contacts__contacts main-contacts">
+        <div class="grid">
+          <div class="col col--4">
+            <div class="main-contacts__contact main-contact">
+              <div class="main-contact__icon">
+                {{ mixins.icon('viber') }}
+              </div>
+
+              <div class="main-contact__text">
+                <a href="viber://chat?number=0980164356" class="">098 016 43 56 Viber </a>
+              </div>
+            </div>
+
+            <div class="main-contacts__contact main-contact">
+              <div class="main-contact__icon">
+                {{ mixins.icon('call-2') }}
+              </div>
+
+              <div class="main-contact__text">
+                <a href="tel:0669240607" class="">066 924 06 07</a>
+              </div>
+            </div>
+
+            <div class="main-contacts__contact main-contact">
+              <div class="main-contact__icon">
+                {{ mixins.icon('call-2') }}
+              </div>
+
+              <div class="main-contact__text">
+                <a href="tel:0936753134" class="">093 675 31 34</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col--4">
+            <div class="main-contacts__contact main-contact">
+              <div class="main-contact__icon">
+                {{ mixins.icon('email') }}
+              </div>
+
+              <div class="main-contact__text">
+                <a href="mailto:6753134@gmail.com" class="">6753134@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="main-contacts__contact main-contact">
+              <div class="main-contact__icon">
+                {{ mixins.icon('skype') }}
+              </div>
+
+              <div class="main-contact__text">
+                <a href="skype:altis-avto" class="">altis-avto</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col--4">
+            <div class="main-contacts__contact main-contact">
+              <div class="main-contact__icon">
+                {{ mixins.icon('place') }}
+              </div>
+
+              <div class="main-contact__text">
+                Киев, Киево-Святошинский район, 
+  с. Новоселки, Васильковская,2а
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section__title title title--h2 text-center">Если у Вас есть деловые вопросы или другие вопросы, пожалуйста,<br> заполните следующую форму, чтобы связаться с нами</h2>
+
+      <form class="contacts__form form">
+        
+
+        <div class="form__row">
+          {% for i in form.fields %}
+          <div class="form__col{% if i.wrapMod %} {{ i.wrapMod }}{% endif %}">
+            {{ mixins.input(
+              name = i.name,
+              mod = 'input--lg',
+              type = i.type,
+              placeholder = i.placeholder,
+              value = '',
+              fieldClass = i.fieldClass,
+              fieldAttributes = i.fieldAttributes,
+              label = i.label
+            ) }}
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="form__btn">
+          {{ mixins.btn(
+            title = 'Отправить',
+            mod = '',
+            href = false
+          ) }}
+        </div>
+      </form>
+      
+    </div>
+    <!-- end contacts -->
+  </div>
+</section>
+<!-- end section -->

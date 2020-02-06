@@ -1,3 +1,25 @@
+.contacts
+  padding: rem(25)
+  &__map
+    padding-top: 50%
+    margin-bottom: rem(20)
+  &__contacts
+    margin-bottom: rem(20)
+  &__form
+    max-width: 775px
+    margin-left: auto
+    margin-right: auto
+
+.map
+  position: relative
+  background-color: $c-border
+  &__map
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+
 .header-contact
   $this: &
   +flex(flex-start, center)
@@ -21,9 +43,7 @@
     .icon
       font-size: 1.2rem
   &__link
-    +tr(color .3s)
-    +hover
-      color: $accent
+    @extend .header-contact__link
 
 .aside-contacts
   &__contact
@@ -44,3 +64,23 @@
   &--sm
     .icon
       font-size: 1em
+
+.main-contacts
+  &__contact
+    margin-bottom: .5em
+
+.main-contact
+  position: relative
+  padding-left: 2em
+  &__icon
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    color: #a4a4a4
+    .icon
+      font-size: 1.3em
+  &__text
+    a
+      @extend .header-contact__link
+

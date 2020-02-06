@@ -1,4 +1,5 @@
 .cart
+  $this: &
   &__item
     +notlast
       margin-bottom: rem(10)
@@ -8,6 +9,24 @@
     padding-top: rem(40)
   &__price
     flex-grow: 1
+  &__amount
+    +flex(space-between, center)
+    padding-right: rem(20)
+    padding-bottom: rem(20)
+  &__controls-title
+    font-size: em(16)
+    font-weight: 500
+  &__controls
+
+  &--order
+    padding-left: rem(20)
+    padding-right: rem(20)
+    #{$this}__price
+      padding-top: rem(10)
+      padding-bottom: rem(10)
+      border-bottom: 1px solid  $c-border
+      margin-bottom: rem(20)
+
 
 
 .cart-item
@@ -35,6 +54,10 @@
     width: calc(#{percentage((1085 - (420 + 200 + 200)) / 1085)} - #{rem(130)})
   &__title
     margin-bottom: rem(8)
+    a
+      +tr(color .3s)
+      +hover
+        color: $accent
   &__subttl
     color: #a3a3a3
   &__label
@@ -49,6 +72,19 @@
     justify-content: center
   &__delete
     justify-content: flex-end
+  &__quantity-text
+    font-size: em(24)
+    font-weight: 500
+
+  &--order
+    #{$this}__descr
+      padding-left: rem(10)
+      width: percentage(330 / 680)
+      +flex(space-between, normal, column)
+    #{$this}__quantity
+      width: percentage(85 / 680)
+    #{$this}__price
+      width: calc(#{percentage((680 - (330 + 85)) / 680)} - #{rem(130)})
 
 
 .cart-list
@@ -62,3 +98,19 @@
     font-size: em(21)
     position: relative
     top: -.2em
+
+.cart-controls-blocks
+  +flex(flex-start, normal, row, wrap)
+  &__block
+    width: 50%
+    margin-bottom: rem(20)
+    &--full
+      width: 100%
+    &--btn
+      +flex(flex-end, flex-end, column)
+  &__title
+    text-transform: none
+    font-weight: 500
+    margin-bottom: rem(10)
+  &__input
+    margin-bottom: rem(20)

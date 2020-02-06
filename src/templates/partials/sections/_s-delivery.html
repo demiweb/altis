@@ -1,0 +1,135 @@
+{%set
+delivery = [
+  {
+    title: 'Нова Пошта',
+    text: 'Доставка товара Новой-Почтой осуществляется ежедневно в будние дни с понедельника по пятницу при оформлении заказ до 15:30. В субботу до 12:00.'
+  },
+  {
+    title: 'Интайм',
+    text: 'По предварительной договоренности(этот тип доставки может быть отклонен по различным причинам....) срок отправки может занимать от 1 до 2 дней.'
+  },
+  {
+    title: 'Гюнсел',
+    text: 'По предварительной договоренности(этот тип доставки может быть отклонен по различным причинам....) срок отправки может занимать от 1 до 2 дней.'
+  },
+  {
+    title: 'Доставка курьером',
+    text: '
+      <p>Стоимость доставки 100 грн.</p>
+      <p>Доставка курьером по Киеву платная и составляет (50-200гр) в зависимости от дальности поездки. Время доставки должно оговариваться заранее в зависимости от загрузки роботы может занимать от 1 до 5 часов. Доставка на правый берег осуществляется при минимальном заказе товара от 7000гр и может занимать до 6 часов или же оговаривается индивидуально.</p>
+    '
+  },
+  {
+    title: 'Самовывоз',
+    text: '
+      <p>В будни с 9-00 до 17-00</p>
+      <p>В субботу с 10-00 до 16-00</p>
+    '
+  },
+  {
+    title: 'Доставка почтой',
+    text: ''
+  }
+]
+%}
+
+{%set
+payment = [
+  {
+    title: 'Безналичный расчет',
+    text: 'Отправка товара или же его выдача осуществляется только после поступления денежных средств на счет Алтис Авто'
+  },
+  {
+    title: 'Наложенный платеж "Нова Пошта"',
+    text: '
+      <p>Все расходы по доставке и оплате наложенного платежа осуществляет получатель(клиент). За исключения некоторых ситуаций....</p>
+      <p>При отправке крупно габаритного товара или превышения суммы доставки в 200гр если у менеджера возникнут сомнения в серьезности покупки клиентом запчастей он в праве не отправлять товар без предоплаты стоимости доставки в одну сторону .</p>
+    '
+  },
+  {
+    title: 'Наличными',
+    text: 'Оплата наличными возможна при отправке товара курьером или же самовывозом.'
+  },
+  {
+    title: 'На карту Приват-банка',
+    text: 'Возможна оплата на карту Приват-банка'
+  },
+  {
+    title: 'Наложенный платеж',
+    text: '
+    <p>Все расходы по доставке и оплате наложенного платежа осуществляет получатель(клиент). За исключения некоторых ситуаций....</p>
+    <p>При отправке крупно габаритного товара или превышения суммы доставки в 200гр если у менеджера возникнут сомнения в серьезности покупки клиентом запчастей он в праве не отправлять товар без предоплаты стоимости доставки в одну сторону .</p>
+    '
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title title title--h2">Доставка и оплата</h2>
+
+    <!-- begin text -->
+    <div class="text section__block">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+
+      <a href="#">Доставка осуществляется только по предоплате.</a>
+    </div>
+    <!-- end text -->
+
+    <div class="section__block meta-block">
+      <div class="meta-block__top">Способы доставки</div>
+
+      <div class="meta-block__content">
+        <!-- begin del-list -->
+        <ul class="del-list">
+          {% for i in delivery %}
+          <li class="del-list__item">
+            <div class="del-list__icon">
+              {{ mixins.icon('check-mark') }}
+            </div>
+            <h3 class="del-list__title title title--h3 title--ttn">{{ i.title  | safe }}</h3>
+            
+            {% if i.text %}
+              <div class="del-list__text">{{ i.text | safe }}</div>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        <!-- end del-list -->
+        
+      </div>
+    </div>
+
+    <div class="section__block meta-block">
+      <div class="meta-block__top">Способы оплаты</div>
+
+      <div class="meta-block__content">
+        <!-- begin del-list -->
+        <ul class="del-list">
+          {% for i in payment %}
+          <li class="del-list__item">
+            <div class="del-list__icon">
+              {{ mixins.icon('check-mark') }}
+            </div>
+            <h3 class="del-list__title title title--h3 title--ttn">{{ i.title  | safe }}</h3>
+            
+            {% if i.text %}
+              <div class="del-list__text">{{ i.text | safe }}</div>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        <!-- end del-list -->
+        
+      </div>
+    </div>
+
+    <!-- begin text -->
+    <div class="text text-center">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+    </div>
+    <!-- end text -->
+  </div>
+</section>
+<!-- end section -->

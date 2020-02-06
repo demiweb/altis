@@ -1,25 +1,29 @@
 <div class="aside__block meta-block">
   <div class="meta-block__top">Фильтры</div>
   <div class="meta-block__content">
-    {{ mixins.input(
-      name = 'checkbox',
-      mod = 'meta-block__input',
-      type = 'checkbox',
-      placeholder = '',
-      value = '',
-      fieldClass = '',
-      label = { last: '<span class="input__label input__label--checkbox">передние</span>' }
-    ) }}
+    <div class="meta-block__input">
+      {{ mixins.input(
+        name = 'checkbox',
+        mod = '',
+        type = 'checkbox',
+        placeholder = '',
+        value = '',
+        fieldClass = '',
+        label = { last: '<span class="input__label input__label--checkbox">передние</span>' }
+      ) }}
+    </div>
 
-    {{ mixins.input(
-      name = 'checkbox',
-      mod = 'meta-block__input',
-      type = 'checkbox',
-      placeholder = '',
-      value = '',
-      fieldClass = '',
-      label = { last: '<span class="input__label input__label--checkbox">задние</span>' }
-    ) }}
+    <div class="meta-block__input">
+      {{ mixins.input(
+        name = 'checkbox',
+        mod = '',
+        type = 'checkbox',
+        placeholder = '',
+        value = '',
+        fieldClass = '',
+        label = { last: '<span class="input__label input__label--checkbox">задние</span>' }
+      ) }}
+    </div>
 
     <div class="meta-block__input input input--range">
       <label class="input__label">Длина</label>

@@ -9,7 +9,6 @@
     padding: .7em 1.2em
     +placeholder
       color: inherit
-
   &__label
     display: block
     margin-bottom: .1em
@@ -19,9 +18,17 @@
     &--checkbox
       margin-bottom: 0
       display: inline
+    &--radio
+      font-weight: 600
+      font-size: em(16)
+      margin-bottom: 0
+      line-height: 1
+  &__label-sm
+    font-size: em(12)
       
 
   &--checkbox
+    display: inline-block
     position: relative
     padding-left: 1.5em
     user-select: none
@@ -51,9 +58,44 @@
         display: block
         border-radius: $radius-sm
 
+  &--radio
+    display: inline-block
+    position: relative
+    padding-left: 2em
+    user-select: none
+    #{$this}__field
+      &[type="radio"]
+        opacity: 0
+        visibility: hidden
+        position: absolute
+        &:checked + #{$this}__label
+          &::after
+            content: ''
+            +icon-arrow(.6, .3, .05, #000, -45, em)
+            top: .4em
+            left: .35em
+            position: absolute
+            display: block
+    #{$this}__label
+      &::before
+        content: ''
+        border: 1px solid $c-border
+        width: 1.3em
+        height: 1.3em
+        top: 0
+        left: 0
+        background-color: $white
+        position: absolute
+        display: block
+
   &--textarea
     #{$this}__field
       min-height: rem(130)
+  &--lg
+    #{$this}__field
+      height: rem(62)
+      border: 0
+      background-color: $light
 
 
 .custom-select

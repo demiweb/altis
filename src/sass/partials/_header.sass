@@ -3,27 +3,96 @@
   &__top
     border-bottom: 1px solid #e6e6e6
   &__inner
-    +flex(flex-start, center)
+    +flex(flex-start, center, row, wrap)
     padding-top: rem(10)
     padding-bottom: rem(10)
     #{$this}__top &
       height: $header-top-height
+      +lg
+        height: $header-top-height-lg
     #{$this}__bottom &
       height: $header-bottom-height
+      +lg
+        height: auto
+        padding-top: 0
+        padding-bottom: 0
   &__bottom
     background-color: $white
     border-bottom: 1px solid #e6e6e6
+    +lg
+      background-color: transparent
+      overflow: hidden
   &__logo
     margin-right: rem(70)
+    +lg
+      display: none
+  &__logo-mob
+    +lgmin
+      display: none
   &__search
     margin-right: rem(20)
-  &__contacts
+    +lg
+      margin-right: 0
+      width: calc(50% - #{rem(8)})
+      margin-left: rem(4)
+      margin-right: rem(4)
+      position: relative
+      z-index: 1
+  &__btn
+    +lg
+      width: calc(50% - #{rem(8)})
+      margin-left: rem(4)
+      margin-right: rem(4)
+      position: relative
+      z-index: 1
+    +xs
+      width: calc(50% - #{rem(8)}) !important
+  &__controls
+    +flex(flex-start, center)
+    +lg
+      width: calc(100% + #{rem(8)})
+      height: rem(90)
+      margin-left: rem(-4)
+      margin-right: rem(-4)
+      background-color: $white
+      position: relative
+      +before
+        z-index: 0
+        position: absolute
+        left: -40px
+        right: -40px
+        top: 0
+        bottom: 0
+        background-color: $white
+  &__contacts-wrap
+    +flex(flex-start, center)
     flex-grow: 1
+    +lg
+      padding-top: rem(20)
+      padding-bottom: rem(20)
   &__cart
     margin-left: rem(40)
+    +lg
+      margin-left: rem(20)
+    +r(374)
+      margin-left: rem(5)
   &__contacts
+    flex-grow: 1
     padding-left: rem(35)
-
+    +lg
+      padding-left: 0
+  &__nav
+    +lg
+      display: none
+  &__burger
+    color: $accent
+    margin-right: rem(30)
+    +lgmin
+      display: none
+    +xxs
+      margin-right: rem(15)
+    +r(374)
+      margin-right: rem(5)
 
 
 .header-cart
@@ -44,8 +113,15 @@
     border-radius: 50%
     height: rem(22)
     min-width: rem(22)
+    +lg
+      top: 0
+      right: 0
+      height: rem(16)
+      min-width: rem(16)
+      font-size: .7em
 
 .burger 
+  $this: &
   display: flex
   align-items: center
   justify-content: center
@@ -64,11 +140,8 @@
       content: ""
       position: absolute
       left: 0
-      // top: 0
     &::after
       top: 0
-      // top: 50%
-      // margin-top: rem(-1)
     &::before
       bottom: 0
   // &--active 
@@ -78,3 +151,13 @@
   //       transform: rotate(45deg) translate(-7px,-5px)
   //     &::after
   //       transform: rotate(-45deg) translate(-6px,4px)
+  &--lg
+    width: rem(50)
+    height: rem(45)
+    +r(374)
+      width: rem(40)
+      height: rem(35)
+    span
+      &, &::after, &::before
+        height: rem(4)
+        border-radius: $radius

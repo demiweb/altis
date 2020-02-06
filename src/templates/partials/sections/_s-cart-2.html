@@ -72,10 +72,12 @@ form = {
 {%set
 items = [
   {
-    mod: 'cart__item cart-item--order'
+    mod: 'cart__item cart-item--order',
+    title: 'Картридж турбины <br> ТКР7С-6 Евро-2,3'
   },
   {
-    mod: 'cart__item cart-item--order'
+    mod: 'cart__item cart-item--order',
+    title: 'Картридж турбины <br> ТКР7С-6 Евро-2,3'
   }
 ]
 %}
@@ -109,7 +111,7 @@ controlsBlocks = [
       }
     ]
   },
-  { btn: true }
+  { btn: true, mod: 'cart-controls-blocks__block--btn' }
 ]
 %}
 
@@ -151,7 +153,7 @@ controlsBlocks = [
 
             <div class="cart__controls-blocks cart-controls-blocks">
               {% for i in controlsBlocks %}
-              <div class="cart-controls-blocks__block{% if i.mod %} {{ mod }}{% endif %}">
+              <div class="cart-controls-blocks__block{% if i.mod %} {{ i.mod }}{% endif %}">
                 {% if i.title %}
                   <h3 class="cart-controls-blocks__title title title--h3">{{ i.title | safe }}</h3>
                 {% endif %}
@@ -159,16 +161,18 @@ controlsBlocks = [
                 {% if i.fields %}
                 <div class="cart-controls-blocks__fields">
                   {% for j in i.fields %}
-                  {{ mixins.input(
-                    name = 'radio',
-                    mod = '',
-                    type = 'radio',
-                    placeholder = '',
-                    value = '',
-                    fieldClass = '',
-                    fieldAttributes = j.fieldAttributes,
-                    label = j.label
-                  ) }}
+                  <div class="cart-controls-blocks__input">
+                    {{ mixins.input(
+                      name = 'radio',
+                      mod = '',
+                      type = 'radio',
+                      placeholder = '',
+                      value = '',
+                      fieldClass = '',
+                      fieldAttributes = j.fieldAttributes,
+                      label = j.label
+                    ) }}
+                  </div>
                   {% endfor %}
                 </div>
                 {% endif %}

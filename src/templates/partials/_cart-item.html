@@ -3,15 +3,19 @@
   <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
 
   <div class="cart-item__descr">
-    <h4 class="cart-item__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+    <h4 class="cart-item__title title title--h4">
+      <a href="#">{{ i.title | safe }}</a>
+    </h4>
 
-    <div class="cart-item__subttl">Артикул 310185</div>
+    <div class="cart-item__descr-content">
+      <div class="cart-item__subttl">Артикул 310185</div>
 
-    <div class="cart-item__label">
-      <span class="card-label">Скидка 10%</span>
+      <div class="cart-item__label">
+        <span class="card-label">Скидка 10%</span>
+      </div>
+
+      <div class="cart-item__text">Производитель Jrone</div>
     </div>
-
-    <div class="cart-item__text">Производитель Jrone</div>
   </div>
 
   <div class="cart-item__quantity">

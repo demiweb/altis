@@ -1,0 +1,19 @@
+.del-list
+  padding: rem(8)
+  &__item
+    position: relative
+    padding-left: rem(30)
+    +notlast
+      margin-bottom: rem(20)
+  &__icon
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    color: $accent
+    .icon
+      font-size: 1.4em
+  &__title
+    margin-bottom: rem(8)
+  &__text
+    font-size: em(12)
