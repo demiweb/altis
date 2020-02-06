@@ -1,0 +1,61 @@
+{%set
+items = [
+  {
+    mod: 'cart__item',
+    counter: true,
+    delete: true
+  },
+  {
+    mod: 'cart__item',
+    counter: true,
+    delete: true
+  },
+  {
+    mod: 'cart__item',
+    counter: true,
+    delete: true
+  },
+  {
+    mod: 'cart__item',
+    counter: true,
+    delete: true
+  }
+]
+%}
+
+<!-- begin cart -->
+<div class="section__bllock cart meta-block">
+  <div class="meta-block__top">
+    Корзина
+  </div>
+
+  <div class="meta-block__content">
+    <div class="cart__items">
+      {% for i in items %}
+      {% include "partials/_cart-item.html" %}
+      {% endfor %}
+    </div>
+
+    <div class="cart__bottom">
+      <div class="cart__price">
+        {{ mixins.list(
+          name = 'cart-list',
+          descr = true,
+          modifications = { wrap: '', item: '', link: '', dt: 'cart-list__title', dd: 'cart-list__text' },
+          list = [
+            { dt: 'Ваша выгода:', dd: '200 грн' },
+            { dt: 'Итого с учётом скидки: ', dd: '8000 грн' }
+          ]
+        ) }}
+      </div>
+
+      <div class="cart__btn">
+        {{ mixins.btn(
+          title = 'Оформить',
+          mod = ''
+        ) }}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end cart -->

@@ -1,0 +1,37 @@
+<!-- begin cart-item -->
+<div class="cart-item{% if i.mod %} {{ i.mod }}{% endif %}">
+  <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
+
+  <div class="cart-item__descr">
+    <h4 class="cart-item__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+
+    <div class="cart-item__subttl">Артикул 310185</div>
+
+    <div class="cart-item__label">
+      <span class="card-label">Скидка 10%</span>
+    </div>
+
+    <div class="cart-item__text">Производитель Jrone</div>
+  </div>
+
+  <div class="cart-item__quantity">
+    {% if i.counter %}
+    {% include "partials/_counter.html" %}
+    {% else %}
+    <div class="cart-item__quantity-text">1х</div>
+    {% endif %}
+  </div>
+
+  <div class="cart-item__price">
+    <div class="price-label">
+      2000 <small>грн</small>
+    </div>
+  </div>
+
+  {% if i.delete %}
+  <div class="cart-item__delete">
+    <button class="close"></button>
+  </div>
+  {% endif %}
+</div>
+<!-- end cart-item -->

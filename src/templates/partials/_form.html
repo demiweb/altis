@@ -1,0 +1,25 @@
+<!-- begin form -->
+<form class="form">
+  <h2 class="form__title">{{ form.title | safe }}</h2>
+
+    {% for i in form.blocks %}
+    <div class="form__block">
+      {% if i.title %}
+      <h3 class="form__block-title title title--h3">{{ i.title | safe }}</h3>
+      {% endif %}
+      {% for j in i.fields %}
+      {{ mixins.input(
+        name = j.name,
+        mod = 'form__field ' + j.mod,
+        type = j.type,
+        placeholder = j.placeholder,
+        value = '',
+        fieldClass = j.fieldClass,
+        fieldAttributes = j.fieldAttributes,
+        label = j.label
+      ) }}
+      {% endfor %}
+    </div>
+    {% endfor %}
+</form>
+<!-- end form -->

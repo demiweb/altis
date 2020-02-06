@@ -1,0 +1,427 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>cart</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!-- begin header -->
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__inner">
+              <!-- begin nav -->
+              <nav class="nav header__nav">
+                <ul>
+                  <li><a href="#">Запчасти на Складе</a></li>
+                  <li><a href="#">О компании</a></li>
+                  <li><a href="#">Оплата и доставка</a></li>
+                  <li><a href="#">Блог</a></li>
+                  <li><a href="#">Сотрудничество</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </nav>
+              <!-- end nav-->
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container">
+            <div class="header__inner">
+              <a href="/" class="header__logo logo">
+                <img class="js-lazy" alt="" src="" data-src="./img/logo.png" />
+              </a>
+              <form class="header__search search">
+                <input class="search__input" type="text" placeholder="Поиск по артикулу">
+                <button class="search__btn">
+                  <!-- begin icon-search -->
+                  <svg viewBox="0 0 511.999 511.999" class="icon icon-search" width="1.000em" height="1em">
+                    <path d="M508.874 478.708L360.142 329.976c28.21-34.827 45.191-79.103 45.191-127.309C405.333 90.917 314.416 0 202.666 0S0 90.917 0 202.667s90.917 202.667 202.667 202.667c48.206 0 92.482-16.982 127.309-45.191l148.732 148.732c4.167 4.165 10.919 4.165 15.086 0l15.081-15.082c4.165-4.166 4.165-10.92-.001-15.085zM202.667 362.667c-88.229 0-160-71.771-160-160s71.771-160 160-160 160 71.771 160 160-71.771 160-160 160z" />
+                  </svg>
+                  <!-- end icon-search -->
+                </button>
+              </form>
+              <div class="header__btn">
+                <a href="#" class="btn">Оставить вопрос</a>
+              </div>
+              <div class="header__contacts">
+                <div class="header__contact header-contact header-contact--viber">
+                  <div class="header-contact__icon">
+                    <!-- begin icon-call-1 -->
+                    <svg viewBox="0 0 512.006 512.006" class="icon icon-call-1" width="1.000em" height="1em">
+                      <path d="M502.05 407.127l-56.761-37.844-50.459-33.633c-9.738-6.479-22.825-4.355-30.014 4.873l-31.223 40.139c-6.707 8.71-18.772 11.213-28.39 5.888-21.186-11.785-46.239-22.881-101.517-78.23-55.278-55.349-66.445-80.331-78.23-101.517-5.325-9.618-2.822-21.683 5.888-28.389l40.139-31.223c9.227-7.188 11.352-20.275 4.873-30.014l-32.6-48.905-38.877-58.316C98.262.03 85.016-2.95 74.786 3.185L29.95 30.083A54.779 54.779 0 005.074 62.277C-7.187 106.98-9.659 205.593 148.381 363.633s256.644 155.56 301.347 143.298a54.771 54.771 0 0032.194-24.876l26.898-44.835c6.136-10.231 3.156-23.476-6.77-30.093zM291.309 79.447c82.842.092 149.977 67.226 150.069 150.069a8.828 8.828 0 0017.656 0c-.102-92.589-75.135-167.622-167.724-167.724a8.828 8.828 0 00-8.828 8.828 8.826 8.826 0 008.827 8.827z" />
+                      <path d="M291.309 132.412c53.603.063 97.04 43.501 97.103 97.103a8.828 8.828 0 0017.656 0c-.073-63.349-51.409-114.686-114.759-114.759a8.828 8.828 0 000 17.656z" />
+                      <path d="M291.309 185.378c24.365.029 44.109 19.773 44.138 44.138a8.828 8.828 0 0017.656 0c-.039-34.111-27.682-61.754-61.793-61.793a8.828 8.828 0 00-8.828 8.828 8.826 8.826 0 008.827 8.827z" />
+                    </svg>
+                    <!-- end icon-call-1 -->
+                  </div>
+                  <a href="viber://chat?number=380980164356" class="header-contact__link">+38 098 016 43 56 Viber </a>
+                </div>
+                <div class="header__contact header-contact">
+                  <div class="header-contact__icon">
+                    <!-- begin icon-call -->
+                    <svg viewBox="0 0 384 384" class="icon icon-call" width="1.000em" height="1em">
+                      <path d="M353.188 252.052c-23.51 0-46.594-3.677-68.469-10.906-10.719-3.656-23.896-.302-30.438 6.417l-43.177 32.594c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208 11.167-20.198 7.635-31.448-7.26-21.99-10.948-45.063-10.948-68.583C132.146 13.823 118.323 0 101.333 0h-70.52C13.823 0 0 13.823 0 30.813 0 225.563 158.438 384 353.188 384c16.99 0 30.813-13.823 30.813-30.813v-70.323c-.001-16.989-13.824-30.812-30.813-30.812z" />
+                    </svg>
+                    <!-- end icon-call -->
+                  </div>
+                  <a href="tel:+380669240607" class="header-contact__link">+38 066 924 06 07</a>
+                </div>
+              </div>
+              <button class="header__cart header-cart">
+                <sup class="header-cart__sup">1</sup>
+                <!-- begin icon-shopping-cart -->
+                <svg height="1em" viewBox="0 -31 512 512" width="1.000em" class="icon icon-shopping-cart">
+                  <path d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0014.422-10.879l60-210a15.003 15.003 0 00-2.445-13.152A15.006 15.006 0 00497 60H130.367l-10.722-48.254A15.003 15.003 0 00105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zm0 0M150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0M362 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0" />
+                </svg>
+                <!-- end icon-shopping-cart -->
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- begin main -->
+      <main class="main">
+        <!-- begin section -->
+        <section class="section">
+          <div class="container">
+            <!-- begin features -->
+            <div class="section__block features">
+              <div class="features__item feature">
+                <div class="feature__icon">
+                  <img class="js-lazy" alt="" src="about:blank" data-src="./img/features/1.png" />
+                </div>
+                <h3 class="feature__title title title--h3">Безопасность</h3>
+                <div class="feature__text">Данные вашей банковской карты надежно защищены при оплате онлайн.</div>
+              </div>
+              <div class="features__item feature">
+                <div class="feature__icon">
+                  <img class="js-lazy" alt="" src="about:blank" data-src="./img/features/2.png" />
+                </div>
+                <h3 class="feature__title title title--h3">Бесплатная доставка</h3>
+                <div class="feature__text">У вас всегда есть возможность получить бесплатную доставку товаров</div>
+              </div>
+              <div class="features__item feature">
+                <div class="feature__icon">
+                  <img class="js-lazy" alt="" src="about:blank" data-src="./img/features/3.png" />
+                </div>
+                <h3 class="feature__title title title--h3">Доставка на следующий день</h3>
+                <div class="feature__text">Доставка на следующий день </div>
+              </div>
+              <div class="features__item feature">
+                <div class="feature__icon">
+                  <img class="js-lazy" alt="" src="about:blank" data-src="./img/features/4.png" />
+                </div>
+                <h3 class="feature__title title title--h3">Установка</h3>
+                <div class="feature__text">Посоветуем сервис-партнера в Вашем городе</div>
+              </div>
+            </div>
+            <!-- end features -->
+            <!-- begin cart -->
+            <div class="section__bllock cart meta-block">
+              <div class="meta-block__top"> Корзина </div>
+              <div class="meta-block__content">
+                <div class="cart__items">
+                  <!-- begin cart-item -->
+                  <div class="cart-item cart__item">
+                    <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
+                    <div class="cart-item__descr">
+                      <h4 class="cart-item__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                      <div class="cart-item__subttl">Артикул 310185</div>
+                      <div class="cart-item__label">
+                        <span class="card-label">Скидка 10%</span>
+                      </div>
+                      <div class="cart-item__text">Производитель Jrone</div>
+                    </div>
+                    <div class="cart-item__quantity">
+                      <!-- begin counter -->
+                      <div class="counter">
+                        <button class="counter__btn counter__btn--add">+</button>
+                        <input type="text" value="2" class="counter__input">
+                        <button class="counter__btn counter__btn--reduce">-</button>
+                      </div>
+                      <!-- end counter -->
+                    </div>
+                    <div class="cart-item__price">
+                      <div class="price-label"> 2000 <small>грн</small>
+                      </div>
+                    </div>
+                    <div class="cart-item__delete">
+                      <button class="close"></button>
+                    </div>
+                  </div>
+                  <!-- end cart-item -->
+                  <!-- begin cart-item -->
+                  <div class="cart-item cart__item">
+                    <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
+                    <div class="cart-item__descr">
+                      <h4 class="cart-item__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                      <div class="cart-item__subttl">Артикул 310185</div>
+                      <div class="cart-item__label">
+                        <span class="card-label">Скидка 10%</span>
+                      </div>
+                      <div class="cart-item__text">Производитель Jrone</div>
+                    </div>
+                    <div class="cart-item__quantity">
+                      <!-- begin counter -->
+                      <div class="counter">
+                        <button class="counter__btn counter__btn--add">+</button>
+                        <input type="text" value="2" class="counter__input">
+                        <button class="counter__btn counter__btn--reduce">-</button>
+                      </div>
+                      <!-- end counter -->
+                    </div>
+                    <div class="cart-item__price">
+                      <div class="price-label"> 2000 <small>грн</small>
+                      </div>
+                    </div>
+                    <div class="cart-item__delete">
+                      <button class="close"></button>
+                    </div>
+                  </div>
+                  <!-- end cart-item -->
+                  <!-- begin cart-item -->
+                  <div class="cart-item cart__item">
+                    <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
+                    <div class="cart-item__descr">
+                      <h4 class="cart-item__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                      <div class="cart-item__subttl">Артикул 310185</div>
+                      <div class="cart-item__label">
+                        <span class="card-label">Скидка 10%</span>
+                      </div>
+                      <div class="cart-item__text">Производитель Jrone</div>
+                    </div>
+                    <div class="cart-item__quantity">
+                      <!-- begin counter -->
+                      <div class="counter">
+                        <button class="counter__btn counter__btn--add">+</button>
+                        <input type="text" value="2" class="counter__input">
+                        <button class="counter__btn counter__btn--reduce">-</button>
+                      </div>
+                      <!-- end counter -->
+                    </div>
+                    <div class="cart-item__price">
+                      <div class="price-label"> 2000 <small>грн</small>
+                      </div>
+                    </div>
+                    <div class="cart-item__delete">
+                      <button class="close"></button>
+                    </div>
+                  </div>
+                  <!-- end cart-item -->
+                  <!-- begin cart-item -->
+                  <div class="cart-item cart__item">
+                    <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
+                    <div class="cart-item__descr">
+                      <h4 class="cart-item__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                      <div class="cart-item__subttl">Артикул 310185</div>
+                      <div class="cart-item__label">
+                        <span class="card-label">Скидка 10%</span>
+                      </div>
+                      <div class="cart-item__text">Производитель Jrone</div>
+                    </div>
+                    <div class="cart-item__quantity">
+                      <!-- begin counter -->
+                      <div class="counter">
+                        <button class="counter__btn counter__btn--add">+</button>
+                        <input type="text" value="2" class="counter__input">
+                        <button class="counter__btn counter__btn--reduce">-</button>
+                      </div>
+                      <!-- end counter -->
+                    </div>
+                    <div class="cart-item__price">
+                      <div class="price-label"> 2000 <small>грн</small>
+                      </div>
+                    </div>
+                    <div class="cart-item__delete">
+                      <button class="close"></button>
+                    </div>
+                  </div>
+                  <!-- end cart-item -->
+                </div>
+                <div class="cart__bottom">
+                  <div class="cart__price">
+                    <!-- begin cart-list -->
+                    <dl class="cart-list">
+                      <dt class="cart-list__title ">Ваша выгода:</dt>
+                      <dd class="cart-list__text ">200 грн</dd>
+                      <dt class="cart-list__title ">Итого с учётом скидки: </dt>
+                      <dd class="cart-list__text ">8000 грн</dd>
+                    </dl>
+                    <!-- end cart-list-->
+                  </div>
+                  <div class="cart__btn">
+                    <a href="#" class="btn">Оформить</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end cart -->
+          </div>
+        </section>
+        <!-- end section -->
+        <!-- begin section -->
+        <section class="section">
+          <div class="container">
+            <div class="text text-center"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </div>
+          </div>
+        </section>
+        <!-- end section -->
+      </main>
+      <!-- end main -->
+      <!-- begin footer -->
+      <footer class="footer">
+        <div class="footer__top js-lazy" data-background-image="./img/1440x400-banner-iveco-new-S-way.jpg">
+          <div class="container">
+            <div class="grid">
+              <div class="col col--3">
+                <div class="footer__block">
+                  <h3 class="footer__title title title--h3">ИНФОРМАЦИЯ</h3>
+                  <!-- begin nav -->
+                  <nav class="nav nav--footer">
+                    <ul>
+                      <li><a href="#">О нас</a></li>
+                      <li><a href="#">Доставка</a></li>
+                      <li><a href="#">Оплата</a></li>
+                      <li><a href="#">Условия сотрудничества</a></li>
+                      <li><a href="#">Региональные представители</a></li>
+                    </ul>
+                  </nav>
+                  <!-- end nav-->
+                </div>
+              </div>
+              <div class="col col--3">
+                <div class="footer__block">
+                  <h3 class="footer__title title title--h3">Каталог</h3>
+                  <!-- begin nav -->
+                  <nav class="nav nav--footer">
+                    <ul>
+                      <li><a href="#">Возврат и обмен товара</a></li>
+                      <li><a href="#">Бренды</a></li>
+                      <li><a href="#">Интересное</a></li>
+                      <li><a href="#">Реферальная программа</a></li>
+                      <li><a href="#">Товары со скидкой</a></li>
+                      <li><a href="#">Карта сайта</a></li>
+                    </ul>
+                  </nav>
+                  <!-- end nav-->
+                </div>
+              </div>
+              <div class="col col--3">
+                <div class="footer__block">
+                  <h3 class="footer__title title title--h3">Соц сети</h3>
+                  <!-- begin  -->
+                  <div class=" nav nav--footer">
+                    <ul>
+                      <li class="footer-contact ">
+                        <!-- begin icon-facebook -->
+                        <svg height="1em" viewBox="0 0 512 512" width="1.000em" class="icon icon-facebook">
+                          <path d="M475.074 0H36.926C16.53 0 0 16.531 0 36.926v438.148C0 495.47 16.531 512 36.926 512H273.5V314H207v-77.5h66.5v-57.035c0-66.14 40.379-102.14 99.379-102.14 28.258 0 52.543 2.105 59.621 3.046V149.5h-40.684c-32.101 0-38.316 15.254-38.316 37.64v49.36h76.75l-10 77.5H353.5v198h121.574C495.47 512 512 495.469 512 475.074V36.926C512 16.53 495.469 0 475.074 0zm0 0" />
+                        </svg>
+                        <!-- end icon-facebook -->
+                        <a href="#">Facebook</a></li>
+                      <li class="footer-contact ">
+                        <!-- begin icon-youtube -->
+                        <svg height="1em" width="1.000em" viewBox="0 0 500 500" class="icon icon-youtube">
+                          <path d="M50 0C22.3 0 0 22.3 0 50v400c0 27.7 22.3 50 50 50h400c27.7 0 50-22.3 50-50V50c0-27.7-22.3-50-50-50H50zm94.531 51.813h23.531l15.907 58.656 15.25-58.656h22.625l-26.906 88.874v60.532h-22.375v-60.531c-2.028-10.715-6.513-26.412-13.688-47.25-4.719-13.862-9.63-27.767-14.344-41.626zM251.812 88.53c10.11 0 17.983 3.792 23.563 11.406 4.23 5.626 6.25 14.35 6.25 26.25v38.97c0 11.832-2.02 20.616-6.25 26.187-5.58 7.592-13.453 11.406-23.563 11.406-10.048 0-17.891-3.814-23.468-11.406-4.292-5.571-6.313-14.355-6.313-26.188v-38.969c0-11.9 2.021-20.624 6.313-26.25 5.575-7.614 13.419-11.406 23.469-11.406zm46.407 1.344h20.125v81.969c0 4.727.006 7.184.25 7.844.445 3.123 2.01 4.718 4.719 4.718 4.033 0 8.28-3.12 12.75-9.437V89.875h20.156v111.344h-20.156v-12.156c-8.03 9.205-15.704 13.687-23.063 13.687-6.493 0-10.957-2.642-12.969-8.281-1.113-3.375-1.812-8.704-1.812-16.563V89.875zm-46.406 16.813c-6.505 0-9.625 5.137-9.625 15.437v46.844c0 10.303 3.12 15.437 9.625 15.437 6.504 0 9.625-5.134 9.625-15.437v-46.844c0-10.3-3.12-15.438-9.625-15.438zm-8.094 112.75h15.25c38.757 0 77.654.3 116.094 4.593 17.293 1.933 31.647 14.9 35.687 32.469 5.75 25.021 5.719 52.302 5.719 78.063v1.093c-.003 25.44-.113 52.332-5.781 77-4.041 17.568-18.424 30.537-35.72 32.469-38.48 4.301-77.387 4.563-116.187 4.563-2.5 0-5 .002-7.5 0-2.496.002-5.001 0-7.5 0-38.801 0-77.705-.262-116.187-4.563-17.295-1.932-31.678-14.901-35.719-32.469-5.613-24.426-5.748-51.001-5.75-76.219v-1.875c0-25.76.063-53.04 5.813-78.062 4.04-17.569 18.423-30.536 35.718-32.469 38.438-4.295 77.306-4.594 116.063-4.594zM110.75 260.53v20.813h23.5v127.062h22.219V281.344h23.906V260.53H110.75zm147.219 0v147.875h19.969V397.72c6.67 8.253 13.528 12.187 20.625 12.187 7.946 0 13.26-4.185 15.937-12.375 1.322-4.671 2.031-12.022 2.031-22.219V331.47c0-10.426-.708-17.723-2.031-22.156-2.678-8.251-7.991-12.438-15.938-12.438-7.341 0-14.179 4.004-20.625 11.938V260.53H257.97zm104.156 36.344c-10.188 0-18.132 3.771-23.906 11.313-4.24 5.571-6.156 14.163-6.156 25.937v38.594c0 11.707 2.163 20.392 6.406 25.906 5.772 7.527 13.713 11.281 24.156 11.281 10.426 0 18.638-3.938 24.156-11.937 2.432-3.531 3.99-7.535 4.656-11.969.188-1.991.407-6.422.407-12.844v-2.937H371.5c0 8.007-.256 12.443-.438 13.531-1.14 5.342-4.015 8.031-8.937 8.031-6.858 0-10.188-5.115-10.188-15.312v-19.531h39.907v-22.813c0-11.774-1.976-20.366-6.156-25.938-5.592-7.54-13.547-11.312-23.563-11.312zm-178.844 1.344v87.125c0 7.776.663 13.037 1.75 16.375 1.998 5.578 6.444 8.187 12.875 8.187 7.34 0 14.877-4.428 22.813-13.531v12.031h19.969V298.22h-19.97v84.219c-4.43 6.253-8.618 9.312-12.624 9.312-2.668 0-4.202-1.564-4.688-4.656-.185-.66-.187-3.072-.187-7.75v-81.125H183.28zm104.594 16.625c5.758 0 8.688 5.077 8.688 15.031v47.031c0 9.954-2.93 14.844-8.688 14.844-3.283 0-6.597-1.569-9.938-4.906v-67.156c3.341-3.294 6.657-4.844 9.938-4.844zm74.094 0c6.609 0 9.938 5.09 9.937 15.281v10.188h-19.969v-10.188c0-10.19 3.355-15.281 10.032-15.281z" />
+                        </svg>
+                        <!-- end icon-youtube -->
+                        <a href="#">Youtube</a></li>
+                      <li class="footer-contact ">
+                        <!-- begin icon-instagram -->
+                        <svg viewBox="0 0 300 300" class="icon icon-instagram" width="1.000em" height="1em">
+                          <path d="M38.52.012h222.978C282.682.012 300 17.336 300 38.52v222.978c0 21.178-17.318 38.49-38.502 38.49H38.52c-21.184 0-38.52-17.313-38.52-38.49V38.52C0 17.336 17.336.012 38.52.012zm180.026 33.317c-7.438 0-13.505 6.091-13.505 13.525v32.314c0 7.437 6.067 13.514 13.505 13.514h33.903c7.426 0 13.506-6.077 13.506-13.514V46.854c0-7.434-6.08-13.525-13.506-13.525h-33.903zm47.538 93.539h-26.396a87.715 87.715 0 013.86 25.759c0 49.882-41.766 90.34-93.266 90.34-51.487 0-93.254-40.458-93.254-90.34 0-8.963 1.37-17.584 3.861-25.759H33.35V253.6c0 6.563 5.359 11.902 11.916 11.902h208.907c6.563 0 11.911-5.339 11.911-11.902V126.868zm-115.801-35.89c-33.26 0-60.24 26.128-60.24 58.388 0 32.227 26.98 58.375 60.24 58.375 33.278 0 60.259-26.148 60.259-58.375 0-32.261-26.981-58.388-60.259-58.388z" />
+                        </svg>
+                        <!-- end icon-instagram -->
+                        <a href="#">Instagram</a></li>
+                    </ul>
+                  </div>
+                  <!-- end -->
+                </div>
+              </div>
+              <div class="col col--3">
+                <div class="footer__block">
+                  <h3 class="footer__title title title--h3">НАШИ КОНТАКТЫ</h3>
+                  <!-- begin  -->
+                  <div class=" nav nav--footer">
+                    <ul>
+                      <li class="footer-contact footer-contact--sm ">
+                        <!-- begin icon-phone-call -->
+                        <svg viewBox="0 0 512 512" class="icon icon-phone-call" width="1.000em" height="1em">
+                          <path d="M436.992 74.953c-99.989-99.959-262.08-99.935-362.039.055s-99.935 262.08.055 362.039 262.08 99.935 362.039-.055a256 256 0 00-.055-362.039zm-49.289 281.652l-.034.034v-.085l-12.971 12.885a68.267 68.267 0 01-64.427 18.432 226.834 226.834 0 01-65.877-29.525 304.371 304.371 0 01-51.968-41.899 306.71 306.71 0 01-38.827-47.104 238.907 238.907 0 01-29.184-59.051 68.265 68.265 0 0117.067-69.717l15.189-15.189c4.223-4.242 11.085-4.257 15.326-.034l.034.034 47.957 47.957c4.242 4.223 4.257 11.085.034 15.326l-.034.034-28.16 28.16c-8.08 7.992-9.096 20.692-2.389 29.867a329.334 329.334 0 0033.707 39.339 327.314 327.314 0 0044.373 37.291c9.167 6.394 21.595 5.316 29.525-2.56l27.221-27.648c4.223-4.242 11.085-4.257 15.326-.034l.034.034 48.043 48.128c4.243 4.222 4.258 11.083.035 15.325z" />
+                        </svg>
+                        <!-- end icon-phone-call -->
+                        <a href="tel:0501400742">050-140-07-42</a></li>
+                      <li class="footer-contact footer-contact--sm ">
+                        <!-- begin icon-phone-call -->
+                        <svg viewBox="0 0 512 512" class="icon icon-phone-call" width="1.000em" height="1em">
+                          <path d="M436.992 74.953c-99.989-99.959-262.08-99.935-362.039.055s-99.935 262.08.055 362.039 262.08 99.935 362.039-.055a256 256 0 00-.055-362.039zm-49.289 281.652l-.034.034v-.085l-12.971 12.885a68.267 68.267 0 01-64.427 18.432 226.834 226.834 0 01-65.877-29.525 304.371 304.371 0 01-51.968-41.899 306.71 306.71 0 01-38.827-47.104 238.907 238.907 0 01-29.184-59.051 68.265 68.265 0 0117.067-69.717l15.189-15.189c4.223-4.242 11.085-4.257 15.326-.034l.034.034 47.957 47.957c4.242 4.223 4.257 11.085.034 15.326l-.034.034-28.16 28.16c-8.08 7.992-9.096 20.692-2.389 29.867a329.334 329.334 0 0033.707 39.339 327.314 327.314 0 0044.373 37.291c9.167 6.394 21.595 5.316 29.525-2.56l27.221-27.648c4.223-4.242 11.085-4.257 15.326-.034l.034.034 48.043 48.128c4.243 4.222 4.258 11.083.035 15.325z" />
+                        </svg>
+                        <!-- end icon-phone-call -->
+                        <a href="tel:0936753134">093-675-31-34</a></li>
+                      <li class="footer-contact footer-contact--sm ">
+                        <!-- begin icon-phone-call -->
+                        <svg viewBox="0 0 512 512" class="icon icon-phone-call" width="1.000em" height="1em">
+                          <path d="M436.992 74.953c-99.989-99.959-262.08-99.935-362.039.055s-99.935 262.08.055 362.039 262.08 99.935 362.039-.055a256 256 0 00-.055-362.039zm-49.289 281.652l-.034.034v-.085l-12.971 12.885a68.267 68.267 0 01-64.427 18.432 226.834 226.834 0 01-65.877-29.525 304.371 304.371 0 01-51.968-41.899 306.71 306.71 0 01-38.827-47.104 238.907 238.907 0 01-29.184-59.051 68.265 68.265 0 0117.067-69.717l15.189-15.189c4.223-4.242 11.085-4.257 15.326-.034l.034.034 47.957 47.957c4.242 4.223 4.257 11.085.034 15.326l-.034.034-28.16 28.16c-8.08 7.992-9.096 20.692-2.389 29.867a329.334 329.334 0 0033.707 39.339 327.314 327.314 0 0044.373 37.291c9.167 6.394 21.595 5.316 29.525-2.56l27.221-27.648c4.223-4.242 11.085-4.257 15.326-.034l.034.034 48.043 48.128c4.243 4.222 4.258 11.083.035 15.325z" />
+                        </svg>
+                        <!-- end icon-phone-call -->
+                        <a href="tel:0988977507">098-897-75-07</a></li>
+                      <li class="footer-contact footer-contact--sm ">
+                        <!-- begin icon-envelope -->
+                        <svg viewBox="0 0 512 512" class="icon icon-envelope" width="1.000em" height="1em">
+                          <path d="M10.688 95.156C80.958 154.667 204.26 259.365 240.5 292.01c4.865 4.406 10.083 6.646 15.5 6.646 5.406 0 10.615-2.219 15.469-6.604 36.271-32.677 159.573-137.385 229.844-196.896 4.375-3.698 5.042-10.198 1.5-14.719C494.625 69.99 482.417 64 469.333 64H42.667c-13.083 0-25.292 5.99-33.479 16.438-3.542 4.52-2.875 11.02 1.5 14.718zM505.813 127.406a10.618 10.618 0 00-11.375 1.542c-46.021 39.01-106.656 90.552-152.385 129.885a10.654 10.654 0 00-3.708 8.271 10.644 10.644 0 004 8.135c42.49 34.031 106.521 80.844 152.76 114.115a10.626 10.626 0 006.229 2.01c1.667 0 3.333-.385 4.865-1.177a10.66 10.66 0 005.802-9.49V137.083a10.663 10.663 0 00-6.188-9.677zM16.896 389.354c46.25-33.271 110.292-80.083 152.771-114.115a10.646 10.646 0 004-8.135 10.654 10.654 0 00-3.708-8.271C124.229 219.5 63.583 167.958 17.563 128.948a10.674 10.674 0 00-11.375-1.542A10.66 10.66 0 000 137.083v243.615c0 4 2.24 7.667 5.802 9.49a10.566 10.566 0 004.865 1.177 10.62 10.62 0 006.229-2.011z" />
+                          <path d="M498.927 418.375c-44.656-31.948-126.917-91.51-176.021-131.365-4-3.26-9.792-3.156-13.729.24-9.635 8.406-17.698 15.49-23.417 20.635-17.563 15.854-41.938 15.854-59.542-.021-5.698-5.135-13.76-12.24-23.396-20.615-3.906-3.417-9.708-3.521-13.719-.24-48.938 39.719-131.292 99.354-176.021 131.365a10.703 10.703 0 00-4.406 7.604 10.67 10.67 0 002.802 8.333C19.552 443.01 30.927 448 42.667 448h426.667c11.74 0 23.104-4.99 31.198-13.688a10.676 10.676 0 002.802-8.323 10.73 10.73 0 00-4.407-7.614z" />
+                        </svg>
+                        <!-- end icon-envelope -->
+                        <a href="mailto:6753134@gmail.com">6753134@gmail.com</a></li>
+                      <li class="footer-contact footer-contact--sm ">
+                        <!-- begin icon-clock -->
+                        <svg height="1em" viewBox="0 0 443.294 443.294" width="1.000em" class="icon icon-clock">
+                          <path d="M221.647 0C99.433 0 0 99.433 0 221.647s99.433 221.647 221.647 221.647 221.647-99.433 221.647-221.647S343.861 0 221.647 0zm0 415.588c-106.941 0-193.941-87-193.941-193.941s87-193.941 193.941-193.941 193.941 87 193.941 193.941-87 193.941-193.941 193.941z" />
+                          <path d="M235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z" />
+                        </svg>
+                        <!-- end icon-clock --> пн-пт 9.00 - 18.00 сб 9.00 - 16.00</li>
+                    </ul>
+                  </div>
+                  <!-- end -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="footer__scroll-top scroll-top js-scroll-top"></button>
+        </div>
+        <div class="footer__middle">
+          <div class="container">
+            <div class="grid">
+              <div class="col col--8 col--offset-2">
+                <div class="footer__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</div>
+              </div>
+              <div class="col col--2">
+                <div class="footer__imgs">
+                  <img class="js-lazy" alt="" width="60" src="" data-src="./img/mastercard.svg" />
+                  <img class="js-lazy" alt="" width="60" src="" data-src="./img/Former_Visa_(company)_logo.svg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container"> Altis Avto (c) 2019 </div>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

@@ -4,3 +4,5 @@ PageList:
 - file: home.html
 - file: catalog.html
 - file: item.html
+- file: cart.html
+- file: cart-2.html

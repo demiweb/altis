@@ -1,0 +1,64 @@
+.cart
+  &__item
+    +notlast
+      margin-bottom: rem(10)
+  &__bottom
+    +flex(space-between, center)
+    padding-bottom: rem(30)
+    padding-top: rem(40)
+  &__price
+    flex-grow: 1
+
+
+.cart-item
+  $this: &
+  +flex
+  border-bottom: 1px solid  $c-border
+  padding-bottom: rem(10)
+  &__img
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: 70%
+    border-radius: $radius
+    border: 1px solid  $c-border
+    width: rem(130)
+    height: rem(130)
+    flex: 0 0 rem(130)
+  &__descr
+    padding-left: rem(30)
+    width: percentage(420/ 1085)
+  &__quantity
+    width: percentage(200/ 1085)
+  &__price
+    width: percentage(200/ 1085)
+  &__delete
+    width: calc(#{percentage((1085 - (420 + 200 + 200)) / 1085)} - #{rem(130)})
+  &__title
+    margin-bottom: rem(8)
+  &__subttl
+    color: #a3a3a3
+  &__label
+    margin-bottom: rem(5)
+    font-size: em(10)
+  &__text
+    font-size: em(12)
+  &__delete, &__price, &__quantity
+    display: flex
+    align-items: center
+  &__price, &__quantity
+    justify-content: center
+  &__delete
+    justify-content: flex-end
+
+
+.cart-list
+  +clr
+  font-weight: 500
+  &__title
+    float: left
+    font-size: em(16)
+    margin-right: .3em
+  &__text
+    font-size: em(21)
+    position: relative
+    top: -.2em

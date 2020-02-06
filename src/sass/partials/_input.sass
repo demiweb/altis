@@ -1,30 +1,44 @@
 .input
+  $this: &
   display: block
-  #{$text-inputs}
+  &__field
     width: 100%
+    background-color: $white
+    height: rem(40)
+    border: 1px solid  $c-border
+    padding: .7em 1.2em
+    +placeholder
+      color: inherit
+
   &__label
     display: block
-    font-weight: 600
-    font-size: em(16)
     margin-bottom: .1em
+    &--lg      
+      font-weight: 600
+      font-size: em(16)
+    &--checkbox
+      margin-bottom: 0
+      display: inline
+      
 
   &--checkbox
     position: relative
     padding-left: 1.5em
     user-select: none
-    input[type="checkbox"]
-      opacity: 0
-      visibility: hidden
-      position: absolute
-      &:checked + span
-        &::after
-          content: ''
-          +icon-arrow(.6, .3, .05, #000, -45, em)
-          top: .4em
-          left: .35em
-          position: absolute
-          display: block
-    span
+    #{$this}__field
+      &[type="checkbox"]
+        opacity: 0
+        visibility: hidden
+        position: absolute
+        &:checked + #{$this}__label
+          &::after
+            content: ''
+            +icon-arrow(.6, .3, .05, #000, -45, em)
+            top: .4em
+            left: .35em
+            position: absolute
+            display: block
+    #{$this}__label
       &::before
         content: ''
         border: 1px solid $c-border
@@ -36,6 +50,11 @@
         position: absolute
         display: block
         border-radius: $radius-sm
+
+  &--textarea
+    #{$this}__field
+      min-height: rem(130)
+
 
 .custom-select
   $this: &
@@ -78,7 +97,7 @@
     background-color: $light
     +hidden
     +ready
-      +tr(opacity .3s, visibility .3s)
+      // +tr(opacity .3s, visibility .3s)
   &__option
     padding: .75em 1em
     +tr(background-color .3s, color .3s)

@@ -1,0 +1,36 @@
+{%set
+features = [
+  {
+    title: 'Безопасность',
+    text: 'Данные вашей банковской карты надежно защищены при оплате онлайн.'
+  },
+  {
+    title: 'Бесплатная доставка',
+    text: 'У вас всегда есть возможность получить бесплатную доставку товаров'
+  },
+  {
+    title: 'Доставка на следующий день',
+    text: 'Доставка на следующий день '
+  },
+  {
+    title: 'Установка',
+    text: 'Посоветуем сервис-партнера в Вашем городе'
+  }
+]
+%}
+
+<!-- begin features -->
+<div class="section__block features">
+  {% for i in features %}
+  <div class="features__item feature">
+    <div class="feature__icon">
+      <img class="js-lazy" alt="" src="about:blank" data-src="./img/features/{{ loop.index }}.png"/>
+    </div>
+
+    <h3 class="feature__title title title--h3">{{ i.title | safe }}</h3>
+
+    <div class="feature__text">{{ i.text | safe }}</div>
+  </div>
+  {% endfor %}
+</div>
+<!-- end features -->

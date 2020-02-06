@@ -20,7 +20,7 @@
 
   {% if name === 'select' %}
   <select
-    {% if fieldClass %}class="{{ fieldClass }}"{% endif %}
+    class="input__field{% if fieldClass %} {{ fieldClass }}{% endif %}"
     {% for attr, attrValue in fieldAttributes %}
       {{ attr }}="{{ attrValue }}"
     {% endfor %}>
@@ -35,7 +35,7 @@
 
   {% elseif name === 'textarea' %}
   <textarea
-    {% if fieldClass %}class="{{ fieldClass }}"{% endif %}
+    class="input__field{% if fieldClass %} {{ fieldClass }}{% endif %}"
     {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}
     {% if value %}value="{{value}}"{% endif %}
     {% for attr, attrValue in fieldAttributes %}
@@ -45,7 +45,7 @@
   {% else %}
 
   <input
-    {% if fieldClass %}class="{{ fieldClass }}"{% endif %}
+    class="input__field{% if fieldClass %} {{ fieldClass }}{% endif %}"
     type="{{ type }}"
     {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}
     {% if value %}value="{{value}}"{% endif %}

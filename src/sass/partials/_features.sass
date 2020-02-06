@@ -1,0 +1,26 @@
+.features
+  +flex(flex-start, normal, row, wrap)
+  &__item
+    width: calc(25% - #{rem(70)})
+    margin-left: rem(35)
+    margin-right: rem(35)
+
+.feature
+  text-align: center
+  &__icon
+    border-radius: 50%
+    background-color: $white
+    border: 1px solid $c-border
+    +flex(center, center)
+    width: 1em
+    height: 1em
+    font-size: rem(145)
+    margin-bottom: rem(15)
+    margin-left: auto
+    margin-right: auto
+  &__title
+    color: $accent
+    margin-bottom: rem(10)
+  &__text
+    font-size: rem(16)
+    font-weight: 500
