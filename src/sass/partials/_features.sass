@@ -4,6 +4,15 @@
     width: calc(25% - #{rem(70)})
     margin-left: rem(35)
     margin-right: rem(35)
+    +md
+      margin-left: rem(15)
+      margin-right: rem(15)
+      width: calc(25% - #{rem(30)})
+    +sm
+      margin-left: rem(10)
+      margin-right: rem(10)
+      width: calc(50% - #{rem(20)})
+      margin-bottom: rem(15)
 
 .feature
   text-align: center
@@ -18,6 +27,10 @@
     margin-bottom: rem(15)
     margin-left: auto
     margin-right: auto
+    img
+      max-height: 70%
+    +md
+      font-size: rem(130)
   &__title
     color: $accent
     margin-bottom: rem(10)

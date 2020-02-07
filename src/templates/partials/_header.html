@@ -6,19 +6,43 @@
         <a href="/" class="header__logo-mob logo">
           <img class="js-lazy" alt="" src="" data-src="./img/logo-mob.png"/>
         </a>
-        {{ mixins.list(
-          name = 'nav',
-          hasWrap = true,
-          modifications = { wrap: 'header__nav', item: '', link: '' },
-          list = [
-             { link: 'Запчасти на Складе' },
-             { link: 'О компании' },
-             { link: 'Оплата и доставка' },
-             { link: 'Блог' },
-             { link: 'Сотрудничество' },
-             { link: 'Контакты' }
-          ]
-        ) }}
+        <div class="header__nav-wrap js-menu">
+          <a href="/" class="header__logo-mob-menu logo">
+            <img class="" alt="" src="./img/logo-mob.png"/>
+          </a>
+
+          <div class="header__contacts-mob">
+            <div class="header__contact header-contact header-contact--viber">
+              <div class="header-contact__icon">
+                {{ mixins.icon('call-1') }}
+              </div>
+              <a href="viber://chat?number=380980164356" class="header-contact__link">+38 098 016 43 56 Viber </a>
+            </div>
+
+            <div class="header__contact header-contact">
+              <div class="header-contact__icon">
+                {{ mixins.icon('call') }}
+              </div>
+              <a href="tel:+380669240607" class="header-contact__link">+38 066 924 06 07</a>
+            </div>
+          </div>
+
+
+
+          {{ mixins.list(
+            name = 'nav',
+            hasWrap = true,
+            modifications = { wrap: 'header__nav', item: '', link: '' },
+            list = [
+               { link: 'Запчасти на Складе' },
+               { link: 'О компании' },
+               { link: 'Оплата и доставка' },
+               { link: 'Блог' },
+               { link: 'Сотрудничество' },
+               { link: 'Контакты' }
+            ]
+          ) }}
+        </div>
       </div>
     </div>
   </div>
@@ -45,7 +69,7 @@
         </div>
 
         <div class="header__contacts-wrap">
-          <button class="header__burger burger burger--lg"><span></span></button>
+          <button class="header__burger burger burger--lg js-burger"><span></span></button>
 
           <div class="header__contacts">
             <div class="header__contact header-contact header-contact--viber">

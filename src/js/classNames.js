@@ -22,4 +22,17 @@ export default {
     },
     gallery: 'js-gallery',
   },
+  scrollTo: {
+    top: 'js-scroll-top',
+  },
+  accordion: {
+    wrap: 'js-accordion',
+    btn: 'js-accordion-title',
+    item: 'js-accordion-content',
+  },
+  tabs: {
+    wrap: 'js-tabs',
+    tab: 'js-tabs-btn',
+    item: 'js-tabs-content',
+  },
 }

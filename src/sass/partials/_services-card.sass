@@ -1,11 +1,12 @@
 .services-card
   $this: &
   +shadow
-  display: block
+  +flex(flex-start, normal, column)
   overflow: hidden
   border-radius: $radius
   background-color: $white
   +tr(background-color .3s, color .3s)
+  height: 100%
   +hover
     background-color: $accent
     color: $white
@@ -18,5 +19,6 @@
     padding: .5em 1em
     +flex(center, center)
     text-align: center
-    height: rem(50)
+    min-height: rem(50)
     overflow: hidden
+    flex-grow: 1

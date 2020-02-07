@@ -31,10 +31,20 @@
     margin-left: em(-8)
     margin-right: em(-8)
     padding-top: em(14)
+    +lg
+      display: block
+      margin-left: 0
+      margin-right: 0
   &__price-label
     width: calc(50% - #{em(16)})
     margin-left: em(8)
     margin-right: em(8)
+    +lg
+      margin-left: 0
+      margin-right: 0
+      width: 100%
+      +notlast
+        margin-bottom: rem(10)
 
 
 .card-label
@@ -74,6 +84,8 @@
   position: relative
   small
     font-size: em(16.91, 21)
+  +r(400)
+    font-size: 1em
   &--old
     color: inherit
     font-weight: 400

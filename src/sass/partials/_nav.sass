@@ -1,8 +1,13 @@
 .nav
   font-size: em(10.78)
+  +lg
+    font-size: em(16)
   li
     &:not(.footer-contact)
       display: inline-block
+      +lg
+        display: block
+        margin-bottom: rem(15)
     +notlast
       margin-right: rem(25)
   a
@@ -11,6 +16,8 @@
       color: $accent
 
   &--footer
+    +sm
+      font-size: em(10.78)
     li
       &:not(.footer-contact)
         display: block

@@ -20,18 +20,47 @@
               <a href="/" class="header__logo-mob logo">
                 <img class="js-lazy" alt="" src="" data-src="./img/logo-mob.png" />
               </a>
-              <!-- begin nav -->
-              <nav class="nav header__nav">
-                <ul>
-                  <li><a href="#">Запчасти на Складе</a></li>
-                  <li><a href="#">О компании</a></li>
-                  <li><a href="#">Оплата и доставка</a></li>
-                  <li><a href="#">Блог</a></li>
-                  <li><a href="#">Сотрудничество</a></li>
-                  <li><a href="#">Контакты</a></li>
-                </ul>
-              </nav>
-              <!-- end nav-->
+              <div class="header__nav-wrap js-menu">
+                <a href="/" class="header__logo-mob-menu logo">
+                  <img class="" alt="" src="./img/logo-mob.png" />
+                </a>
+                <div class="header__contacts-mob">
+                  <div class="header__contact header-contact header-contact--viber">
+                    <div class="header-contact__icon">
+                      <!-- begin icon-call-1 -->
+                      <svg viewBox="0 0 512.006 512.006" class="icon icon-call-1" width="1.000em" height="1em">
+                        <path d="M502.05 407.127l-56.761-37.844-50.459-33.633c-9.738-6.479-22.825-4.355-30.014 4.873l-31.223 40.139c-6.707 8.71-18.772 11.213-28.39 5.888-21.186-11.785-46.239-22.881-101.517-78.23-55.278-55.349-66.445-80.331-78.23-101.517-5.325-9.618-2.822-21.683 5.888-28.389l40.139-31.223c9.227-7.188 11.352-20.275 4.873-30.014l-32.6-48.905-38.877-58.316C98.262.03 85.016-2.95 74.786 3.185L29.95 30.083A54.779 54.779 0 005.074 62.277C-7.187 106.98-9.659 205.593 148.381 363.633s256.644 155.56 301.347 143.298a54.771 54.771 0 0032.194-24.876l26.898-44.835c6.136-10.231 3.156-23.476-6.77-30.093zM291.309 79.447c82.842.092 149.977 67.226 150.069 150.069a8.828 8.828 0 0017.656 0c-.102-92.589-75.135-167.622-167.724-167.724a8.828 8.828 0 00-8.828 8.828 8.826 8.826 0 008.827 8.827z" />
+                        <path d="M291.309 132.412c53.603.063 97.04 43.501 97.103 97.103a8.828 8.828 0 0017.656 0c-.073-63.349-51.409-114.686-114.759-114.759a8.828 8.828 0 000 17.656z" />
+                        <path d="M291.309 185.378c24.365.029 44.109 19.773 44.138 44.138a8.828 8.828 0 0017.656 0c-.039-34.111-27.682-61.754-61.793-61.793a8.828 8.828 0 00-8.828 8.828 8.826 8.826 0 008.827 8.827z" />
+                      </svg>
+                      <!-- end icon-call-1 -->
+                    </div>
+                    <a href="viber://chat?number=380980164356" class="header-contact__link">+38 098 016 43 56 Viber </a>
+                  </div>
+                  <div class="header__contact header-contact">
+                    <div class="header-contact__icon">
+                      <!-- begin icon-call -->
+                      <svg viewBox="0 0 384 384" class="icon icon-call" width="1.000em" height="1em">
+                        <path d="M353.188 252.052c-23.51 0-46.594-3.677-68.469-10.906-10.719-3.656-23.896-.302-30.438 6.417l-43.177 32.594c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208 11.167-20.198 7.635-31.448-7.26-21.99-10.948-45.063-10.948-68.583C132.146 13.823 118.323 0 101.333 0h-70.52C13.823 0 0 13.823 0 30.813 0 225.563 158.438 384 353.188 384c16.99 0 30.813-13.823 30.813-30.813v-70.323c-.001-16.989-13.824-30.812-30.813-30.812z" />
+                      </svg>
+                      <!-- end icon-call -->
+                    </div>
+                    <a href="tel:+380669240607" class="header-contact__link">+38 066 924 06 07</a>
+                  </div>
+                </div>
+                <!-- begin nav -->
+                <nav class="nav header__nav">
+                  <ul>
+                    <li><a href="#">Запчасти на Складе</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Оплата и доставка</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </nav>
+                <!-- end nav-->
+              </div>
             </div>
           </div>
         </div>
@@ -55,7 +84,7 @@
                 <a href="#" class="btn header__btn">Оставить вопрос</a>
               </div>
               <div class="header__contacts-wrap">
-                <button class="header__burger burger burger--lg"><span></span></button>
+                <button class="header__burger burger burger--lg js-burger"><span></span></button>
                 <div class="header__contacts">
                   <div class="header__contact header-contact header-contact--viber">
                     <div class="header-contact__icon">
@@ -116,7 +145,7 @@
               </div>
               <div class="contacts__contacts main-contacts">
                 <div class="grid">
-                  <div class="col col--4">
+                  <div class="col col--xs-4">
                     <div class="main-contacts__contact main-contact">
                       <div class="main-contact__icon">
                         <!-- begin icon-viber -->
@@ -157,7 +186,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col col--4">
+                  <div class="col col--xs-4">
                     <div class="main-contacts__contact main-contact">
                       <div class="main-contact__icon">
                         <!-- begin icon-email -->
@@ -183,7 +212,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col col--4">
+                  <div class="col col--xs-4">
                     <div class="main-contacts__contact main-contact">
                       <div class="main-contact__icon">
                         <!-- begin icon-place -->
@@ -260,7 +289,7 @@
         <div class="footer__top js-lazy" data-background-image="./img/1440x400-banner-iveco-new-S-way.jpg">
           <div class="container">
             <div class="grid">
-              <div class="col col--3">
+              <div class="col col--sm-3 col--6">
                 <div class="footer__block">
                   <h3 class="footer__title title title--h3">ИНФОРМАЦИЯ</h3>
                   <!-- begin nav -->
@@ -276,7 +305,7 @@
                   <!-- end nav-->
                 </div>
               </div>
-              <div class="col col--3">
+              <div class="col col--sm-3 col--6">
                 <div class="footer__block">
                   <h3 class="footer__title title title--h3">Каталог</h3>
                   <!-- begin nav -->
@@ -293,7 +322,7 @@
                   <!-- end nav-->
                 </div>
               </div>
-              <div class="col col--3">
+              <div class="col col--sm-3 col--6">
                 <div class="footer__block">
                   <h3 class="footer__title title title--h3">Соц сети</h3>
                   <!-- begin  -->
@@ -325,7 +354,7 @@
                   <!-- end -->
                 </div>
               </div>
-              <div class="col col--3">
+              <div class="col col--sm-3 col--6">
                 <div class="footer__block">
                   <h3 class="footer__title title title--h3">НАШИ КОНТАКТЫ</h3>
                   <!-- begin  -->
@@ -379,10 +408,10 @@
         <div class="footer__middle">
           <div class="container">
             <div class="grid">
-              <div class="col col--8 col--offset-2">
+              <div class="col col--md-8 col--offset-md-2">
                 <div class="footer__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</div>
               </div>
-              <div class="col col--2">
+              <div class="col col--md-2">
                 <div class="footer__imgs">
                   <img class="js-lazy" alt="" width="60" src="" data-src="./img/mastercard.svg" />
                   <img class="js-lazy" alt="" width="60" src="" data-src="./img/Former_Visa_(company)_logo.svg" />

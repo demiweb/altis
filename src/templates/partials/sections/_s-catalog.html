@@ -2,6 +2,17 @@
 <section class="section">
   <h2 class="section__title title title--h2 text-center">Запчасти на DAF</h2>
 
+  {% set asideBlockMod = 'aside__block--sliders hidden--mdmin' %}
+  {% include "partials/aside/_aside-sliders.html" %}
+
+  <div class="items__top items-top">
+    <div class="items-top__title">отображение</div>
+    <div class="items-top__btns">
+      <button class="items-top__btn items-top__btn--two-cols items-top__btn--active"></button>
+      <button class="items-top__btn items-top__btn--one-col"></button>
+    </div>
+  </div>
+
   <!-- begin block -->
   <div class="section__block block items">
       {% for i in range(0, 20) %}

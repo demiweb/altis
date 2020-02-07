@@ -2,13 +2,16 @@
 tabs = [
   {
     tabTitle: 'Cкидки',
-    active: true
+    active: true,
+    tab: 'discount'
   },
   {
-    tabTitle: 'Новые поступления'
+    tabTitle: 'Новые поступления',
+    tab: 'new'
   },
   {
-    tabTitle: 'Популярные'
+    tabTitle: 'Популярные',
+    tab: 'popular'
   }
 ]
 %}
@@ -17,16 +20,22 @@ tabs = [
 <section class="section section--bg js-lazy" data-background-image="./img/7a1e0dac-ed61-42e1-a206-9ce908cf095e.jpg">
   <div class="container">
     <!-- begin items-tabs -->
-    <div class="items-tabs">
+    <div class="items-tabs js-tabs">
       <div class="items-tabs__tabs">
         {% for i in tabs %}
-        <button class="items-tabs__tab js-tab{% if i.active %} items-tabs__tab--active{% endif %}">{{ i.tabTitle | safe }}</button>
+        <button
+          class="items-tabs__tab js-tabs-btn{% if i.active %} items-tabs__tab--active{% endif %}"
+          data-tabs-tab="{{ i.tab }}"
+          >{{ i.tabTitle | safe }}</button>
         {% endfor %}
       </div>
 
       <div class="items-tabs__content">
         {% for i in tabs %}
-        <div class="items-tabs__item js-tabs-content{% if i.active %} items-tabs__item--active{% endif %}">
+        <div
+          class="items-tabs__item js-tabs-content{% if i.active %} items-tabs__item--active{% endif %}"
+          data-tabs-item="{{ i.tab }}"
+        >
           {% include "partials/sliders/_items.html" %}
         </div>
         {% endfor %}

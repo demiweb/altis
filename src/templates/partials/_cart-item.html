@@ -18,17 +18,19 @@
     </div>
   </div>
 
-  <div class="cart-item__quantity">
-    {% if i.counter %}
-    {% include "partials/_counter.html" %}
-    {% else %}
-    <div class="cart-item__quantity-text">1х</div>
-    {% endif %}
-  </div>
+  <div class="cart-item__price-wrap">
+    <div class="cart-item__quantity">
+      {% if i.counter %}
+      {% include "partials/_counter.html" %}
+      {% else %}
+      <div class="cart-item__quantity-text">1х</div>
+      {% endif %}
+    </div>
 
-  <div class="cart-item__price">
-    <div class="price-label">
-      2000 <small>грн</small>
+    <div class="cart-item__price">
+      <div class="price-label">
+        2000 <small>грн</small>
+      </div>
     </div>
   </div>
 

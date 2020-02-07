@@ -7,8 +7,12 @@
     +flex(space-between, center)
     padding-bottom: rem(30)
     padding-top: rem(40)
+    +xs
+      display: block
   &__price
     flex-grow: 1
+    +xs
+      margin-bottom: rem(30)
   &__amount
     +flex(space-between, center)
     padding-right: rem(20)
@@ -43,15 +47,27 @@
     width: rem(130)
     height: rem(130)
     flex: 0 0 rem(130)
+    +xs
+      width: rem(90)
+      height: rem(90)
+      flex: 0 0 rem(90)
   &__descr
     padding-left: rem(30)
     width: percentage(420/ 1085)
-  &__quantity
-    width: percentage(200/ 1085)
-  &__price
-    width: percentage(200/ 1085)
+    +xs
+      padding-left: rem(10)
+  &__price-wrap
+    width: percentage(400/ 1085)
+    +flex(flex-start, center, row, wrap)
+  &__quantity, &__price
+    width: 50%
+    +sm
+      width: 100%
+      justify-content: flex-end
   &__delete
     width: calc(#{percentage((1085 - (420 + 200 + 200)) / 1085)} - #{rem(130)})
+    +xs
+      width: calc(#{percentage((1085 - (420 + 200 + 200)) / 1085)} - #{rem(90)})
   &__title
     margin-bottom: rem(8)
     a
@@ -81,10 +97,12 @@
       padding-left: rem(10)
       width: percentage(330 / 680)
       +flex(space-between, normal, column)
+    #{$this}__price-wrap
+      width: calc(#{percentage((680 - 330) / 680)} - #{rem(130)})
+      +xs
+        width: calc(#{percentage((680 - 330) / 680)} - #{rem(90)})
     #{$this}__quantity
-      width: percentage(85 / 680)
     #{$this}__price
-      width: calc(#{percentage((680 - (330 + 85)) / 680)} - #{rem(130)})
 
 
 .cart-list
@@ -104,6 +122,8 @@
   &__block
     width: 50%
     margin-bottom: rem(20)
+    +xs
+      width: 100%
     &--full
       width: 100%
     &--btn
@@ -113,4 +133,5 @@
     font-weight: 500
     margin-bottom: rem(10)
   &__input
-    margin-bottom: rem(20)
+    +notlast
+      margin-bottom: rem(20)

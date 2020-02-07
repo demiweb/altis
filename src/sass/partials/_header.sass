@@ -29,6 +29,10 @@
   &__logo-mob
     +lgmin
       display: none
+  &__logo-mob-menu
+    margin-bottom: rem(30)
+    +lgmin
+      display: none
   &__search
     margin-right: rem(20)
     +lg
@@ -81,9 +85,38 @@
     padding-left: rem(35)
     +lg
       padding-left: 0
+  &__contacts-mob
+    border-top: 1px solid  $c-border
+    border-bottom: 1px solid  $c-border
+    padding: rem(15) rem(20)
+    margin-left: rem(-20)
+    margin-right: rem(-20)
+    +lgmin
+      display: none
+    #{$this}__contact
+      +notlast
+        margin-bottom: rem(10)
+  &__nav-wrap
+    +lg
+      +shadow
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 10
+      background-color: $white
+      border-bottom-right-radius: $radius-sm
+      padding: rem(15) rem(20) rem(70)
+      width: 460px
+      max-width: percentage(460 / 500)
+      transform: translate(-105%, 0)
+      +ready
+        +tr(transform .5s)
+      &--open
+        transform: translate(0, 0)
+
   &__nav
     +lg
-      display: none
+      padding-top: rem(20)
   &__burger
     color: $accent
     margin-right: rem(30)

@@ -5,14 +5,17 @@
   {% endif %}
 
   {% if aside.sliders %}
+    {% set asideBlockMod = 'hidden--md' %}
     {% include "partials/aside/_aside-sliders.html" %}
   {% endif %}
   
   {% if aside.contacts %}
+    {% set asideBlockMod = 'hidden--md' %}
     {% include "partials/aside/_aside-contacts.html" %}
   {% endif %}
   
   {% if aside.scedule %}
+    {% set asideBlockMod = 'hidden--md' %}
     {% include "partials/aside/_aside-scedule.html" %}
   {% endif %}
 </aside>

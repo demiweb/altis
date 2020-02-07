@@ -1,13 +1,23 @@
 .section
   padding-top: rem(40)
   padding-bottom: rem(40)
+  +md
+    padding-top: rem(10)
+    padding-bottom: rem(10)
   &__block
     margin-bottom: rem(30)
+    +xs
+      margin-bottom: rem(15)
   &__block-sm
     margin-bottom: rem(15)
   &__title
     margin-bottom: rem(20)
+    +lg
+      text-align: center
 
   &--bg
     +cover
     background-color: $c-border
+    +xs
+      background-image: none !important
+      background-color: $white

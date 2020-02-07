@@ -666,14 +666,20 @@ filters = [
 ]
 %}
 
-<div class="aside__block meta-block">
-  <div class="meta-block__top meta-block__top--has-icon">
-    <div class="meta-block__top-icon"><span></span></div>
+<div class="aside__block aside-filters-block meta-block js-accordion">
+  <button
+    class="meta-block__top aside-filters-block__top meta-block__top--has-icon js-accordion-title"
+    data-block="aside-filters-block__top"
+    data-accordion-btn="aside-filters">
+    <span class="meta-block__top-icon"><span></span></span>
 
-    <div class="meta-block__title">Подбор по каталогу</div>
-  </div>
+    <span class="meta-block__title">Подбор по каталогу</span>
+  </button>
 
-  <div class="meta-block__content">
+  <div
+    class="meta-block__content aside-filters-block__content js-accordion-content"
+    data-block="aside-filters-block__content"
+    data-accordion-item="aside-filters">
     {{ mixins.input(
       name = 'select',
       mod = 'meta-block__input',
@@ -710,16 +716,16 @@ filters = [
     <ul class="meta-block__filters aside-filters js-accordion">
       {% for i in filters %}
       <li class="aside-filters__item">
-        <button class="aside-filters__btn">
+        <button class="aside-filters__btn js-accordion-title" data-block="aside-filters__btn">
           <span class="aside-filters__icon"></span>
           <span class="aside-filters__title">{{ i.title | safe }}</span>
         </button>
         {% if i.sublist %}
-        <ul class="aside-filters__sublist">
+        <ul class="aside-filters__sublist js-accordion-content" data-block="aside-filters__sublist">
           {% for j in i.sublist %}
           <li class="aside-filters__subitem">
             {% if j.sublist %}
-            <button class="aside-filters__btn">
+            <button class="aside-filters__btn js-accordion-title" data-block="aside-filters__btn">
               <span class="aside-filters__icon"></span>            
               <span class="aside-filters__title">{{ j.title | safe }}</span>
             </button>
@@ -727,7 +733,7 @@ filters = [
             <span class="aside-filters__title">{{ j.title | safe }}</span>
             {% endif %}
             {% if j.sublist %}
-            <ul class="aside-filters__sublist aside-filters__sublist--second">
+            <ul class="aside-filters__sublist aside-filters__sublist--second js-accordion-content" data-block="aside-filters__sublist">
               {% for k in j.sublist %}
               <li class="aside-filters__subitem">{{ k.title | safe }}</li>
               {% endfor %}

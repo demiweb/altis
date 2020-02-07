@@ -13,6 +13,14 @@
     +tr(background-color .3s, color .3s)
     +hover
       @extend #{$this}__tab--active
+    +lg
+      padding: .3em 1em .5em
+    +xxs
+      font-size: 1em
+      padding-left: .7em
+      padding-right: .7em
+    +r(374)
+      font-size: em(12)
     &--active
       background-color: $accent
       color: $white
@@ -25,6 +33,9 @@
     z-index: 2
     +notlast
       margin-bottom: rem(15)
+    +xs
+      padding: 0
+      box-shadow: none
     &--no-shadow
       box-shadow: none
       border: 1px solid  $c-border
@@ -33,6 +44,7 @@
     +hidden
     overflow: hidden
     max-height: 0
+    +tr(opacity .3s, visibility .3s)
     &--active
       +visible
       max-height: none

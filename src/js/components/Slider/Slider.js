@@ -15,21 +15,33 @@ export default class Slider {
         slidesPerView: 1,
         grabCursor: true,
         navigation,
-        pagination: {
-          el: pagination,
-          type: 'bullets',
-          clickable: true,
-        },
         on: {
           init: onInit,
         },
+        breakpoints: {
+          576: {
+            pagination: {
+              el: pagination,
+              type: 'bullets',
+              clickable: true,
+            },
+          },
+        },
       },
       items: {
-        slidesPerView: 4,
+        slidesPerView: 2,
         spaceBetween: 14,
         navigation,
         on: {
           init: onInit,
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 3,
+          },
+          992: {
+            slidesPerView: 4,
+          },
         },
       },
       gallery: {

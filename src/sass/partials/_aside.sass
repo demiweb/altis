@@ -1,6 +1,30 @@
 .aside
   &__block
-    margin-bottom: rem(13)
+    margin-bottom: rem(13)   
+    +md
+      height: 100%
+      +flex(flex-start, normal, column)
+      .meta-block__content
+        flex-grow: 1
+    &--sliders
+      .meta-block__input:not(.input)
+        +xs
+          display: inline-block
+
+.aside-filters-block
+  $this: &
+  &__top
+    +md
+      +after
+        +icon-arrow(.8, .8, .1, currentColor, -45, em)
+        display: block
+        margin-top: -.2em
+  &__content    
+    &:not(#{$this}__content--open)
+      +hidden
+      overflow: hidden
+      max-height: 0
+      padding: 0
 
 .aside-filters
   &__item    
@@ -45,12 +69,14 @@
     font-size: rem(12)
     font-weight: 600
     color: $accent
+    // display: none
     +hidden
     max-height: 0
     overflow: hidden
     &--open
       +visible
       max-height: none
+      overflow: visible
     &--second
       color: $accent-dark
       padding-left: em(10)

@@ -5,6 +5,8 @@ html
   +reg
   // +sm
   //   font-size: $fz-sm-px
+  +r(400)
+    font-size: 12px
 
 body
   background-color: $light  
@@ -23,13 +25,17 @@ body
 
 .logo
   display: inline-block
-  font-size: 0
+  font-size: 0  
 
 .main
   padding-top: rem(10)
   // padding-bottom: rem(10)
   &__breadcrumbs
     margin-bottom: rem(10)
+
+.container
+  +lg
+    max-width: none
 
 .search
   +flex()
@@ -65,6 +71,8 @@ body
   +clr
   &__title, &__text
     margin-bottom: .7rem
+    +xs
+      margin-bottom: .3em
   &__title
     float: left
     color: $accent
@@ -104,10 +112,14 @@ body
     color: $white
     font-size: em(16)
     padding: .5rem 1rem
+    display: block
+    width: 100%
     &--has-icon
       +flex(flex-start, center)
   &__top-icon
     @extend .burger
+    +md
+      display: none
   &__title
     text-align: center
     flex-grow: 1
@@ -115,6 +127,9 @@ body
     background-color: $white
     border-radius: $radius
     padding: rem(8) rem(15)
+    +xs
+      padding-left: rem(10)
+      padding-right: rem(10)
   &__input
     margin-bottom: rem(10)
 

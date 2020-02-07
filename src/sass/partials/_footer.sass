@@ -5,10 +5,15 @@
     position: relative
     +cover
     background-color: $c-border
+    +lg
+      padding-bottom: rem(30)
   &__middle
     background-color: $white
     padding-top: rem(30)
     padding-bottom: rem(30)
+    +md
+      padding-top: rem(15)
+      padding-bottom: rem(15)
   &__bottom
     padding-top: rem(15)
     padding-bottom: rem(15)
@@ -31,3 +36,8 @@
     z-index: 10
     right: rem(30)
     bottom: rem(30)
+    +lg
+      position: static
+      margin-left: auto
+      margin-right: auto
+      margin-top: rem(20)

@@ -1,5 +1,14 @@
 .banner-slide
   background-repeat: no-repeat
   background-position: 100% 0%
+  background-size: auto
+  +lg
+    background-size: rem(300)
+  +xs
+    background-size: rem(200)
   &__title
     margin-bottom: rem(90)
+    +lg
+      margin-bottom: rem(70)
+    +xs
+      margin-bottom: rem(30)

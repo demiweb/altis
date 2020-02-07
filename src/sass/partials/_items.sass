@@ -1,14 +1,54 @@
+.items-top
+  $this: &
+  +flex(flex-start, center)
+  &__title
+    margin-right: rem(15)
+  &__btns
+    +flex(flex-start, center)
+  &__btn
+    color: #c3c3c3
+    font-size: em(22)
+    +flex
+    +notlast
+      margin-right: rem(10)
+    +before      
+      width: 1em
+      height: 1em
+      background-color: currentColor
+    &--two-cols
+      font-size: em(12)
+      +before
+        margin-right: rem(5)
+      +after     
+        width: 1em
+        height: 1em
+        background-color: currentColor
+    &--active
+      color: $accent
+
+
+
 .items
   $grid-gap: rem(10)
+  --item-width: 25%
+
   +flex(flex-start, normal, row, wrap)
   font-size: em(12)
   margin-left: -$grid-gap / 2
   margin-right: -$grid-gap / 2
+  +sm
+    --item-width: 33.33333%
+  +xs
+    --item-width: 50%
+
   &__item
     width: calc(25% - #{$grid-gap})
+    width: calc(var(--item-width, 25%) - #{$grid-gap})
     margin-left: $grid-gap / 2
     margin-right: $grid-gap / 2
     margin-bottom: $grid-gap
+  &__top
+    margin-bottom: rem(8)
 
 .item-full
   &__top
