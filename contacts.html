@@ -81,7 +81,7 @@
                     <!-- end icon-search -->
                   </button>
                 </form>
-                <a href="#" class="btn header__btn">Оставить вопрос</a>
+                <button class="btn header__btn js-popup-open" data-popup-target="call">Оставить вопрос</button>
               </div>
               <div class="header__contacts-wrap">
                 <button class="header__burger burger burger--lg js-burger"><span></span></button>
@@ -425,6 +425,33 @@
         </div>
       </footer>
       <!-- end footer -->
+      <!-- begin popup -->
+      <div class="popup js-popup" data-popup="call">
+        <div class="popup__inner">
+          <button class="popup__close close js-popup-close"></button>
+          <!-- begin form -->
+          <form class="popup__form form">
+            <h2 class="form__title">Оставить вопрос</h2>
+            <!-- begin input -->
+            <div class="input form__field ">
+              <input class="input__field" type="text" placeholder="Имя">
+            </div>
+            <!-- end input -->
+            <!-- begin input -->
+            <div class="input form__field ">
+              <input class="input__field" type="tel" placeholder="Телефон">
+            </div>
+            <!-- end input -->
+            <!-- begin textarea -->
+            <div class="input input--textarea form__field undefined">
+              <textarea class="input__field js-textarea" placeholder="Комментарий"></textarea>
+            </div>
+            <!-- end textarea -->
+          </form>
+          <!-- end form -->
+        </div>
+      </div>
+      <!-- end popup -->
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
