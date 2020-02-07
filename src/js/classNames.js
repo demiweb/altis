@@ -42,4 +42,5 @@ export default {
   rangeSlider: {
     slider: 'js-range-slider',
   },
+  textarea: 'js-textarea',
 }

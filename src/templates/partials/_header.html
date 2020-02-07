@@ -64,7 +64,9 @@
 
           {{ mixins.btn(
             title = 'Оставить вопрос',
-            mod = 'header__btn'
+            mod = 'header__btn js-popup-open',
+            href = false,
+            attributes = { 'data-popup-target': 'call' }
           ) }}
         </div>
 

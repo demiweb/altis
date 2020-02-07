@@ -5,7 +5,7 @@ html
   +reg
   // +sm
   //   font-size: $fz-sm-px
-  +r(400)
+  +xxs
     font-size: 12px
 
 body
@@ -159,6 +159,10 @@ body
       line-height: .9
 
 .close
-  +icon-close(#{em(17)}, .2em, #9f9f9f)
+  color: #9f9f9f
+  +icon-close(#{em(17)}, .2em, currentColor)
   display: block
+  +tr(color .3s)
+  +hover
+    color: $accent
     

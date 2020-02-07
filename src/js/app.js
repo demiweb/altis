@@ -7,6 +7,7 @@ import 'intersection-observer'
 import './lib/polyfill'
 import smoothscroll from 'smoothscroll-polyfill'
 import { debounce } from 'throttle-debounce'
+import Popup from 'popup-simple'
 
 import classNames from './classNames'
 
@@ -16,6 +17,7 @@ import setLazy from './components/setLazy'
 import setGallery from './components/setGallery'
 import scrollTo from './components/scrollTo'
 import toggleItemsView from './components/toggleItemsView'
+import setTextareaHeight from './components/setTextareaHeight'
 
 import setSelects from './components/Select/Select'
 import Slider from './components/Slider/Slider'
@@ -49,6 +51,7 @@ class App {
       },
     })
     this.rangeSlider = new RangeSlider(`.${classNames.rangeSlider.slider}`)
+    this.popup = new Popup()
   }
 
   initMethods() {
@@ -60,6 +63,7 @@ class App {
       setGallery,
       scrollTo,
       toggleItemsView,
+      setTextareaHeight,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))
@@ -83,6 +87,7 @@ class App {
     Accordion.setOpenItems()
     this.tabs.init()
     this.rangeSlider.init()
+    this.popup.init()
 
     this.addListeners()
   }

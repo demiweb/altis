@@ -1,0 +1,33 @@
+.popup
+  position: fixed
+  z-index: 15
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  overflow: auto
+  pading: rem(15)
+  background-color: rgba($black, .7)
+  +vertical
+  +hidden
+  +ready
+    +tr(opacity .3s, visibility .3s)
+  &__inner
+    width: 100%
+    display: inline-block
+    vertical-align: middle
+    max-width: 500px
+    font-size: $fz
+    background-color: $white
+    padding: rem(50) rem(20) rem(20)
+    position: relative
+    +xxs
+      font-size: 12px
+  &__close
+    position: absolute
+    z-index: 1
+    top: rem(15)
+    right: rem(15)
+
+  &--active
+    +visible

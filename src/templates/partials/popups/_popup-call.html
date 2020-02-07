@@ -1,0 +1,58 @@
+{%set
+form = {
+  title: 'Оставить вопрос',
+  fields: [
+    {
+      name: 'input',
+      mod: '',
+      type: 'text',
+      placeholder: 'Имя',
+      fieldClass: '',
+      fieldAttributes: ''
+    },
+    {
+      name: 'input',
+      mod: '',
+      type: 'tel',
+      placeholder: 'Телефон',
+      fieldClass: '',
+      fieldAttributes: ''
+    },
+    {
+      wrapMod: '',
+      name: 'textarea',
+      type: '',
+      placeholder: 'Комментарий',
+      fieldClass: 'js-textarea'
+    }
+  ]
+}
+%}
+
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="call">
+  <div class="popup__inner">
+    <button class="popup__close close js-popup-close"></button>
+
+    <!-- begin form -->
+    <form class="popup__form form">
+      <h2 class="form__title">{{ form.title | safe }}</h2>
+
+      
+      {% for i in form.fields %}
+      {{ mixins.input(
+        name = i.name,
+        mod = 'form__field ' + i.mod,
+        type = i.type,
+        placeholder = i.placeholder,
+        value = '',
+        fieldClass = i.fieldClass,
+        fieldAttributes = i.fieldAttributes,
+        label = i.label
+      ) }}
+      {% endfor %}
+    </form>
+    <!-- end form -->
+  </div>
+</div>
+<!-- end popup -->
