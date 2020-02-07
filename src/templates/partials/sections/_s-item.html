@@ -2,13 +2,16 @@
 tabs = [
   {
     tabTitle: 'Описание',
-    active: true
+    active: true,
+    tab: 'description'
   },
   {
-    tabTitle: 'Характеристики'
+    tabTitle: 'Характеристики',
+    tab: 'characteristics'
   },
   {
-    tabTitle: 'Аналоги'
+    tabTitle: 'Аналоги',
+    tab: 'analogs'
   }
 ]
 %}
@@ -20,16 +23,22 @@ tabs = [
     {% include "partials/_item-full.html" %}
 
     <!-- begin items-tabs -->
-    <div class="section__block-sm items-tabs">
+    <div class="section__block-sm items-tabs js-tabs">
       <div class="items-tabs__tabs">
         {% for i in tabs %}
-        <button class="items-tabs__tab js-tab{% if i.active %} items-tabs__tab--active{% endif %}">{{ i.tabTitle | safe }}</button>
+        <button
+          class="items-tabs__tab js-tabs-btn{% if i.active %} items-tabs__tab--active{% endif %}"
+          data-tabs-tab="{{ i.tab }}"
+          >{{ i.tabTitle | safe }}</button>
         {% endfor %}
       </div>
 
       <div class="items-tabs__content items-tabs__content--no-shadow">
         {% for i in tabs %}
-        <div class="items-tabs__item js-tabs-content{% if i.active %} items-tabs__item--active{% endif %}">
+        <div
+          class="items-tabs__item js-tabs-content{% if i.active %} items-tabs__item--active{% endif %}"
+          data-tabs-item="{{ i.tab }}"
+        >
 
           {{ mixins.list(
             name = 'item-descr',

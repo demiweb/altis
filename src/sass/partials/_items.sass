@@ -49,29 +49,48 @@
     margin-bottom: $grid-gap
   &__top
     margin-bottom: rem(8)
+    +xxsmin
+      display: none
 
 .item-full
   &__top
     +flex(space-between)
     margin-bottom: rem(5)
+    +xs
+      display: block
   &__subttl
     font-size: em(12)
     margin-bottom: rem(15)
+  &__title
+    +xs
+      margin-bottom: rem(10)
   &__body
     +flex(flex-start, normal, row, wrap)
   &__gallery
     width: percentage(300/ 805)
+    +xs
+      width: 100%
+      margin-bottom: rem(30)
   &__content
     padding-left: rem(20)
     width: percentage((805 - 300) / 805)
+    +xs
+      width: 100%
+      padding-left: 0
   &__price-block
     +flex(flex-start, center)
-    // margin-right: rem(-10)
     margin-bottom: rem(20)
+    +lg
+      display: block
+
   &__price-labels
     +flex(space-between, center)
     margin-right: rem(10)
     width: 65%
+    +lg
+      width: 100%
+      margin-right: 0
+      margin-bottom: rem(15)
   &__descr-title
     font-size: em(18)
     font-weight: 500
@@ -80,6 +99,8 @@
       margin-bottom: 0
   &__btn
     width: 35%
+    +lg
+      width: 100%
   &__descr
     +flex(flex-start, normal, row, wrap)
   &__descr-block

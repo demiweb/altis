@@ -1,0 +1,25 @@
+.range-slider
+  +flex(space-between, normal, row, wrap)
+  &__start, &__end
+    margin-bottom: rem(15)
+  &__slider
+    width: 100%
+    height: rem(5)
+    box-shadow: none
+    border: 0
+    background-color: $accent
+    .noUi-connect
+      background-color: $accent-dark
+      box-shadow: none
+      border: 0
+    .noUi-handle
+      box-shadow: none
+      border: 0
+      background-color: $accent-aux
+      border-radius: 50%
+      width: rem(15)
+      height: rem(15)
+      top: rem(-5)
+      right: rem(-7)
+      &::before, &::after
+        display: none

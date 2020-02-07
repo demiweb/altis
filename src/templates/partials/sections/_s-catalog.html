@@ -8,13 +8,13 @@
   <div class="items__top items-top">
     <div class="items-top__title">отображение</div>
     <div class="items-top__btns">
-      <button class="items-top__btn items-top__btn--two-cols items-top__btn--active"></button>
-      <button class="items-top__btn items-top__btn--one-col"></button>
+      <button class="items-top__btn items-top__btn--two-cols items-top__btn--active js-toggle-items-view" data-cols="2"></button>
+      <button class="items-top__btn items-top__btn--one-col js-toggle-items-view" data-cols="1"></button>
     </div>
   </div>
 
   <!-- begin block -->
-  <div class="section__block block items">
+  <div class="section__block block items js-items-layout">
       {% for i in range(0, 20) %}
         {{ mixins.itemCard(
           mod = 'items__item'

@@ -730,12 +730,12 @@ filters = [
               <span class="aside-filters__title">{{ j.title | safe }}</span>
             </button>
             {% else %}
-            <span class="aside-filters__title">{{ j.title | safe }}</span>
+            <a href="#" class="aside-filters__link">{{ j.title | safe }}</a>
             {% endif %}
             {% if j.sublist %}
             <ul class="aside-filters__sublist aside-filters__sublist--second js-accordion-content" data-block="aside-filters__sublist">
               {% for k in j.sublist %}
-              <li class="aside-filters__subitem">{{ k.title | safe }}</li>
+              <li class="aside-filters__subitem"><a href="#" class="aside-filters__link">{{ k.title | safe }}</a></li>
               {% endfor %}
             </ul>
             {% endif %}

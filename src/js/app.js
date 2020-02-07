@@ -15,14 +15,14 @@ import setHTMLClassNames from './components/setHTMLClassNames'
 import setLazy from './components/setLazy'
 import setGallery from './components/setGallery'
 import scrollTo from './components/scrollTo'
+import toggleItemsView from './components/toggleItemsView'
 
 import setSelects from './components/Select/Select'
 import Slider from './components/Slider/Slider'
 import Menu from './components/Menu/Menu'
 import Accordion from './components/Accordion/Accordion'
 import Tabs from './components/Tabs/Tabs'
-
-// import { NO_SCROLL } from './constants'
+import RangeSlider from './components/RangeSlider/RangeSlider'
 
 class App {
   constructor() {
@@ -31,7 +31,7 @@ class App {
     this.dom = {
       body: document.body,
     }
-    this.onResize = debounce(200, this.handleResize.bind(this))
+    this.onResize = debounce(200, App.handleResize.bind(this))
 
     this.slider = new Slider(`.${classNames.slider.container}`)
     this.menu = new Menu({
@@ -48,6 +48,7 @@ class App {
         item: 'items-tabs__item',
       },
     })
+    this.rangeSlider = new RangeSlider(`.${classNames.rangeSlider.slider}`)
   }
 
   initMethods() {
@@ -58,18 +59,18 @@ class App {
       setSelects,
       setGallery,
       scrollTo,
+      toggleItemsView,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))
   }
 
-  // eslint-disable-next-line
-  handleResize() {    
-    Accordion.setOpenItems()
-  }
-
   addListeners() {
     window.addEventListener('resize', this.onResize.bind(this))
+  }
+
+  static handleResize() {
+    Accordion.setOpenItems()
   }
 
   init() {
@@ -81,6 +82,7 @@ class App {
     this.accordion.init()
     Accordion.setOpenItems()
     this.tabs.init()
+    this.rangeSlider.init()
 
     this.addListeners()
   }
@@ -90,4 +92,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = new App()
   app.init()
   window.app = app
+
+  // all methods available in global variable `app`
+  // functional components in app.methods
+  // prototypes in app.prototypeName
+
+  // some examples - uncomment to watch behaviour
+
+  // // example of handling range slider
+  // // get range-slider value
+  // console.log(app.rangeSlider.sliders[0].slider.noUiSlider.get())
+  // // adding range-slider update listener
+  // app.rangeSlider.sliders[0].slider.noUiSlider.on('update', (value, handle) => {
+  //   console.log({ value, handle })
+  // })
+
+  // // example of handling sliders
+  // // adding new slide
+  // app.slider.sliders[0].swiper.appendSlide([
+  //   '<div class="swiper-slide"><img class="js-lazy" src="" data-src="./img/item.png" alt=""/></div>',
+  // ])
+  // // reinit lazyloading
+  // app.methods.setLazy()
 })

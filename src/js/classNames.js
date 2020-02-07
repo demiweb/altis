@@ -35,4 +35,11 @@ export default {
     tab: 'js-tabs-btn',
     item: 'js-tabs-content',
   },
+  itemsView: {
+    btn: 'js-toggle-items-view',
+    container: 'js-items-layout',
+  },
+  rangeSlider: {
+    slider: 'js-range-slider',
+  },
 }

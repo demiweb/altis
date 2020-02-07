@@ -10,6 +10,7 @@
       .meta-block__input:not(.input)
         +xs
           display: inline-block
+          margin-right: rem(10)
 
 .aside-filters-block
   $this: &
@@ -34,7 +35,9 @@
     padding-bottom: rem(8)
     +notlast
       border-bottom: 1px solid $c-border
-  &__title
+  &__link
+    +hover
+      text-decoration: underline
   &__btn
     width: 100%
     display: block
