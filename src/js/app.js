@@ -3,6 +3,8 @@ import 'core-js/features/array/from'
 import 'core-js/features/promise'
 import 'core-js/features/object/assign'
 import 'core-js/features/object/values'
+import 'core-js/es/instance/starts-with'
+
 import 'intersection-observer'
 import './lib/polyfill'
 import smoothscroll from 'smoothscroll-polyfill'
