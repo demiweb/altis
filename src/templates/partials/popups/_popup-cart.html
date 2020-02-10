@@ -1,0 +1,16 @@
+{%set
+cart = {
+  mod: 'popup__cart'
+}
+%}
+
+<!-- begin popup -->
+<div class="popup popup--lg js-popup" data-popup="cart">
+  <div class="popup__inner">
+    <button class="popup__close close js-popup-close"></button>
+    
+
+    {% include "partials/_cart-form.html" %}
+  </div>
+</div>
+<!-- end popup -->

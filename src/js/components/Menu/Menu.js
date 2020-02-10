@@ -45,8 +45,9 @@ export default class Menu {
   handleClick(e) {
     const menu = e.target.closest(`.${classNames.menu}`)
     const btn = e.target.closest(`.${classNames.burger}`)
+    const close = e.target.closest(`.${classNames.close}`)
 
-    if (!menu && !btn) {
+    if ((!menu && !btn) || close) {
       this.close()
     } else {
       this.toggle(e)

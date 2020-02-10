@@ -7,6 +7,8 @@
           <img class="js-lazy" alt="" src="" data-src="./img/logo-mob.png"/>
         </a>
         <div class="header__nav-wrap js-menu">
+          <button class="header__close close js-menu-close"></button>
+          
           <a href="/" class="header__logo-mob-menu logo">
             <img class="" alt="" src="./img/logo-mob.png"/>
           </a>
@@ -89,10 +91,10 @@
             </div>
           </div>
 
-          <a href="#" class="header__cart header-cart">
+          <button class="header__cart header-cart js-popup-open" data-popup-target="cart">
             <sup class="header-cart__sup">1</sup>
             {{ mixins.icon('shopping-cart') }}
-          </a>
+          </button>
         </div>
       </div>
     </div>

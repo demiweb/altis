@@ -99,26 +99,4 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = new App()
   app.init()
   window.app = app
-
-  // all methods available in global variable `app`
-  // functional components in app.methods
-  // prototypes in app.prototypeName
-
-  // some examples - uncomment to watch behaviour
-
-  // // example of handling range slider
-  // // get range-slider value
-  // console.log(app.rangeSlider.sliders[0].slider.noUiSlider.get())
-  // // adding range-slider update listener
-  // app.rangeSlider.sliders[0].slider.noUiSlider.on('update', (value, handle) => {
-  //   console.log({ value, handle })
-  // })
-
-  // // example of handling sliders
-  // // adding new slide
-  // app.slider.sliders[0].swiper.appendSlide([
-  //   '<div class="swiper-slide"><img class="js-lazy" src="" data-src="./img/item.png" alt=""/></div>',
-  // ])
-  // // reinit lazyloading
-  // app.methods.setLazy()
 })

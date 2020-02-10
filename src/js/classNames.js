@@ -4,6 +4,7 @@ export default {
   menu: {
     burger: 'js-burger',
     menu: 'js-menu',
+    close: 'js-menu-close',
   },
   select: 'js-select',
   slider: {

@@ -16,6 +16,13 @@ tabs = [
 ]
 %}
 
+{%set
+itemsSlider = {
+  mod: 'slider--items-sm',
+  wrapMod: 'slider--items-sm__wrap'
+}
+%}
+
 <!-- begin section -->
 <section class="">
   <!-- begin block -->
@@ -65,25 +72,19 @@ tabs = [
 
       <div class="items-tabs__content items-tabs__content--no-shadow">
         <div class="items-tabs__item items-tabs__item--active">
-          <!-- begin items -->
-          <div class="items">
-            {% for i in range(0, 4) %}
-            {{ mixins.itemCard(
-              mod = 'items__item'
-            ) }}
-            {% endfor %}
-          </div>
-          <!-- end items -->
+          
+
+          {% include "partials/sliders/_items.html" %}
         </div>
       </div>
 
-      <div class="items-tabs__btn">
+{#       <div class="items-tabs__btn">
         {{ mixins.btn(
           title = 'Показать еще 20',
           mod = 'btn--transp-blue',
           href = false
         ) }}
-      </div>
+      </div> #}
     </div>
     <!-- end items-tabs -->
   </div>

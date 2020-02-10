@@ -1,7 +1,7 @@
 <!-- begin slider -->
-<div class="slider__wrap slider--items__wrap">
+<div class="slider__wrap slider--items__wrap{% if itemsSlider.wrapMod %} {{ itemsSlider.wrapMod }}{% endif %}">
   <div class="swiper-container js-slider" data-slider="items">
-    <div class="swiper-wrapper slider">
+    <div class="swiper-wrapper slider slider--items{% if itemsSlider.mod %} {{ itemsSlider.mod }}{% endif %}">
       {% for i in range(0, 10) %}
       {{ mixins.itemCard(
         mod = 'swiper-slide'

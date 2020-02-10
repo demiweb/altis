@@ -21,6 +21,7 @@
                 <img class="js-lazy" alt="" src="" data-src="./img/logo-mob.png" />
               </a>
               <div class="header__nav-wrap js-menu">
+                <button class="header__close close js-menu-close"></button>
                 <a href="/" class="header__logo-mob-menu logo">
                   <img class="" alt="" src="./img/logo-mob.png" />
                 </a>
@@ -109,14 +110,14 @@
                     <a href="tel:+380669240607" class="header-contact__link">+38 066 924 06 07</a>
                   </div>
                 </div>
-                <a href="#" class="header__cart header-cart">
+                <button class="header__cart header-cart js-popup-open" data-popup-target="cart">
                   <sup class="header-cart__sup">1</sup>
                   <!-- begin icon-shopping-cart -->
                   <svg height="1em" viewBox="0 -31 512 512" width="1.000em" class="icon icon-shopping-cart">
                     <path d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0014.422-10.879l60-210a15.003 15.003 0 00-2.445-13.152A15.006 15.006 0 00497 60H130.367l-10.722-48.254A15.003 15.003 0 00105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zm0 0M150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0M362 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0" />
                   </svg>
                   <!-- end icon-shopping-cart -->
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -132,45 +133,7 @@
               <div class="order-page__left">
                 <!-- begin form -->
                 <form class="form">
-                  <h2 class="form__title">покупатель</h2>
-                  <div class="form__block">
-                    <!-- begin input -->
-                    <div class="input form__field ">
-                      <span class="input__label">Контактное лицо*</span>
-                      <input class="input__field" type="text">
-                    </div>
-                    <!-- end input -->
-                    <!-- begin input -->
-                    <div class="input form__field ">
-                      <span class="input__label">Email*</span>
-                      <input class="input__field" type="email">
-                    </div>
-                    <!-- end input -->
-                    <!-- begin input -->
-                    <div class="input form__field ">
-                      <span class="input__label">Контактный телефон*</span>
-                      <input class="input__field" type="tel">
-                    </div>
-                    <!-- end input -->
-                  </div>
-                  <div class="form__block">
-                    <h3 class="form__block-title title title--h3">Адрес доставки</h3>
-                    <!-- begin input -->
-                    <div class="input form__field ">
-                      <input class="input__field" type="text" placeholder="Населенный пункт">
-                    </div>
-                    <!-- end input -->
-                    <!-- begin input -->
-                    <div class="input form__field ">
-                      <input class="input__field" type="text" placeholder="Адрес доставки">
-                    </div>
-                    <!-- end input -->
-                    <!-- begin textarea -->
-                    <div class="input input--textarea form__field ">
-                      <textarea class="input__field js-textarea" placeholder="Комментарии к заказу"></textarea>
-                    </div>
-                    <!-- end textarea -->
-                  </div>
+                  <h2 class="form__title"></h2>
                 </form>
                 <!-- end form -->
               </div>
@@ -467,6 +430,133 @@
             <!-- end textarea -->
           </form>
           <!-- end form -->
+        </div>
+      </div>
+      <!-- end popup -->
+      <!-- begin popup -->
+      <div class="popup popup--lg js-popup" data-popup="cart">
+        <div class="popup__inner">
+          <button class="popup__close close js-popup-close"></button>
+          <form class="block cart cart--order popup__cart">
+            <div class="cart__items">
+              <!-- begin cart-item -->
+              <div class="cart-item cart__item cart-item--order">
+                <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
+                <div class="cart-item__descr">
+                  <h4 class="cart-item__title title title--h4">
+                    <a href="#">Картридж турбины <br> ТКР7С-6 Евро-2,3</a>
+                  </h4>
+                  <div class="cart-item__descr-content">
+                    <div class="cart-item__subttl">Артикул 310185</div>
+                    <div class="cart-item__label">
+                      <span class="card-label">Скидка 10%</span>
+                    </div>
+                    <div class="cart-item__text">Производитель Jrone</div>
+                  </div>
+                </div>
+                <div class="cart-item__price-wrap">
+                  <div class="cart-item__quantity">
+                    <div class="cart-item__quantity-text">1х</div>
+                  </div>
+                  <div class="cart-item__price">
+                    <div class="price-label"> 2000 <small>грн</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end cart-item -->
+              <!-- begin cart-item -->
+              <div class="cart-item cart__item cart-item--order">
+                <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
+                <div class="cart-item__descr">
+                  <h4 class="cart-item__title title title--h4">
+                    <a href="#">Картридж турбины <br> ТКР7С-6 Евро-2,3</a>
+                  </h4>
+                  <div class="cart-item__descr-content">
+                    <div class="cart-item__subttl">Артикул 310185</div>
+                    <div class="cart-item__label">
+                      <span class="card-label">Скидка 10%</span>
+                    </div>
+                    <div class="cart-item__text">Производитель Jrone</div>
+                  </div>
+                </div>
+                <div class="cart-item__price-wrap">
+                  <div class="cart-item__quantity">
+                    <div class="cart-item__quantity-text">1х</div>
+                  </div>
+                  <div class="cart-item__price">
+                    <div class="price-label"> 2000 <small>грн</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end cart-item -->
+            </div>
+            <div class="cart__price">
+              <!-- begin cart-list -->
+              <dl class="cart-list">
+                <dt class="cart-list__title ">Ваша выгода:</dt>
+                <dd class="cart-list__text ">200 грн</dd>
+                <dt class="cart-list__title ">Итого с учётом скидки: </dt>
+                <dd class="cart-list__text ">8000 грн</dd>
+              </dl>
+              <!-- end cart-list-->
+            </div>
+            <div class="cart__controls">
+              <div class="cart__amount">
+                <div class="cart__controls-title">ИТОГО:</div>
+                <div class="cart__controls-price-label price-label"> 2000 <small>грн</small>
+                </div>
+              </div>
+              <div class="cart__controls-blocks cart-controls-blocks">
+                <div class="cart-controls-blocks__block cart-controls-blocks__block--full">
+                  <h3 class="cart-controls-blocks__title title title--h3">Способ доставки*</h3>
+                  <div class="cart-controls-blocks__fields">
+                    <div class="cart-controls-blocks__input">
+                      <!-- begin radio -->
+                      <label class="input input--radio">
+                        <input class="input__field" type="radio" name="delivery">
+                        <span class="input__label input__label--radio">Самовывоз</span><span class="input__label-sm">в точке продажи</span>
+                      </label>
+                      <!-- end radio -->
+                    </div>
+                    <div class="cart-controls-blocks__input">
+                      <!-- begin radio -->
+                      <label class="input input--radio">
+                        <input class="input__field" type="radio" name="delivery">
+                        <span class="input__label input__label--radio">Доставка транспортной компанией</span><span class="input__label-sm">Без комиссии</span>
+                      </label>
+                      <!-- end radio -->
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-controls-blocks__block">
+                  <h3 class="cart-controls-blocks__title title title--h3">Способ оплаты*</h3>
+                  <div class="cart-controls-blocks__fields">
+                    <div class="cart-controls-blocks__input">
+                      <!-- begin radio -->
+                      <label class="input input--radio">
+                        <input class="input__field" type="radio" name="delivery">
+                        <span class="input__label input__label--radio">Наличными курьеру</span><span class="input__label-sm">Наличными курьеру</span>
+                      </label>
+                      <!-- end radio -->
+                    </div>
+                    <div class="cart-controls-blocks__input">
+                      <!-- begin radio -->
+                      <label class="input input--radio">
+                        <input class="input__field" type="radio" name="delivery">
+                        <span class="input__label input__label--radio">Оплата картой через Интернет</span><span class="input__label-sm">Без комиссии</span>
+                      </label>
+                      <!-- end radio -->
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-controls-blocks__block cart-controls-blocks__block--btn">
+                  <button class="btn">Оформить</button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
       <!-- end popup -->
