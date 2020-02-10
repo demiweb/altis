@@ -21,6 +21,7 @@
                 <img class="js-lazy" alt="" src="" data-src="./img/logo-mob.png" />
               </a>
               <div class="header__nav-wrap js-menu">
+                <button class="header__close close js-menu-close"></button>
                 <a href="/" class="header__logo-mob-menu logo">
                   <img class="" alt="" src="./img/logo-mob.png" />
                 </a>
@@ -109,14 +110,14 @@
                     <a href="tel:+380669240607" class="header-contact__link">+38 066 924 06 07</a>
                   </div>
                 </div>
-                <a href="#" class="header__cart header-cart">
+                <button class="header__cart header-cart js-popup-open" data-popup-target="cart">
                   <sup class="header-cart__sup">1</sup>
                   <!-- begin icon-shopping-cart -->
                   <svg height="1em" viewBox="0 -31 512 512" width="1.000em" class="icon icon-shopping-cart">
                     <path d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0014.422-10.879l60-210a15.003 15.003 0 00-2.445-13.152A15.006 15.006 0 00497 60H130.367l-10.722-48.254A15.003 15.003 0 00105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zm0 0M150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0M362 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0" />
                   </svg>
                   <!-- end icon-shopping-cart -->
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -1412,106 +1413,252 @@
                     </div>
                     <div class="items-tabs__content items-tabs__content--no-shadow">
                       <div class="items-tabs__item items-tabs__item--active">
-                        <!-- begin items -->
-                        <div class="items">
-                          <a href="#" class="item-card items__item">
-                            <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
-                            <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
-                            <span class="item-card__content">
-                              <span class="item-card__label">
-                                <span class="card-label">Скидка 10%</span>
-                              </span>
-                              <span class="item-card__text">Производитель Jrone</span>
-                              <span class="item-card__status status">
-                                <span class="status__icon">
-                                  <!-- begin icon-checkmark -->
-                                  <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
-                                    <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
-                                    <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
-                                  </svg>
-                                  <!-- end icon-checkmark -->
-                                </span> Есть в наличии </span>
-                            </span>
-                            <span class="item-card__price-labels">
-                              <span class="item-card__price-label price-label">2000 <small>грн</small></span>
-                              <span class="item-card__price-label price-label price-label--old">3000 грн</span>
-                            </span>
-                          </a>
-                          <a href="#" class="item-card items__item">
-                            <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
-                            <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
-                            <span class="item-card__content">
-                              <span class="item-card__label">
-                                <span class="card-label">Скидка 10%</span>
-                              </span>
-                              <span class="item-card__text">Производитель Jrone</span>
-                              <span class="item-card__status status">
-                                <span class="status__icon">
-                                  <!-- begin icon-checkmark -->
-                                  <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
-                                    <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
-                                    <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
-                                  </svg>
-                                  <!-- end icon-checkmark -->
-                                </span> Есть в наличии </span>
-                            </span>
-                            <span class="item-card__price-labels">
-                              <span class="item-card__price-label price-label">2000 <small>грн</small></span>
-                              <span class="item-card__price-label price-label price-label--old">3000 грн</span>
-                            </span>
-                          </a>
-                          <a href="#" class="item-card items__item">
-                            <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
-                            <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
-                            <span class="item-card__content">
-                              <span class="item-card__label">
-                                <span class="card-label">Скидка 10%</span>
-                              </span>
-                              <span class="item-card__text">Производитель Jrone</span>
-                              <span class="item-card__status status">
-                                <span class="status__icon">
-                                  <!-- begin icon-checkmark -->
-                                  <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
-                                    <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
-                                    <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
-                                  </svg>
-                                  <!-- end icon-checkmark -->
-                                </span> Есть в наличии </span>
-                            </span>
-                            <span class="item-card__price-labels">
-                              <span class="item-card__price-label price-label">2000 <small>грн</small></span>
-                              <span class="item-card__price-label price-label price-label--old">3000 грн</span>
-                            </span>
-                          </a>
-                          <a href="#" class="item-card items__item">
-                            <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
-                            <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
-                            <span class="item-card__content">
-                              <span class="item-card__label">
-                                <span class="card-label">Скидка 10%</span>
-                              </span>
-                              <span class="item-card__text">Производитель Jrone</span>
-                              <span class="item-card__status status">
-                                <span class="status__icon">
-                                  <!-- begin icon-checkmark -->
-                                  <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
-                                    <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
-                                    <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
-                                  </svg>
-                                  <!-- end icon-checkmark -->
-                                </span> Есть в наличии </span>
-                            </span>
-                            <span class="item-card__price-labels">
-                              <span class="item-card__price-label price-label">2000 <small>грн</small></span>
-                              <span class="item-card__price-label price-label price-label--old">3000 грн</span>
-                            </span>
-                          </a>
+                        <!-- begin slider -->
+                        <div class="slider__wrap slider--items__wrap slider--items-sm__wrap">
+                          <div class="swiper-container js-slider" data-slider="items">
+                            <div class="swiper-wrapper slider slider--items slider--items-sm">
+                              <a href="#" class="item-card swiper-slide">
+                                <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
+                                <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                                <span class="item-card__content">
+                                  <span class="item-card__label">
+                                    <span class="card-label">Скидка 10%</span>
+                                  </span>
+                                  <span class="item-card__text">Производитель Jrone</span>
+                                  <span class="item-card__status status">
+                                    <span class="status__icon">
+                                      <!-- begin icon-checkmark -->
+                                      <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
+                                        <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
+                                        <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
+                                      </svg>
+                                      <!-- end icon-checkmark -->
+                                    </span> Есть в наличии </span>
+                                </span>
+                                <span class="item-card__price-labels">
+                                  <span class="item-card__price-label price-label">2000 <small>грн</small></span>
+                                  <span class="item-card__price-label price-label price-label--old">3000 грн</span>
+                                </span>
+                              </a>
+                              <a href="#" class="item-card swiper-slide">
+                                <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
+                                <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                                <span class="item-card__content">
+                                  <span class="item-card__label">
+                                    <span class="card-label">Скидка 10%</span>
+                                  </span>
+                                  <span class="item-card__text">Производитель Jrone</span>
+                                  <span class="item-card__status status">
+                                    <span class="status__icon">
+                                      <!-- begin icon-checkmark -->
+                                      <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
+                                        <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
+                                        <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
+                                      </svg>
+                                      <!-- end icon-checkmark -->
+                                    </span> Есть в наличии </span>
+                                </span>
+                                <span class="item-card__price-labels">
+                                  <span class="item-card__price-label price-label">2000 <small>грн</small></span>
+                                  <span class="item-card__price-label price-label price-label--old">3000 грн</span>
+                                </span>
+                              </a>
+                              <a href="#" class="item-card swiper-slide">
+                                <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
+                                <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                                <span class="item-card__content">
+                                  <span class="item-card__label">
+                                    <span class="card-label">Скидка 10%</span>
+                                  </span>
+                                  <span class="item-card__text">Производитель Jrone</span>
+                                  <span class="item-card__status status">
+                                    <span class="status__icon">
+                                      <!-- begin icon-checkmark -->
+                                      <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
+                                        <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
+                                        <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
+                                      </svg>
+                                      <!-- end icon-checkmark -->
+                                    </span> Есть в наличии </span>
+                                </span>
+                                <span class="item-card__price-labels">
+                                  <span class="item-card__price-label price-label">2000 <small>грн</small></span>
+                                  <span class="item-card__price-label price-label price-label--old">3000 грн</span>
+                                </span>
+                              </a>
+                              <a href="#" class="item-card swiper-slide">
+                                <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
+                                <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                                <span class="item-card__content">
+                                  <span class="item-card__label">
+                                    <span class="card-label">Скидка 10%</span>
+                                  </span>
+                                  <span class="item-card__text">Производитель Jrone</span>
+                                  <span class="item-card__status status">
+                                    <span class="status__icon">
+                                      <!-- begin icon-checkmark -->
+                                      <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
+                                        <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
+                                        <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
+                                      </svg>
+                                      <!-- end icon-checkmark -->
+                                    </span> Есть в наличии </span>
+                                </span>
+                                <span class="item-card__price-labels">
+                                  <span class="item-card__price-label price-label">2000 <small>грн</small></span>
+                                  <span class="item-card__price-label price-label price-label--old">3000 грн</span>
+                                </span>
+                              </a>
+                              <a href="#" class="item-card swiper-slide">
+                                <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
+                                <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                                <span class="item-card__content">
+                                  <span class="item-card__label">
+                                    <span class="card-label">Скидка 10%</span>
+                                  </span>
+                                  <span class="item-card__text">Производитель Jrone</span>
+                                  <span class="item-card__status status">
+                                    <span class="status__icon">
+                                      <!-- begin icon-checkmark -->
+                                      <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
+                                        <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
+                                        <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
+                                      </svg>
+                                      <!-- end icon-checkmark -->
+                                    </span> Есть в наличии </span>
+                                </span>
+                                <span class="item-card__price-labels">
+                                  <span class="item-card__price-label price-label">2000 <small>грн</small></span>
+                                  <span class="item-card__price-label price-label price-label--old">3000 грн</span>
+                                </span>
+                              </a>
+                              <a href="#" class="item-card swiper-slide">
+                                <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
+                                <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                                <span class="item-card__content">
+                                  <span class="item-card__label">
+                                    <span class="card-label">Скидка 10%</span>
+                                  </span>
+                                  <span class="item-card__text">Производитель Jrone</span>
+                                  <span class="item-card__status status">
+                                    <span class="status__icon">
+                                      <!-- begin icon-checkmark -->
+                                      <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
+                                        <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
+                                        <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
+                                      </svg>
+                                      <!-- end icon-checkmark -->
+                                    </span> Есть в наличии </span>
+                                </span>
+                                <span class="item-card__price-labels">
+                                  <span class="item-card__price-label price-label">2000 <small>грн</small></span>
+                                  <span class="item-card__price-label price-label price-label--old">3000 грн</span>
+                                </span>
+                              </a>
+                              <a href="#" class="item-card swiper-slide">
+                                <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
+                                <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                                <span class="item-card__content">
+                                  <span class="item-card__label">
+                                    <span class="card-label">Скидка 10%</span>
+                                  </span>
+                                  <span class="item-card__text">Производитель Jrone</span>
+                                  <span class="item-card__status status">
+                                    <span class="status__icon">
+                                      <!-- begin icon-checkmark -->
+                                      <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
+                                        <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
+                                        <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
+                                      </svg>
+                                      <!-- end icon-checkmark -->
+                                    </span> Есть в наличии </span>
+                                </span>
+                                <span class="item-card__price-labels">
+                                  <span class="item-card__price-label price-label">2000 <small>грн</small></span>
+                                  <span class="item-card__price-label price-label price-label--old">3000 грн</span>
+                                </span>
+                              </a>
+                              <a href="#" class="item-card swiper-slide">
+                                <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
+                                <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                                <span class="item-card__content">
+                                  <span class="item-card__label">
+                                    <span class="card-label">Скидка 10%</span>
+                                  </span>
+                                  <span class="item-card__text">Производитель Jrone</span>
+                                  <span class="item-card__status status">
+                                    <span class="status__icon">
+                                      <!-- begin icon-checkmark -->
+                                      <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
+                                        <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
+                                        <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
+                                      </svg>
+                                      <!-- end icon-checkmark -->
+                                    </span> Есть в наличии </span>
+                                </span>
+                                <span class="item-card__price-labels">
+                                  <span class="item-card__price-label price-label">2000 <small>грн</small></span>
+                                  <span class="item-card__price-label price-label price-label--old">3000 грн</span>
+                                </span>
+                              </a>
+                              <a href="#" class="item-card swiper-slide">
+                                <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
+                                <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                                <span class="item-card__content">
+                                  <span class="item-card__label">
+                                    <span class="card-label">Скидка 10%</span>
+                                  </span>
+                                  <span class="item-card__text">Производитель Jrone</span>
+                                  <span class="item-card__status status">
+                                    <span class="status__icon">
+                                      <!-- begin icon-checkmark -->
+                                      <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
+                                        <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
+                                        <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
+                                      </svg>
+                                      <!-- end icon-checkmark -->
+                                    </span> Есть в наличии </span>
+                                </span>
+                                <span class="item-card__price-labels">
+                                  <span class="item-card__price-label price-label">2000 <small>грн</small></span>
+                                  <span class="item-card__price-label price-label price-label--old">3000 грн</span>
+                                </span>
+                              </a>
+                              <a href="#" class="item-card swiper-slide">
+                                <span class="item-card__img js-lazy" data-background-image="./img/item.png"></span>
+                                <h4 class="item-card__title title title--h4">Картридж турбины ТКР7С-6 Евро-2,3</h4>
+                                <span class="item-card__content">
+                                  <span class="item-card__label">
+                                    <span class="card-label">Скидка 10%</span>
+                                  </span>
+                                  <span class="item-card__text">Производитель Jrone</span>
+                                  <span class="item-card__status status">
+                                    <span class="status__icon">
+                                      <!-- begin icon-checkmark -->
+                                      <svg height="1em" viewBox="0 -21 512.016 512" width="1.000em" class="icon icon-checkmark">
+                                        <path d="M234.668 469.34C105.281 469.34 0 364.063 0 234.676S105.281.008 234.668.008c44.992 0 88.766 12.82 126.59 37.097 7.426 4.782 9.601 14.68 4.82 22.125-4.797 7.446-14.676 9.598-22.121 4.82-32.64-20.972-70.441-32.042-109.289-32.042C122.922 32.008 32 122.93 32 234.676c0 111.742 90.922 202.664 202.668 202.664 111.742 0 202.664-90.922 202.664-202.664 0-6.68-.32-13.293-.937-19.797-.852-8.813 5.59-16.621 14.378-17.473 8.832-.812 16.618 5.59 17.473 14.38a239.63 239.63 0 011.086 22.89c0 129.387-105.277 234.664-234.664 234.664zm0 0" />
+                                        <path d="M261.332 288.008c-4.094 0-8.191-1.559-11.305-4.692l-96-96c-6.25-6.253-6.25-16.386 0-22.636s16.383-6.25 22.633 0l84.695 84.695 223.336-223.34c6.254-6.25 16.387-6.25 22.637 0s6.25 16.383 0 22.633L272.66 283.336a16.03 16.03 0 01-11.328 4.672zm0 0" />
+                                      </svg>
+                                      <!-- end icon-checkmark -->
+                                    </span> Есть в наличии </span>
+                                </span>
+                                <span class="item-card__price-labels">
+                                  <span class="item-card__price-label price-label">2000 <small>грн</small></span>
+                                  <span class="item-card__price-label price-label price-label--old">3000 грн</span>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="slider__controls">
+                            <button class="slider__prev slider-prev js-slider-prev"></button>
+                            <button class="slider__next slider-next js-slider-next"></button>
+                          </div>
+                          <div class="slider__btn">
+                            <button class="btn btn--transp-blue">Показать еще 20</button>
+                          </div>
                         </div>
-                        <!-- end items -->
+                        <!-- end slider -->
                       </div>
-                    </div>
-                    <div class="items-tabs__btn">
-                      <button class="btn btn--transp-blue">Показать еще 20</button>
                     </div>
                   </div>
                   <!-- end items-tabs -->
@@ -1696,6 +1843,133 @@
             <!-- end textarea -->
           </form>
           <!-- end form -->
+        </div>
+      </div>
+      <!-- end popup -->
+      <!-- begin popup -->
+      <div class="popup popup--lg js-popup" data-popup="cart">
+        <div class="popup__inner">
+          <button class="popup__close close js-popup-close"></button>
+          <form class="block cart cart--order popup__cart">
+            <div class="cart__items">
+              <!-- begin cart-item -->
+              <div class="cart-item cart__item cart-item--order">
+                <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
+                <div class="cart-item__descr">
+                  <h4 class="cart-item__title title title--h4">
+                    <a href="#">Картридж турбины <br> ТКР7С-6 Евро-2,3</a>
+                  </h4>
+                  <div class="cart-item__descr-content">
+                    <div class="cart-item__subttl">Артикул 310185</div>
+                    <div class="cart-item__label">
+                      <span class="card-label">Скидка 10%</span>
+                    </div>
+                    <div class="cart-item__text">Производитель Jrone</div>
+                  </div>
+                </div>
+                <div class="cart-item__price-wrap">
+                  <div class="cart-item__quantity">
+                    <div class="cart-item__quantity-text">1х</div>
+                  </div>
+                  <div class="cart-item__price">
+                    <div class="price-label"> 2000 <small>грн</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end cart-item -->
+              <!-- begin cart-item -->
+              <div class="cart-item cart__item cart-item--order">
+                <div class="cart-item__img js-lazy" data-background-image="./img/item.png"></div>
+                <div class="cart-item__descr">
+                  <h4 class="cart-item__title title title--h4">
+                    <a href="#">Картридж турбины <br> ТКР7С-6 Евро-2,3</a>
+                  </h4>
+                  <div class="cart-item__descr-content">
+                    <div class="cart-item__subttl">Артикул 310185</div>
+                    <div class="cart-item__label">
+                      <span class="card-label">Скидка 10%</span>
+                    </div>
+                    <div class="cart-item__text">Производитель Jrone</div>
+                  </div>
+                </div>
+                <div class="cart-item__price-wrap">
+                  <div class="cart-item__quantity">
+                    <div class="cart-item__quantity-text">1х</div>
+                  </div>
+                  <div class="cart-item__price">
+                    <div class="price-label"> 2000 <small>грн</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end cart-item -->
+            </div>
+            <div class="cart__price">
+              <!-- begin cart-list -->
+              <dl class="cart-list">
+                <dt class="cart-list__title ">Ваша выгода:</dt>
+                <dd class="cart-list__text ">200 грн</dd>
+                <dt class="cart-list__title ">Итого с учётом скидки: </dt>
+                <dd class="cart-list__text ">8000 грн</dd>
+              </dl>
+              <!-- end cart-list-->
+            </div>
+            <div class="cart__controls">
+              <div class="cart__amount">
+                <div class="cart__controls-title">ИТОГО:</div>
+                <div class="cart__controls-price-label price-label"> 2000 <small>грн</small>
+                </div>
+              </div>
+              <div class="cart__controls-blocks cart-controls-blocks">
+                <div class="cart-controls-blocks__block cart-controls-blocks__block--full">
+                  <h3 class="cart-controls-blocks__title title title--h3">Способ доставки*</h3>
+                  <div class="cart-controls-blocks__fields">
+                    <div class="cart-controls-blocks__input">
+                      <!-- begin radio -->
+                      <label class="input input--radio">
+                        <input class="input__field" type="radio" name="delivery">
+                        <span class="input__label input__label--radio">Самовывоз</span><span class="input__label-sm">в точке продажи</span>
+                      </label>
+                      <!-- end radio -->
+                    </div>
+                    <div class="cart-controls-blocks__input">
+                      <!-- begin radio -->
+                      <label class="input input--radio">
+                        <input class="input__field" type="radio" name="delivery">
+                        <span class="input__label input__label--radio">Доставка транспортной компанией</span><span class="input__label-sm">Без комиссии</span>
+                      </label>
+                      <!-- end radio -->
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-controls-blocks__block">
+                  <h3 class="cart-controls-blocks__title title title--h3">Способ оплаты*</h3>
+                  <div class="cart-controls-blocks__fields">
+                    <div class="cart-controls-blocks__input">
+                      <!-- begin radio -->
+                      <label class="input input--radio">
+                        <input class="input__field" type="radio" name="delivery">
+                        <span class="input__label input__label--radio">Наличными курьеру</span><span class="input__label-sm">Наличными курьеру</span>
+                      </label>
+                      <!-- end radio -->
+                    </div>
+                    <div class="cart-controls-blocks__input">
+                      <!-- begin radio -->
+                      <label class="input input--radio">
+                        <input class="input__field" type="radio" name="delivery">
+                        <span class="input__label input__label--radio">Оплата картой через Интернет</span><span class="input__label-sm">Без комиссии</span>
+                      </label>
+                      <!-- end radio -->
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-controls-blocks__block cart-controls-blocks__block--btn">
+                  <button class="btn">Оформить</button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
       <!-- end popup -->
