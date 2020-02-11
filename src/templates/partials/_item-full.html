@@ -65,7 +65,9 @@ descr = [
 
         {{ mixins.btn(
           title = 'Купить',
-          mod = 'item-full__btn btn--lg btn--full'
+          mod = 'item-full__btn btn--lg btn--full js-popup-open',
+          href = false,
+          attributes = { 'data-popup-target': 'order' }
         ) }}
       </div>
 

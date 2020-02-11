@@ -1,3 +1,74 @@
+{%set
+form = {
+  title: 'покупатель',
+  blocks: [
+    {
+      fields: [
+        {
+          name: 'input',
+          mod: '',
+          type: 'text',
+          placeholder: '',
+          fieldClass: '',
+          fieldAttributes: '',
+          label: { first: '<span class="input__label">Контактное лицо*</span>'}
+        },
+        {
+          name: 'input',
+          mod: '',
+          type: 'email',
+          placeholder: '',
+          fieldClass: '',
+          fieldAttributes: '',
+          label: { first: '<span class="input__label">Email*</span>'}
+        },
+        {
+          name: 'input',
+          mod: '',
+          type: 'tel',
+          placeholder: '',
+          fieldClass: '',
+          fieldAttributes: '',
+          label: { first: '<span class="input__label">Контактный телефон*</span>'}
+        }
+      ]
+    },
+    {
+      title: 'Адрес доставки',
+      fields: [
+        {
+          name: 'input',
+          mod: '',
+          type: 'text',
+          placeholder: 'Населенный пункт',
+          fieldClass: '',
+          fieldAttributes: '',
+          label: {}
+        },
+        {
+          name: 'input',
+          mod: '',
+          type: 'text',
+          placeholder: 'Адрес доставки',
+          fieldClass: '',
+          fieldAttributes: '',
+          label: {}
+        },
+        {
+          name: 'textarea',
+          mod: '',
+          type: '',
+          placeholder: 'Комментарии к заказу',
+          fieldClass: 'js-textarea',
+          fieldAttributes: '',
+          label: {}
+        }
+      ]
+    }
+  ]
+}
+%}
+
 <!-- begin section -->
 <section class="section order-page">
    <div class="container">

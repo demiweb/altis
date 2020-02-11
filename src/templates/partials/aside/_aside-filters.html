@@ -718,7 +718,7 @@ filters = [
       <li class="aside-filters__item">
         <button class="aside-filters__btn js-accordion-title" data-block="aside-filters__btn">
           <span class="aside-filters__icon"></span>
-          <span class="aside-filters__title">{{ i.title | safe }}</span>
+          <span class="aside-filters__title" title="{{ i.title }}">{{ i.title | safe }}</span>
         </button>
         {% if i.sublist %}
         <ul class="aside-filters__sublist js-accordion-content" data-block="aside-filters__sublist">
@@ -727,15 +727,15 @@ filters = [
             {% if j.sublist %}
             <button class="aside-filters__btn js-accordion-title" data-block="aside-filters__btn">
               <span class="aside-filters__icon"></span>            
-              <span class="aside-filters__title">{{ j.title | safe }}</span>
+              <span class="aside-filters__title" title="{{ j.title }}">{{ j.title | safe }}</span>
             </button>
             {% else %}
-            <a href="#" class="aside-filters__link">{{ j.title | safe }}</a>
+            <a href="#" class="aside-filters__link" title="{{ j.title }}">{{ j.title | safe }}</a>
             {% endif %}
             {% if j.sublist %}
             <ul class="aside-filters__sublist aside-filters__sublist--second js-accordion-content" data-block="aside-filters__sublist">
               {% for k in j.sublist %}
-              <li class="aside-filters__subitem"><a href="#" class="aside-filters__link">{{ k.title | safe }}</a></li>
+              <li class="aside-filters__subitem"><a href="#" class="aside-filters__link" title="{{ j.title }}">{{ k.title | safe }}</a></li>
               {% endfor %}
             </ul>
             {% endif %}

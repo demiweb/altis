@@ -43,8 +43,18 @@
                { link: 'Сотрудничество' },
                { link: 'Контакты' }
             ]
-          ) }}
+          ) }}          
         </div>
+
+        {{ mixins.list(
+          name = 'lang',
+          modifications = { wrap: '', list: 'header__lang lang', item: 'lang__item', link: 'lang__link' },
+          list = [
+            { link: 'укр' },
+            { item: '/' },
+            { item: 'рус', modItem: 'lang__item--current' }
+          ]
+        ) }}
       </div>
     </div>
   </div>

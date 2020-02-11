@@ -10,6 +10,7 @@
       height: $header-top-height
       +lg
         height: $header-top-height-lg
+        justify-content: space-between
     #{$this}__bottom &
       height: $header-bottom-height
       +lg
@@ -29,6 +30,8 @@
   &__logo-mob
     +lgmin
       display: none
+    +xxs
+      width: 200px
   &__logo-mob-menu
     margin-bottom: rem(30)
     +lgmin
@@ -97,8 +100,12 @@
       +notlast
         margin-bottom: rem(10)
   &__nav-wrap
+    // width: 100%
+    // +flex(space-between, center)
+    flex-grow: 1
     +lg
       +shadow
+      display: block
       position: absolute
       top: 0
       left: 0
@@ -185,13 +192,6 @@
       top: 0
     &::before
       bottom: 0
-  // &--active 
-  //   span
-  //     background-color: transparent
-  //     &::before
-  //       transform: rotate(45deg) translate(-7px,-5px)
-  //     &::after
-  //       transform: rotate(-45deg) translate(-6px,4px)
   &--lg
     width: rem(50)
     height: rem(45)
@@ -202,3 +202,19 @@
       &, &::after, &::before
         height: rem(4)
         border-radius: $radius
+
+.lang
+  +flex(flex-start, center)
+  text-transform: uppercase
+  font-weight: 500
+  margin-left: rem(-4)
+  margin-right: rem(-4)
+  &__item
+    padding-left: rem(4)
+    padding-right: rem(4)
+    &--current
+      color: $accent
+  &__link
+    +tr(color .3s)
+    +hover
+      color: $accent

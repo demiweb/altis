@@ -28,10 +28,12 @@ items = [
 %}
 
 <!-- begin cart -->
-<div class="section__bllock cart meta-block">
+<form class="cart{% if cart.mod %} {{ cart.mod }}{% else %} meta-block section__block{% endif %}">
+  {% if not cart.noTop %}
   <div class="meta-block__top">
     Корзина
   </div>
+  {% endif %}
 
   <div class="meta-block__content">
     <div class="cart__items">
@@ -56,10 +58,11 @@ items = [
       <div class="cart__btn">
         {{ mixins.btn(
           title = 'Оформить',
-          mod = ''
+          mod = '',
+          href = false
         ) }}
       </div>
     </div>
   </div>
-</div>
+</form>
 <!-- end cart -->
