@@ -4,9 +4,17 @@
   height: 1em
   font-size: em(45)
   color: $black
+  // border: 2px solid  $black
+  // padding: r
   +before
     +icon-arrow(.7, .7, .06, currentColor, 45, em)
     display: block
+  +after
+    width: 80%
+    height: 120%
+    border: 2px solid  $black
+    +vcenter
+    transform: translate(-75%, -50%) 
 
 .slider-next
   transform: scaleX(-1)
@@ -62,9 +70,9 @@
       padding: rem(20) rem(50)
       .slider
         &__prev
-          left: rem(20)
+          left: rem(10)
         &__next
-          right: rem(20)
+          right: rem(10)
         &__pagination
           display: none
           +xsmin
