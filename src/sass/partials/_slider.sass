@@ -3,25 +3,26 @@
   width: 1em
   height: 1em
   font-size: em(45)
-  color: $white
+  // color: $white
+  color: $accent-dark
   +before
     +icon-arrow(.7, .7, .06, currentColor, 45, em)
     display: block
     position: relative
     z-index: 1
-  +after
-    width: 80%
-    height: 120%
-    // border: 2px solid  $black
-    background-color: $accent
-    +vcenter
-    transform: translate(-75%, -50%) 
-    border-radius: $radius
-    z-index: 0
-    +tr(background-color .3s)
-  +hover
-    +after
-      background-color: $accent-aux
+  // +after
+  //   width: 80%
+  //   height: 120%
+  //   // border: 2px solid  $black
+  //   background-color: $accent
+  //   +vcenter
+  //   transform: translate(-75%, -50%) 
+  //   border-radius: $radius
+  //   z-index: 0
+  //   +tr(background-color .3s)
+  // +hover
+  //   +after
+  //     background-color: $accent-aux
 
 .slider-next
   transform: scaleX(-1)

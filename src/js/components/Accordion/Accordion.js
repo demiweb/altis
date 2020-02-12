@@ -55,6 +55,7 @@ export default class Accordion {
 
     e.preventDefault()
 
+    this.parent = this.btn.parentNode
     this.wrap = this.btn.closest(`.${classNames.wrap}`)
     this.btns = [...document.querySelectorAll(`.${classNames.btn}`)]
     this.items = [...document.querySelectorAll(`.${classNames.item}`)]
@@ -83,6 +84,10 @@ export default class Accordion {
 
     this.BEMbtn.toggleMod(IS_ACTIVE)
     this.BEMitem.toggleMod(IS_OPEN)
+    const itemMod = this.parent.classList.contains('aside-filters__subitem')
+      ? 'aside-filters__subitem--open'
+      : 'aside-filters__item--open'
+    this.parent.classList.toggle(itemMod)
 
     if (this.onToggle) this.onToggle()
   }

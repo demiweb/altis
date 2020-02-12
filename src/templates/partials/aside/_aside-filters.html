@@ -723,7 +723,7 @@ filters = [
         {% if i.sublist %}
         <ul class="aside-filters__sublist js-accordion-content" data-block="aside-filters__sublist">
           {% for j in i.sublist %}
-          <li class="aside-filters__subitem">
+          <li class="aside-filters__subitem{% if not j.sublist %} aside-filters__subitem--sm{% endif %}">
             {% if j.sublist %}
             <button class="aside-filters__btn js-accordion-title" data-block="aside-filters__btn">
               <span class="aside-filters__icon"></span>            
@@ -735,7 +735,7 @@ filters = [
             {% if j.sublist %}
             <ul class="aside-filters__sublist aside-filters__sublist--second js-accordion-content" data-block="aside-filters__sublist">
               {% for k in j.sublist %}
-              <li class="aside-filters__subitem"><a href="#" class="aside-filters__link" title="{{ j.title }}">{{ k.title | safe }}</a></li>
+              <li class="aside-filters__subitem aside-filters__subitem--sm"><a href="#" class="aside-filters__link" title="{{ j.title }}">{{ k.title | safe }}</a></li>
               {% endfor %}
             </ul>
             {% endif %}
